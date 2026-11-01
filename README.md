@@ -6,9 +6,9 @@ Heritage for the Future** (1999, set `jojoba`, SH-2). Round 1 = one naming pass 
 
 | Program | Functions | Hand-named | Still `provisional` |
 |---|---|---|---|
-| JOJOBA.BIN (simm1 + simm2 at 0x06000000) | 2,662 | 2,662 | 184 (after round 2) |
+| JOJOBA.BIN (simm1 + simm2 at 0x06000000) | 2,662 | 2,662 | 20 (after round 3) |
 
-0 placeholder (`FUN_`) names left. Round 2 (11-01): all 1,727 provisional names re-read with callers/callees context by Sonnet agents (13 parts, prompt + verdicts in `ghidra/review/`): 992 confirmed, 551 renamed, 184 still unsure.
+0 placeholder (`FUN_`) names left. Round 2 (11-01): all 1,727 provisional names re-read with callers/callees context by Sonnet agents (13 parts, prompt + verdicts in `ghidra/review/`): 992 confirmed, 551 renamed, 184 still unsure. Round 3 (11-01): those 184 re-read with current callee names + callers (`tools/provctx3.py`, verdicts `ghidra/review/r3_JJ_*_rv.txt`): 4 confirmed, 160 renamed (mostly generic `plyr_UpdateMisc_N` placeholders), 20 still `provisional`.
 
 Subsystems named (prefixes): player and character logic (`plyr_`, `chr_`), stands (`stand_`), hits and collision
 (`hit_`), objects and effects (`obj_`, `fx_`, `efx*_`), sprites and graphics (`spr_`, `gfx_`, `anim_`), HUD / UI

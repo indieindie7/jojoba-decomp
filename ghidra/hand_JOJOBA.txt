@@ -543,66 +543,66 @@
 0x0624c1e0 func junk_0624c1e0 hand bad disassembly of data bytes, not real code
 0x0624c7fe func junk_0624c7fe hand bad disassembly of data bytes, not real code
 0x06c22baa func junk_06c22baa hand bad disassembly of data bytes, not real code
-0x0604a734 func plyr_UpdateMisc hand provisional small player object helper touching object fields
-0x0604a7a4 func plyr_UpdateMisc_2 hand provisional small player object helper touching object fields
+0x0604a734 func plyr_EnterAnimWithTableVelocity hand small player object helper touching object fields (was plyr_UpdateMisc)
+0x0604a7a4 func plyr_BeginActionDispatchByMove hand small player object helper touching object fields (was plyr_UpdateMisc_2)
 0x0604a8d6 func plyr_RunMoveScript hand stepped move script routine with phase counter and indirect calls
-0x0604a984 func plyr_UpdateMisc_3 hand provisional small player object helper touching object fields
-0x0604aa02 func plyr_UpdateMisc_4 hand provisional small player object helper touching object fields
-0x0604aaa4 func plyr_CheckMoveInput hand provisional runs motion command matcher on object and sets state
-0x0604ab5a func plyr_UpdateMisc_5 hand provisional small player object helper touching object fields
-0x0604ab6c func plyr_UpdateMisc_6 hand provisional small player object helper touching object fields
-0x0604ab8e func plyr_UpdateMisc_7 hand provisional small player object helper touching object fields
+0x0604a984 func plyr_SetState14Dispatch hand small player object helper touching object fields (was plyr_UpdateMisc_3)
+0x0604aa02 func plyr_EnterState15 hand small player object helper touching object fields (was plyr_UpdateMisc_4)
+0x0604aaa4 func plyr_EnterState17 hand runs motion command matcher on object and sets state (was plyr_CheckMoveInput)
+0x0604ab5a func plyr_IsBelowGround hand small player object helper touching object fields (was plyr_UpdateMisc_5)
+0x0604ab6c func plyr_IsDownHeldGated hand small player object helper touching object fields (was plyr_UpdateMisc_6)
+0x0604ab8e func plyr_IsDownNotHeld hand small player object helper touching object fields (was plyr_UpdateMisc_7)
 0x0604aba2 func plyr_UpdateMisc_8 hand provisional small player object helper touching object fields
-0x0604abb4 func plyr_UpdateMisc_9 hand provisional small player object helper touching object fields
-0x0604abee func plyr_UpdateMisc_10 hand provisional small player object helper touching object fields
+0x0604abb4 func plyr_IsUpHeld hand small player object helper touching object fields (was plyr_UpdateMisc_9)
+0x0604abee func plyr_IsUpHeldGated hand small player object helper touching object fields (was plyr_UpdateMisc_10)
 0x0604ac0e func plyr_UpdateMisc_11 hand provisional small player object helper touching object fields
 0x0604ac20 func plyr_UpdateLarge hand provisional large player or stand state update with callees 
-0x0604ad48 func plyr_UpdateMisc_12 hand provisional small player object helper touching object fields
+0x0604ad48 func plyr_StoreInputMaskIfAny hand small player object helper touching object fields (was plyr_UpdateMisc_12)
 0x0604ad76 func plyr_BuildInputMask hand small player object helper touching object fields (was plyr_UpdateMisc_13)
-0x0604ae32 func plyr_UpdateMisc_14 hand provisional small player object helper touching object fields
+0x0604ae32 func plyr_IsFacingFlipped hand small player object helper touching object fields (was plyr_UpdateMisc_14)
 0x0604ae54 func plyr_UpdateMisc_15 hand provisional small player object helper touching object fields
-0x0604ae9e func plyr_UpdateMisc_16 hand provisional small player object helper touching object fields
-0x0604af32 func plyr_UpdateMisc_17 hand provisional small player object helper touching object fields
+0x0604ae9e func plyr_CanAirRecoverInput hand small player object helper touching object fields (was plyr_UpdateMisc_16)
+0x0604af32 func plyr_IsMaskedButtonPressed hand small player object helper touching object fields (was plyr_UpdateMisc_17)
 0x0604af86 func plyr_IsAirborne hand small player object helper touching object fields (was plyr_UpdateMisc_18)
-0x0604af98 func plyr_UpdateMisc_19 hand provisional small player object helper touching object fields
-0x0604b052 func plyr_UpdateLarge_2 hand provisional large player or stand state update with callees 
-0x0604b13c func plyr_UpdateLarge_3 hand provisional large player or stand state update with callees 0604b35a,0604b35a
-0x0604b2cc func plyr_UpdateMisc_20 hand provisional small player object helper touching object fields
-0x0604b35a func plyr_UpdateMisc_21 hand provisional small player object helper touching object fields
+0x0604af98 func plyr_LatchHorizInputFacing hand small player object helper touching object fields (was plyr_UpdateMisc_19)
+0x0604b052 func plyr_LatchHorizInputRelative hand large player or stand state update with callees (was plyr_UpdateLarge_2)
+0x0604b13c func plyr_DetectDoubleTapDash hand large player or stand state update with callees 0604b35a,0604b35a (was plyr_UpdateLarge_3)
+0x0604b2cc func plyr_DetectInputPairWindow hand small player object helper touching object fields (was plyr_UpdateMisc_20)
+0x0604b35a func plyr_ClearDashDetectState hand small player object helper touching object fields (was plyr_UpdateMisc_21)
 0x0604b368 func plyr_ClearMoveStageFlags hand small player object helper touching object fields (was plyr_UpdateMisc_22)
-0x0604b37e func plyr_UpdateLarge_4 hand provisional large player or stand state update with callees 0604b4e4,0604b4ec,0604b4f0
+0x0604b37e func plyr_TryStartSuperMove hand large player or stand state update with callees 0604b4e4,0604b4ec,0604b4f0 (was plyr_UpdateLarge_4)
 0x0604b4f4 func plyr_UpdateLarge_5 hand provisional large player or stand state update with callees 0604b5de,0604b626
 0x0604b5de func plyr_IsGroundedAllButtons hand small player object helper touching object fields (was plyr_UpdateMisc_23)
-0x0604b626 func plyr_UpdateMisc_24 hand provisional small player object helper touching object fields
-0x0604b650 func plyr_UpdateMisc_25 hand provisional small player object helper touching object fields
-0x0604b8f8 func plyr_UpdateMisc_26 hand provisional small player object helper touching object fields
+0x0604b626 func plyr_AllButtonsHeldGrounded hand small player object helper touching object fields (was plyr_UpdateMisc_24)
+0x0604b650 func plyr_AddTableOffsetX hand small player object helper touching object fields (was plyr_UpdateMisc_25)
+0x0604b8f8 func plyr_UpdateInputLatchPair hand small player object helper touching object fields (was plyr_UpdateMisc_26)
 0x0604b9ba func plyr_LatchInputWithFacing hand small player object helper touching object fields (was plyr_UpdateMisc_27)
-0x0604ba1e func plyr_UpdateLarge_6 hand provisional large player or stand state update with callees 0604bd0a,0604bdf6,0604bd0a
-0x0604bbf6 func plyr_UpdateLarge_7 hand provisional large player or stand state update with callees 0604bdf6,0604bdf6
-0x0604bd0a func plyr_UpdateMisc_28 hand provisional small player object helper touching object fields
-0x0604bda0 func plyr_UpdateMisc_29 hand provisional small player object helper touching object fields
-0x0604bdf6 func plyr_UpdateMisc_30 hand provisional small player object helper touching object fields
+0x0604ba1e func plyr_CanGrabTarget hand large player or stand state update with callees 0604bd0a,0604bdf6,0604bd0a (was plyr_UpdateLarge_6)
+0x0604bbf6 func plyr_IsTargetInGrabReach hand large player or stand state update with callees 0604bdf6,0604bdf6 (was plyr_UpdateLarge_7)
+0x0604bd0a func plyr_IsHoldingTowardTarget hand small player object helper touching object fields (was plyr_UpdateMisc_28)
+0x0604bda0 func plyr_IsBetweenPair hand small player object helper touching object fields (was plyr_UpdateMisc_29)
+0x0604bdf6 func plyr_CheckThreeBoxOverlap hand small player object helper touching object fields (was plyr_UpdateMisc_30)
 0x0604be8c func plyr_CheckBoxOverlap hand large player or stand state update with callees (was plyr_UpdateLarge_8)
-0x0604bf66 func plyr_UpdateLarge_9 hand provisional large player or stand state update with callees 0604c0b8,0604c14e,0604c07c
-0x0604c0b8 func plyr_UpdateMisc_31 hand provisional small player object helper touching object fields
-0x0604c14e func plyr_UpdateMisc_32 hand provisional small player object helper touching object fields
+0x0604bf66 func plyr_StepNextMoveOnButton hand large player or stand state update with callees 0604c0b8,0604c14e,0604c07c (was plyr_UpdateLarge_9)
+0x0604c0b8 func plyr_ResetPlayerFields hand small player object helper touching object fields (was plyr_UpdateMisc_31)
+0x0604c14e func plyr_ResetPartnerFields hand small player object helper touching object fields (was plyr_UpdateMisc_32)
 0x0604c21e func plyr_ClearTable hand loops over table entries clearing or searching fields
-0x0604c238 func plyr_UpdateMisc_33 hand provisional small player object helper touching object fields
+0x0604c238 func plyr_IsPlayerBitClear hand small player object helper touching object fields (was plyr_UpdateMisc_33)
 0x0604c260 func plyr_UpdateMisc_34 hand provisional small player object helper touching object fields
-0x0604c278 func plyr_ClearTable_2 hand provisional loops over table entries clearing or searching fields
-0x0604c2a4 func plyr_UpdateLarge_10 hand provisional large player or stand state update with callees 0604c52c,0604c400
-0x0604c47e func plyr_UpdateMisc_35 hand provisional small player object helper touching object fields
-0x0604c534 func plyr_UpdateMisc_36 hand provisional small player object helper touching object fields
-0x0604c7b4 func plyr_UpdateMisc_37 hand provisional small player object helper touching object fields
-0x0604c89c func plyr_UpdateMisc_38 hand provisional small player object helper touching object fields
+0x0604c278 func plyr_ApplyPushQueue hand loops over table entries clearing or searching fields (was plyr_ClearTable_2)
+0x0604c2a4 func plyr_ApplyPushQueueEntry hand large player or stand state update with callees 0604c52c,0604c400 (was plyr_UpdateLarge_10)
+0x0604c47e func plyr_QueuePushEntry hand small player object helper touching object fields (was plyr_UpdateMisc_35)
+0x0604c534 func plyr_JumpByStateByte hand small player object helper touching object fields (was plyr_UpdateMisc_36)
+0x0604c7b4 func plyr_IsForwardInputHeld hand small player object helper touching object fields (was plyr_UpdateMisc_37)
+0x0604c89c func plyr_SyncPartnerToState14 hand small player object helper touching object fields (was plyr_UpdateMisc_38)
 0x0604dfc8 func plyr_TryMoveCmdF hand matches command table then SetMoveState 0xf for input move
-0x0604e016 func plyr_UpdateLarge_11 hand provisional large player or stand state update with callees 0604e168,0604e170,0604e2a4
+0x0604e016 func plyr_TryStartMeterMove hand large player or stand state update with callees 0604e168,0604e170,0604e2a4 (was plyr_UpdateLarge_11)
 0x0604e10c func plyr_TryMoveCmd0 hand matches command table then SetMoveState 0 for input move
 0x0604e136 func plyr_TryMoveCmd9 hand matches command table then SetMoveState 9 for input move
 0x0604e19e func plyr_TryMoveCmd4 hand matches command table then SetMoveState 4 for input move
 0x0604e1ec func plyr_TryMoveCmd6 hand matches command table then SetMoveState 6 for input move
 0x0604e21e func plyr_TryMoveCmd10 hand matches command table then SetMoveState 10 for input move
-0x0604e248 func plyr_ClearTable_3 hand provisional loops over table entries clearing or searching fields
+0x0604e248 func plyr_ClearTable_3 hand loops over table entries clearing or searching fields
 0x0604e278 func stub_0604e278 hand tiny stub only returns
 0x0604e2a4 func plyr_SetMoveState hand writes move id and clears anim fields, sets state 0x1a
 0x0604f4a4 func plyr_MatchMotionSeqA hand large player or stand state update with callees 0604f59c,0604f5a8,0604f5a8 (was plyr_UpdateLarge_12)
@@ -612,8 +612,8 @@
 0x0604facc func plyr_MatchButtonHoldRelease hand large player or stand state update with callees 0604fbb4,0605082e,06050876 (was plyr_UpdateLarge_16)
 0x0604fbb4 func plyr_IsMultiButtonCombo hand small player object helper touching object fields (was plyr_UpdateMisc_39)
 0x0604fbf4 func plyr_MatchMotionSeqE hand large player or stand state update with callees 0604fcd8,0605082e,0605082e (was plyr_UpdateLarge_17)
-0x0604fd76 func plyr_UpdateMisc_40 hand provisional small player object helper touching object fields
-0x0604fe0c func plyr_UpdateMisc_41 hand provisional small player object helper touching object fields
+0x0604fd76 func plyr_TryButtonMoveStart hand small player object helper touching object fields (was plyr_UpdateMisc_40)
+0x0604fe0c func plyr_TryButtonMoveStartNoFlag hand small player object helper touching object fields (was plyr_UpdateMisc_41)
 0x0604fea4 func plyr_MatchDirectionHoldCmd hand large player or stand state update with callees 06050bc0,0605082e,0605082e (was plyr_UpdateLarge_18)
 0x06050062 func plyr_MatchButtonPressCmd hand large player or stand state update with callees 0605082e,0605082e,06050876 (was plyr_UpdateLarge_19)
 0x06050156 func plyr_MatchDirectionPressCmd hand large player or stand state update with callees 0605039c,0605082e,0605082e (was plyr_UpdateLarge_20)
@@ -624,12 +624,12 @@
 0x060507fe func plyr_IsMultiButtonComboB hand small player object helper touching object fields (was plyr_UpdateMisc_43)
 0x0605082e func plyr_ResetMatcherState hand small player object helper touching object fields (was plyr_UpdateMisc_44)
 0x06050842 func plyr_CanSpendMeter hand small player object helper touching object fields (was plyr_UpdateMisc_45)
-0x06050876 func plyr_UpdateLarge_24 hand provisional large player or stand state update with callees 
+0x06050876 func plyr_CanStartMove hand large player or stand state update with callees (was plyr_UpdateLarge_24)
 0x06050bc0 func plyr_MirrorDirByFacing hand small player object helper touching object fields (was plyr_UpdateMisc_46)
 0x06050bfc func plyr_CheckAirGroundRequirement hand small player object helper touching object fields (was plyr_UpdateMisc_47)
 0x06050c28 func plyr_SetButtonStrength hand small player object helper touching object fields (was plyr_UpdateMisc_48)
 0x06050c8a func plyr_SetButtonStrengthFromCombo hand small player object helper touching object fields (was plyr_UpdateMisc_49)
-0x06050ce2 func plyr_UpdateLarge_25 hand provisional large player or stand state update with callees 
+0x06050ce2 func plyr_ConsumeMoveInput hand large player or stand state update with callees (was plyr_UpdateLarge_25)
 0x060512ae func plyr_InitPartnerAttackState hand small player object helper touching object fields (was plyr_UpdateMisc_50)
 0x060522a6 func plyr_RunMoveScript_2 hand stepped move script routine with phase counter and indirect calls
 0x06052662 func plyr_TryMoveCmd4VB hand matches command table then SetMoveState 4 for input move (was plyr_TryMoveCmd4_2)
@@ -641,10 +641,10 @@
 0x06052834 func plyr_TryMoveCmd16 hand matches command table then SetMoveState 0x16 for input move
 0x06052866 func plyr_TryMoveCmdC hand matches command table then SetMoveState 0xc for input move
 0x0605291e func plyr_SetMoveState_2 hand writes move id and clears anim fields, sets state 0x1a
-0x060537b6 func plyr_UpdateMisc_51 hand provisional small player object helper touching object fields
+0x060537b6 func plyr_StartMoveScriptByInput hand small player object helper touching object fields (was plyr_UpdateMisc_51)
 0x06053a6a func plyr_SpawnPartnerThrowA hand large player or stand state update with callees 06053b54,06053b50 (was plyr_UpdateLarge_26)
 0x06053b76 func plyr_SpawnPartnerThrowB hand large player or stand state update with callees 06053c9c,06053ca0 (was plyr_UpdateLarge_27)
-0x06053daa func plyr_UpdateMisc_52 hand provisional small player object helper touching object fields
+0x06053daa func plyr_StartMoveScriptWithSound hand small player object helper touching object fields (was plyr_UpdateMisc_52)
 0x06054f54 func plyr_TryMatchStartPartnerMove hand runs motion command matcher on object and sets state (was plyr_CheckMoveInput_2)
 0x0605502c func plyr_TryMoveCmd0VC hand matches command table then SetMoveState 0 for input move (was plyr_TryMoveCmd0_2)
 0x06055056 func plyr_TryMoveCmd2 hand matches command table then SetMoveState 2 for input move
@@ -655,8 +655,8 @@
 0x0605517a func plyr_TryMoveCmd1 hand matches command table then SetMoveState 1 for input move
 0x060551b4 func plyr_TryMoveCmd8 hand matches command table then SetMoveState 8 for input move
 0x060551de func plyr_TryMoveCmd9VC hand matches command table then SetMoveState 9 for input move (was plyr_TryMoveCmd9_2)
-0x0605520a func plyr_SetMoveState_3 hand provisional writes move id and clears anim fields, sets state 0x1a
-0x060559d6 func plyr_UpdateMisc_53 hand provisional small player object helper touching object fields
+0x0605520a func plyr_SetPartnerAssistState hand writes move id and clears anim fields, sets state 0x1a (was plyr_SetMoveState_3)
+0x060559d6 func plyr_IsTowardInputHeld hand small player object helper touching object fields (was plyr_UpdateMisc_53)
 0x06055a44 func plyr_RunStateFromTable hand runs motion command matcher on object and sets state (was plyr_CheckMoveInput_3)
 0x06055d4a func plyr_InitPartnerAttackStateB hand small player object helper touching object fields (was plyr_UpdateMisc_54)
 0x060564a2 func plyr_RunStateHandler hand resets frame fields then calls state handler from jumptable by index
@@ -672,7 +672,7 @@
 0x06056d44 func plyr_TryMoveCmd11 hand matches command table then SetMoveState 0x11 for input move
 0x06056eb8 func plyr_TryMoveCmd1C hand matches command table then SetMoveState 0x1c for input move
 0x0605874a func plyr_NegateDistance hand stores negated helper result into player field
-0x06058e9c func plyr_UpdateMisc_56 hand provisional small player object helper touching object fields
+0x06058e9c func plyr_RestartOrResumeByPos hand small player object helper touching object fields (was plyr_UpdateMisc_56)
 0x0605a628 func plyr_ClearTable_4 hand loops over table entries clearing or searching fields
 0x0605a642 func plyr_TryMoveCmd3VD hand matches command table then SetMoveState 3 for input move (was plyr_TryMoveCmd3_3)
 0x0605a684 func plyr_TryMoveCmd5VD hand matches command table then SetMoveState 5 for input move (was plyr_TryMoveCmd5_3)
@@ -682,12 +682,12 @@
 0x0605a788 func plyr_TryMoveCmdCVD hand matches command table then SetMoveState 0xc for input move (was plyr_TryMoveCmdC_3)
 0x0605a7c8 func plyr_TryMoveCmdD hand matches command table then SetMoveState 0xd for input move
 0x0605a824 func plyr_SetMoveState_4 hand writes move id and clears anim fields, sets state 0x1a
-0x0605b334 func plyr_UpdateLarge_28 hand provisional large player or stand state update with callees 0605b434,0605b430,0605b42c
-0x0605b5ea func plyr_UpdateMisc_57 hand provisional small player object helper touching object fields
-0x0605b746 func plyr_UpdateLarge_29 hand provisional large player or stand state update with callees 0605b78c,0605b788,0605b894
-0x0605b83a func plyr_UpdateLarge_30 hand provisional large player or stand state update with callees 0605b8a8,0605b8a4,0605b894
-0x0605b93a func plyr_UpdateLarge_31 hand provisional large player or stand state update with callees 0605b9c0,0605b9bc,0605b9c8
-0x0605c496 func plyr_UpdateMisc_58 hand provisional small player object helper touching object fields
+0x0605b334 func plyr_RunKnockdownRecoverScript hand large player or stand state update with callees 0605b434,0605b430,0605b42c (was plyr_UpdateLarge_28)
+0x0605b5ea func plyr_SetStartPosFacing hand small player object helper touching object fields (was plyr_UpdateMisc_57)
+0x0605b746 func plyr_RunEffectScriptPhasesA hand large player or stand state update with callees 0605b78c,0605b788,0605b894 (was plyr_UpdateLarge_29)
+0x0605b83a func plyr_RunEffectScriptPhasesB hand large player or stand state update with callees 0605b8a8,0605b8a4,0605b894 (was plyr_UpdateLarge_30)
+0x0605b93a func plyr_RunEffectScriptPhasesC hand large player or stand state update with callees 0605b9c0,0605b9bc,0605b9c8 (was plyr_UpdateLarge_31)
+0x0605c496 func plyr_TryStartCounterHit hand small player object helper touching object fields (was plyr_UpdateMisc_58)
 0x0605c570 func plyr_CallStateTableEntry hand small player object helper touching object fields (was plyr_UpdateMisc_59)
 0x0605c914 func plyr_InitPartnerAttackStateC hand small player object helper touching object fields (was plyr_UpdateMisc_60)
 0x0605e0ca func plyr_TryMoveCmd3VE hand matches command table then SetMoveState 3 for input move (was plyr_TryMoveCmd3_4)
@@ -699,10 +699,10 @@
 0x0605e2de func plyr_TryMoveCmdDVE hand matches command table then SetMoveState 0xd for input move (was plyr_TryMoveCmdD_2)
 0x0605e31a func plyr_TryMoveCmd11VE hand matches command table then SetMoveState 0x11 for input move (was plyr_TryMoveCmd11_2)
 0x0605e364 func plyr_SetMoveState_5 hand writes move id and clears anim fields, sets state 0x1a
-0x0605fae6 func plyr_UpdateMisc_61 hand provisional small player object helper touching object fields
-0x0605fb08 func plyr_UpdateMisc_62 hand provisional small player object helper touching object fields
-0x0605fc78 func plyr_UpdateMisc_63 hand provisional small player object helper touching object fields
-0x06060d80 func plyr_UpdateMisc_64 hand provisional small player object helper touching object fields
+0x0605fae6 func plyr_ApplyPartnerOffset hand small player object helper touching object fields (was plyr_UpdateMisc_61)
+0x0605fb08 func plyr_CopyLinkedField60AndFollow hand small player object helper touching object fields (was plyr_UpdateMisc_62)
+0x0605fc78 func plyr_CopyLinkedByteField hand small player object helper touching object fields (was plyr_UpdateMisc_63)
+0x06060d80 func plyr_StartScriptFromFlagTable hand small player object helper touching object fields (was plyr_UpdateMisc_64)
 0x06060fec func plyr_ClearTable_5 hand loops over table entries clearing or searching fields
 0x0606102e func plyr_SetMoveState_6 hand writes move id and clears anim fields, sets state 0x1a
 0x06061132 func plyr_TryCmdSetState0 hand runs motion command matcher on object and sets state (was plyr_CheckMoveInput_5)
@@ -711,18 +711,18 @@
 0x06061230 func plyr_TryMoveCmd7VF hand matches command table then SetMoveState 7 for input move (was plyr_TryMoveCmd7_4)
 0x0606127a func plyr_TryMoveCmdBVF hand matches command table then SetMoveState 0xb for input move (was plyr_TryMoveCmdB_3)
 0x060612ce func plyr_TryMoveCmd5VF hand matches command table then SetMoveState 5 for input move (was plyr_TryMoveCmd5_4)
-0x0606178c func plyr_UpdateMisc_65 hand provisional small player object helper touching object fields
-0x06061b2c func plyr_UpdateMisc_66 hand provisional small player object helper touching object fields
-0x0606260e func plyr_UpdateMisc_67 hand provisional small player object helper touching object fields
-0x060627b6 func plyr_UpdateMisc_68 hand provisional small player object helper touching object fields
-0x060628f8 func plyr_UpdateMisc_69 hand provisional small player object helper touching object fields
-0x0606292e func plyr_UpdateMisc_70 hand provisional small player object helper touching object fields
-0x060629e0 func plyr_UpdateMisc_71 hand provisional small player object helper touching object fields
+0x0606178c func plyr_RunWaitLinkedStateScript hand small player object helper touching object fields (was plyr_UpdateMisc_65)
+0x06061b2c func plyr_SetXFromCameraByFacing hand small player object helper touching object fields (was plyr_UpdateMisc_66)
+0x0606260e func plyr_StartScriptOnLinkedChange hand small player object helper touching object fields (was plyr_UpdateMisc_67)
+0x060627b6 func plyr_StartMoveFrame0Script hand small player object helper touching object fields (was plyr_UpdateMisc_68)
+0x060628f8 func plyr_StartMoveSoundMeter hand small player object helper touching object fields (was plyr_UpdateMisc_69)
+0x0606292e func plyr_StartMoveByPhaseSoundMeter hand small player object helper touching object fields (was plyr_UpdateMisc_70)
+0x060629e0 func plyr_StartMoveByPhaseSetVelocity hand small player object helper touching object fields (was plyr_UpdateMisc_71)
 0x060636e8 func plyr_TryMoveCmd2VG hand matches command table then SetMoveState 2 for input move (was plyr_TryMoveCmd2_4)
-0x06063740 func plyr_SetMoveState_7 hand provisional writes move id and clears anim fields, sets state 0x1a
-0x06063c84 func plyr_CheckMoveInput_6 hand provisional runs motion command matcher on object and sets state
-0x0606461e func plyr_UpdateMisc_72 hand provisional small player object helper touching object fields
-0x060647b4 func plyr_RunStateHandler_2 hand provisional resets frame fields then calls state handler from jumptable by index
+0x06063740 func plyr_SetPairMoveState hand writes move id and clears anim fields, sets state 0x1a (was plyr_SetMoveState_7)
+0x06063c84 func plyr_PlaySoundFromTable hand runs motion command matcher on object and sets state (was plyr_CheckMoveInput_6)
+0x0606461e func plyr_IsStateByteCR hand small player object helper touching object fields (was plyr_UpdateMisc_72)
+0x060647b4 func plyr_RunStateHandler_2 hand resets frame fields then calls state handler from jumptable by index
 0x060647f8 func plyr_TryMoveCmd1VS hand matches command table then SetMoveState 1 for input move (was plyr_TryMoveCmd1_2)
 0x060648ac func plyr_TryMoveCmd4VS hand matches command table then SetMoveState 4 for input move (was plyr_TryMoveCmd4_6)
 0x06064992 func plyr_TryMoveCmd7_5 hand matches command table then SetMoveState 7 for input move
@@ -731,13 +731,13 @@
 0x06064c32 func plyr_TryMoveCmd14 hand matches command table then SetMoveState 0x14 for input move
 0x06064cf2 func plyr_TryMoveCmd13 hand matches command table then SetMoveState 0x13 for input move
 0x06064d62 func plyr_TryMoveCmd12 hand matches command table then SetMoveState 0x12 for input move
-0x06065b36 func plyr_NegateDistance_2 hand provisional stores negated helper result into player field
-0x06066aec func plyr_CheckMoveInput_7 hand provisional runs motion command matcher on object and sets state
-0x06066b52 func plyr_CheckMoveInput_8 hand provisional runs motion command matcher on object and sets state
-0x06066bd8 func plyr_CheckMoveInput_9 hand provisional runs motion command matcher on object and sets state
-0x06066d0e func plyr_UpdateMisc_73 hand provisional small player object helper touching object fields
-0x06066eaa func plyr_UpdateLarge_32 hand provisional large player or stand state update with callees 06066f0c,06066f00,06067090
-0x06067588 func plyr_UpdateMisc_74 hand provisional small player object helper touching object fields
+0x06065b36 func plyr_StoreNegShiftedValue hand stores negated helper result into player field (was plyr_NegateDistance_2)
+0x06066aec func plyr_MatchSeqSetPairMoveOne hand runs motion command matcher on object and sets state (was plyr_CheckMoveInput_7)
+0x06066b52 func plyr_MatchSeqSetPairMoveTwo hand runs motion command matcher on object and sets state (was plyr_CheckMoveInput_8)
+0x06066bd8 func plyr_MatchSeqSetPairMoveThree hand runs motion command matcher on object and sets state (was plyr_CheckMoveInput_9)
+0x06066d0e func plyr_StartMoveFrame11Script hand small player object helper touching object fields (was plyr_UpdateMisc_73)
+0x06066eaa func plyr_RunMovePhasesLinkedStand hand large player or stand state update with callees 06066f0c,06066f00,06067090 (was plyr_UpdateLarge_32)
+0x06067588 func plyr_StartMoveFrame1ESoundMeter hand small player object helper touching object fields (was plyr_UpdateMisc_74)
 0x06068d34 func plyr_TryMoveCmd2_5 hand matches command table then SetMoveState 2 for input move
 0x06068d60 func plyr_TryMoveCmd3_5 hand matches command table then SetMoveState 3 for input move
 0x06068d8a func plyr_TryMoveCmd5_5 hand matches command table then SetMoveState 5 for input move
@@ -746,9 +746,9 @@
 0x06068e30 func plyr_TryMoveCmdE_2 hand matches command table then SetMoveState 0xe for input move
 0x06068e5a func plyr_TryMoveCmd10_6 hand matches command table then SetMoveState 0x10 for input move
 0x06068ea4 func plyr_SetMoveState_8 hand writes move id and clears anim fields, sets state 0x1a
-0x06069a04 func plyr_UpdateMisc_75 hand provisional small player object helper touching object fields
-0x0606b096 func plyr_UpdateLarge_33 hand provisional large player or stand state update with callees 
-0x0606b26c func plyr_UpdateMisc_76 hand provisional small player object helper touching object fields
+0x06069a04 func plyr_StartMoveFrame1Meter hand small player object helper touching object fields (was plyr_UpdateMisc_75)
+0x0606b096 func plyr_SetXFromCameraByCase hand large player or stand state update with callees (was plyr_UpdateLarge_33)
+0x0606b26c func plyr_TickAdvancePhase hand small player object helper touching object fields (was plyr_UpdateMisc_76)
 0x0606b788 func plyr_TryMoveCmd2_6 hand matches command table then SetMoveState 2 for input move
 0x0606b7ba func plyr_TryMoveCmdD_3 hand matches command table then SetMoveState 0xd for input move
 0x0606b7ec func plyr_TryMoveCmdC_4 hand matches command table then SetMoveState 0xc for input move
@@ -760,10 +760,10 @@
 0x0606b9dc func plyr_TryMoveCmd12_2 hand matches command table then SetMoveState 0x12 for input move
 0x0606ba0e func plyr_TryMoveCmd14_2 hand matches command table then SetMoveState 0x14 for input move
 0x0606ba88 func plyr_SetMoveState_9 hand writes move id and clears anim fields, sets state 0x1a
-0x0606c566 func plyr_UpdateMisc_77 hand provisional small player object helper touching object fields
-0x0606cb64 func plyr_CheckMoveInput_10 hand provisional runs motion command matcher on object and sets state
+0x0606c566 func plyr_IsBelowBothThresholds hand small player object helper touching object fields (was plyr_UpdateMisc_77)
+0x0606cb64 func plyr_PlayRandomSoundFromTable hand runs motion command matcher on object and sets state (was plyr_CheckMoveInput_10)
 0x0606cbaa func plyr_DispatchStateHandler hand small player object helper touching object fields (was plyr_UpdateMisc_78)
-0x0606ccf2 func plyr_UpdateMisc_79 hand provisional small player object helper touching object fields
+0x0606ccf2 func plyr_TickCancelCheckDispatch hand small player object helper touching object fields (was plyr_UpdateMisc_79)
 0x0606d0c8 func plyr_RunStateHandler_3 hand resets frame fields then calls state handler from jumptable by index
 0x0606d144 func plyr_TryMoveCmd2_7 hand matches command table then SetMoveState 2 for input move
 0x0606d1fe func plyr_TryMoveCmd4_7 hand matches command table then SetMoveState 4 for input move
@@ -771,7 +771,7 @@
 0x0606d3ac func plyr_TryMoveCmd8_5 hand matches command table then SetMoveState 8 for input move
 0x0606d466 func plyr_TryMoveCmd10_7 hand matches command table then SetMoveState 10 for input move
 0x0606d568 func plyr_TryMoveCmdC_5 hand matches command table then SetMoveState 0xc for input move
-0x0606dc86 func plyr_NegateDistance_3 hand provisional stores negated helper result into player field
+0x0606dc86 func plyr_StoreNegShiftedValueB hand stores negated helper result into player field (was plyr_NegateDistance_3)
 0x0606e1d8 func plyr_StartRandomTableMove hand runs motion command matcher on object and sets state (was plyr_CheckMoveInput_11)
 0x0606e20e func plyr_StartRandomTableMoveB hand runs motion command matcher on object and sets state (was plyr_CheckMoveInput_12)
 0x0606e4e0 func plyr_RunStateHandler_4 hand resets frame fields then calls state handler from jumptable by index
@@ -780,9 +780,9 @@
 0x0606e65e func plyr_TryMoveCmd2_8 hand matches command table then SetMoveState 2 for input move
 0x0606e708 func plyr_TryMoveCmd3_7 hand matches command table then SetMoveState 3 for input move
 0x0606e788 func plyr_TryMoveCmd4_8 hand matches command table then SetMoveState 4 for input move
-0x0606ede8 func plyr_NegateDistance_4 hand provisional stores negated helper result into player field
+0x0606ede8 func plyr_StoreNegShiftedValueC hand stores negated helper result into player field (was plyr_NegateDistance_4)
 0x0606f09c func plyr_LoadSpeedFromTable hand small player object helper touching object fields (was plyr_UpdateMisc_80)
-0x06070778 func plyr_RunMoveScript_3 hand provisional stepped move script routine with phase counter and indirect calls
+0x06070778 func plyr_RunTeleportBesideTargetMove hand stepped move script routine with phase counter and indirect calls (was plyr_RunMoveScript_3)
 0x06071788 func plyr_TryMoveCmd0_7 hand matches command table then SetMoveState 0 for input move
 0x06071800 func plyr_TryMoveCmd1_4 hand matches command table then SetMoveState 1 for input move
 0x0607182a func plyr_TryMoveCmd10_8 hand matches command table then SetMoveState 10 for input move
@@ -794,10 +794,10 @@
 0x06071a96 func plyr_TryMoveCmdE_3 hand matches command table then SetMoveState 0xe for input move
 0x06071ad0 func plyr_TryMoveCmd14_3 hand matches command table then SetMoveState 0x14 for input move
 0x06071b38 func plyr_SetMoveState_10 hand writes move id and clears anim fields, sets state 0x1a
-0x06072156 func plyr_RunMoveScript_4 hand provisional stepped move script routine with phase counter and indirect calls
-0x0607246c func plyr_RunMoveScript_5 hand provisional stepped move script routine with phase counter and indirect calls
-0x06072610 func plyr_UpdateMisc_81 hand provisional small player object helper touching object fields
-0x06072650 func plyr_UpdateMisc_82 hand provisional small player object helper touching object fields
+0x06072156 func plyr_RunDecelSlideMove hand stepped move script routine with phase counter and indirect calls (was plyr_RunMoveScript_4)
+0x0607246c func plyr_RunSpawnFxMove hand stepped move script routine with phase counter and indirect calls (was plyr_RunMoveScript_5)
+0x06072610 func plyr_TryStartStandStunReact hand small player object helper touching object fields (was plyr_UpdateMisc_81)
+0x06072650 func plyr_IsLinkedStateEAnim10 hand small player object helper touching object fields (was plyr_UpdateMisc_82)
 0x06074098 func plyr_ClearTable_6 hand loops over table entries clearing or searching fields
 0x060740ac func plyr_TryMoveCmd0_8 hand matches command table then SetMoveState 0 for input move
 0x060740ea func plyr_TryMoveCmd1_5 hand matches command table then SetMoveState 1 for input move
@@ -821,8 +821,8 @@
 0x06077b92 func plyr_TryMoveCmd8_6 hand matches command table then SetMoveState 8 for input move
 0x06077bd2 func plyr_TryMoveCmd9_6 hand matches command table then SetMoveState 9 for input move
 0x06077c28 func plyr_SetMoveState_12 hand writes move id and clears anim fields, sets state 0x1a
-0x06078868 func plyr_CheckMoveInput_17 hand provisional runs motion command matcher on object and sets state
-0x06078c5c func plyr_UpdateMisc_83 hand provisional small player object helper touching object fields
+0x06078868 func plyr_PlayMoveSoundByIndex hand runs motion command matcher on object and sets state (was plyr_CheckMoveInput_17)
+0x06078c5c func plyr_SyncLinkedStateAndPos hand small player object helper touching object fields (was plyr_UpdateMisc_83)
 0x060790b6 func plyr_RunStateHandler_5 hand resets frame fields then calls state handler from jumptable by index
 0x0607912c func plyr_TryMoveCmd5_7 hand matches command table then SetMoveState 5 for input move
 0x06079200 func plyr_TryMoveCmd8_7 hand matches command table then SetMoveState 8 for input move
@@ -830,14 +830,14 @@
 0x060793d0 func plyr_TryMoveCmd13_2 hand matches command table then SetMoveState 0x13 for input move
 0x06079480 func plyr_TryMoveCmd19 hand matches command table then SetMoveState 0x19 for input move
 0x06079f50 func plyr_SetLinkedObjectsX hand small player object helper touching object fields (was plyr_UpdateMisc_84)
-0x0607a2e8 func plyr_UpdateMisc_85 hand provisional small player object helper touching object fields
+0x0607a2e8 func plyr_ClearTwoFlags hand small player object helper touching object fields (was plyr_UpdateMisc_85)
 0x0607a2f4 func plyr_StepMoveTableFrame hand resets frame fields then calls state handler from jumptable by index (was plyr_RunStateHandler_6)
-0x0607a8de func plyr_NegateDistance_5 hand provisional stores negated helper result into player field
-0x0607af02 func plyr_UpdateMisc_86 hand provisional small player object helper touching object fields
-0x0607b312 func plyr_UpdateMisc_87 hand provisional small player object helper touching object fields
-0x0607b340 func plyr_UpdateMisc_88 hand provisional small player object helper touching object fields
-0x0607b872 func plyr_UpdateMisc_89 hand provisional small player object helper touching object fields
-0x0607c89a func plyr_RunMoveScript_6 hand provisional stepped move script routine with phase counter and indirect calls
+0x0607a8de func plyr_StoreNegShiftedValueD hand stores negated helper result into player field (was plyr_NegateDistance_5)
+0x0607af02 func plyr_RunTimedHoldScript hand small player object helper touching object fields (was plyr_UpdateMisc_86)
+0x0607b312 func plyr_SyncScriptWithLinked hand small player object helper touching object fields (was plyr_UpdateMisc_87)
+0x0607b340 func plyr_IsLinkedState11Anim36 hand small player object helper touching object fields (was plyr_UpdateMisc_88)
+0x0607b872 func plyr_SyncLinkedStateAndDispatch hand small player object helper touching object fields (was plyr_UpdateMisc_89)
+0x0607c89a func plyr_RunAirDiveMove hand stepped move script routine with phase counter and indirect calls (was plyr_RunMoveScript_6)
 0x0607cf56 func plyr_TryMoveCmd4_9 hand matches command table then SetMoveState 4 for input move
 0x0607cf86 func plyr_TryMoveCmd5_8 hand matches command table then SetMoveState 5 for input move
 0x0607cfdc func plyr_TryMoveCmd7_9 hand matches command table then SetMoveState 7 for input move
@@ -847,11 +847,11 @@
 0x0607d124 func plyr_TryMoveCmd16_2 hand matches command table then SetMoveState 0x16 for input move
 0x0607d156 func plyr_TryMoveCmdC_8 hand matches command table then SetMoveState 0xc for input move
 0x0607d1fc func plyr_SetMoveState_13 hand writes move id and clears anim fields, sets state 0x1a
-0x0607db8c func plyr_RunMoveScript_7 hand provisional stepped move script routine with phase counter and indirect calls
-0x0607e0f0 func plyr_CheckMoveInput_18 hand provisional runs motion command matcher on object and sets state
-0x0607e116 func plyr_UpdateMisc_90 hand provisional small player object helper touching object fields
-0x0607e2f6 func plyr_UpdateMisc_91 hand provisional small player object helper touching object fields
-0x0607e3e0 func plyr_UpdateMisc_92 hand provisional small player object helper touching object fields
+0x0607db8c func plyr_RunSlideSpawnMove hand stepped move script routine with phase counter and indirect calls (was plyr_RunMoveScript_7)
+0x0607e0f0 func plyr_PlayCmdSoundByIndex hand runs motion command matcher on object and sets state (was plyr_CheckMoveInput_18)
+0x0607e116 func plyr_JumpByStateByte_2 hand small player object helper touching object fields (was plyr_UpdateMisc_90)
+0x0607e2f6 func plyr_TickCancelCheckCrouch hand small player object helper touching object fields (was plyr_UpdateMisc_91)
+0x0607e3e0 func plyr_SyncLinkedStateAndPosFlag hand small player object helper touching object fields (was plyr_UpdateMisc_92)
 0x0607e908 func plyr_RunStateHandler_7 hand resets frame fields then calls state handler from jumptable by index
 0x0607e970 func plyr_TryMoveCmd1_6 hand matches command table then SetMoveState 1 for input move
 0x0607e9d8 func plyr_CheckMoveInput_19 hand runs motion command matcher on object and sets state
@@ -869,11 +869,11 @@
 0x0607f200 func plyr_SummonStandMoveD hand small player object helper touching object fields (was plyr_UpdateMisc_96)
 0x0607f9e6 func plyr_RowContainsValue hand loops over table entries clearing or searching fields (was plyr_ClearTable_7)
 0x0607fa6c func plyr_AppendToRowList hand small player object helper touching object fields (was plyr_UpdateMisc_97)
-0x0607fab6 func plyr_UpdateMisc_98 hand provisional small player object helper touching object fields
-0x0607fb40 func plyr_UpdateMisc_99 hand provisional small player object helper touching object fields
-0x0607fbc8 func plyr_UpdateMisc_100 hand provisional small player object helper touching object fields
-0x0608071a func plyr_NegateDistance_6 hand provisional stores negated helper result into player field
-0x06080c22 func plyr_UpdateMisc_101 hand provisional small player object helper touching object fields
+0x0607fab6 func plyr_TryStandAutoGuard hand small player object helper touching object fields (was plyr_UpdateMisc_98)
+0x0607fb40 func plyr_TryArmHitReactTimer hand small player object helper touching object fields (was plyr_UpdateMisc_99)
+0x0607fbc8 func plyr_TryStartCounterReact hand small player object helper touching object fields (was plyr_UpdateMisc_100)
+0x0608071a func plyr_StoreNegShiftedValueE hand stores negated helper result into player field (was plyr_NegateDistance_6)
+0x06080c22 func plyr_SyncScriptWithLinkedB hand small player object helper touching object fields (was plyr_UpdateMisc_101)
 0x060826fc func plyr_TryMoveCmd1_7 hand matches command table then SetMoveState 1 for input move
 0x06082744 func plyr_UpdateButtonHoldTimers hand small player object helper touching object fields (was plyr_UpdateMisc_102)
 0x060827fc func plyr_CheckMoveInput_22 hand runs motion command matcher on object and sets state
@@ -882,20 +882,20 @@
 0x06082904 func plyr_TryMoveCmd3_11 hand matches command table then SetMoveState 3 for input move
 0x06082934 func plyr_TryMoveCmd8_9 hand matches command table then SetMoveState 8 for input move
 0x06082990 func plyr_SetMoveState_14 hand writes move id and clears anim fields, sets state 0x1a
-0x06084300 func plyr_UpdateMisc_103 hand provisional small player object helper touching object fields
-0x06084336 func plyr_UpdateMisc_104 hand provisional small player object helper touching object fields
-0x06084360 func plyr_UpdateMisc_105 hand provisional small player object helper touching object fields
-0x06084382 func plyr_UpdateMisc_106 hand provisional small player object helper touching object fields
-0x060843c0 func plyr_CheckMoveInput_23 hand provisional runs motion command matcher on object and sets state
-0x06084446 func plyr_UpdateMisc_107 hand provisional small player object helper touching object fields
-0x060844b8 func plyr_UpdateMisc_108 hand provisional small player object helper touching object fields
-0x06084528 func plyr_UpdateMisc_109 hand provisional small player object helper touching object fields
-0x0608454c func plyr_UpdateMisc_110 hand provisional small player object helper touching object fields
+0x06084300 func plyr_IsOnlyFlagDSet hand small player object helper touching object fields (was plyr_UpdateMisc_103)
+0x06084336 func plyr_CanActAtLowStun hand small player object helper touching object fields (was plyr_UpdateMisc_104)
+0x06084360 func plyr_IsLowStunInputBitA hand small player object helper touching object fields (was plyr_UpdateMisc_105)
+0x06084382 func plyr_IsLowStunInputBitB hand small player object helper touching object fields (was plyr_UpdateMisc_106)
+0x060843c0 func plyr_StartDirectionalRecoveryMove hand runs motion command matcher on object and sets state (was plyr_CheckMoveInput_23)
+0x06084446 func plyr_EnterState5ClearScript hand small player object helper touching object fields (was plyr_UpdateMisc_107)
+0x060844b8 func plyr_EnterState5AnimByFacing hand small player object helper touching object fields (was plyr_UpdateMisc_108)
+0x06084528 func plyr_EnterState5SubFourScript hand small player object helper touching object fields (was plyr_UpdateMisc_109)
+0x0608454c func plyr_EnterState5SubSixAnim hand small player object helper touching object fields (was plyr_UpdateMisc_110)
 0x06084580 func plyr_UpdateMisc_111 hand provisional small player object helper touching object fields
 0x0608459e func plyr_UpdateMisc_112 hand provisional small player object helper touching object fields
 0x06084606 func plyr_UpdateMisc_113 hand provisional small player object helper touching object fields
 0x06084620 func plyr_UpdateMisc_114 hand provisional small player object helper touching object fields
-0x06084688 func plyr_UpdateLarge_34 hand provisional large player or stand state update with callees 06084770,06084774,0608454c
+0x06084688 func plyr_DispatchActionTransitions hand large player or stand state update with callees 06084770,06084774,0608454c (was plyr_UpdateLarge_34)
 0x060847d2 func plyr_ApplyTableXOffset hand small player object helper touching object fields (was plyr_UpdateMisc_115)
 0x06084878 func plyr_SetDirectionFlagFromInput hand small player object helper touching object fields (was plyr_UpdateMisc_116)
 0x060848e0 func plyr_ApplyVelocities hand small player object helper touching object fields (was plyr_UpdateMisc_117)
@@ -928,7 +928,7 @@
 0x060894dc func plyr_TryCommandMove0 hand small player object helper touching object fields (was plyr_UpdateMisc_142)
 0x06089540 func plyr_SetMoveStateWithStand hand writes move id and clears anim fields, sets state 0x1a (was plyr_SetMoveState_17)
 0x0608a414 func plyr_SetStandMove hand small player object helper touching object fields (was plyr_UpdateMisc_143)
-0x0608a468 func plyr_UpdateMisc_144 hand provisional small player object helper touching object fields
+0x0608a468 func plyr_TryCounterHitState18 hand small player object helper touching object fields (was plyr_UpdateMisc_144)
 0x0608b3c0 func plyr_TryCommandMoveA hand small player object helper touching object fields (was plyr_UpdateMisc_145)
 0x0608b420 func plyr_TryCommandMoveB hand small player object helper touching object fields (was plyr_UpdateMisc_146)
 0x0608b452 func plyr_TryCommandMoveC hand small player object helper touching object fields (was plyr_UpdateMisc_147)
@@ -936,26 +936,26 @@
 0x0608b4c4 func plyr_TryCommandMoveD hand small player object helper touching object fields (was plyr_UpdateMisc_149)
 0x0608b4f8 func plyr_TryCommandMoveE hand small player object helper touching object fields (was plyr_UpdateMisc_150)
 0x0608ca4a func plyr_SetMoveStateFacing hand writes move id and clears anim fields, sets state 0x1a (was plyr_SetMoveState_18)
-0x0608cac0 func plyr_UpdateMisc_151 hand provisional small player object helper touching object fields
-0x0608cb00 func plyr_UpdateLarge_35 hand provisional large player or stand state update with callees 0608cc00,0608cc04,0608cc08
-0x0608cbd4 func plyr_ClearTable_8 hand provisional loops over table entries clearing or searching fields
-0x0608cc8e func plyr_ClearTable_9 hand provisional loops over table entries clearing or searching fields
-0x0608d558 func plyr_UpdateMisc_152 hand provisional small player object helper touching object fields
-0x0608df48 func plyr_UpdateLarge_36 hand provisional large player or stand state update with callees 0608e0f0,0608e0f4,0608e22c
-0x0608e5d4 func plyr_UpdateMisc_153 hand provisional small player object helper touching object fields
+0x0608cac0 func plyr_IsWithinRangeX hand small player object helper touching object fields (was plyr_UpdateMisc_151)
+0x0608cb00 func plyr_TryCounterHitState19 hand large player or stand state update with callees 0608cc00,0608cc04,0608cc08 (was plyr_UpdateLarge_35)
+0x0608cbd4 func plyr_MatchBufferedInput hand loops over table entries clearing or searching fields (was plyr_ClearTable_8)
+0x0608cc8e func plyr_TryBufferedInputReact hand loops over table entries clearing or searching fields (was plyr_ClearTable_9)
+0x0608d558 func plyr_RunStandStateTable hand small player object helper touching object fields (was plyr_UpdateMisc_152)
+0x0608df48 func plyr_EndActionChooseNext hand large player or stand state update with callees 0608e0f0,0608e0f4,0608e22c (was plyr_UpdateLarge_36)
+0x0608e5d4 func plyr_IsHoldingBackGuard hand small player object helper touching object fields (was plyr_UpdateMisc_153)
 0x0608e696 func plyr_UpdateMisc_154 hand provisional small player object helper touching object fields
-0x0608ee1c func plyr_UpdateLarge_37 hand provisional large player or stand state update with callees 0608efd8,0608eed8,0608eed0
-0x0608ef58 func plyr_UpdateMisc_155 hand provisional small player object helper touching object fields
-0x0608efb4 func plyr_UpdateMisc_156 hand provisional small player object helper touching object fields
-0x0608f012 func plyr_UpdateMisc_157 hand provisional small player object helper touching object fields
-0x0608f050 func plyr_UpdateLarge_38 hand provisional large player or stand state update with callees 0608f1b8,0608f210,0608f2c4
-0x0608f210 func plyr_UpdateMisc_158 hand provisional small player object helper touching object fields
-0x0608f27e func plyr_UpdateLarge_39 hand provisional large player or stand state update with callees 0608f3f0,0608f210,0608f3f8
-0x0608f8e2 func plyr_UpdateMisc_159 hand provisional small player object helper touching object fields
-0x0608faf8 func plyr_UpdateMisc_160 hand provisional small player object helper touching object fields
-0x0608fc3a func plyr_UpdateMisc_161 hand provisional small player object helper touching object fields
-0x0608fed6 func plyr_UpdateLarge_40 hand provisional large player or stand state update with callees 0608ff34,0608ff38,06090078
-0x06090088 func chr_DispatchStateJump hand provisional jump-table dispatch on state byte, calls per-state handler
+0x0608ee1c func plyr_PlayReactionAnimTriggerOwner hand large player or stand state update with callees 0608efd8,0608eed8,0608eed0 (was plyr_UpdateLarge_37)
+0x0608ef58 func plyr_IsOutsideOwnerRangeX hand small player object helper touching object fields (was plyr_UpdateMisc_155)
+0x0608efb4 func plyr_InitKnockbackCounter hand small player object helper touching object fields (was plyr_UpdateMisc_156)
+0x0608f012 func plyr_RepeatKnockbackWithVoice hand small player object helper touching object fields (was plyr_UpdateMisc_157)
+0x0608f050 func plyr_StartKnockbackFromTable hand large player or stand state update with callees 0608f1b8,0608f210,0608f2c4 (was plyr_UpdateLarge_38)
+0x0608f210 func plyr_SelectKnockbackAnim hand small player object helper touching object fields (was plyr_UpdateMisc_158)
+0x0608f27e func plyr_StartKnockbackAltTable hand large player or stand state update with callees 0608f3f0,0608f210,0608f3f8 (was plyr_UpdateLarge_39)
+0x0608f8e2 func plyr_EnterWallBounceStun hand small player object helper touching object fields (was plyr_UpdateMisc_159)
+0x0608faf8 func plyr_StartStandGuardRecoverAnim hand small player object helper touching object fields (was plyr_UpdateMisc_160)
+0x0608fc3a func plyr_StartStandCrouchGuardAnim hand small player object helper touching object fields (was plyr_UpdateMisc_161)
+0x0608fed6 func plyr_DispatchStateAndSyncPartner hand large player or stand state update with callees 0608ff34,0608ff38,06090078 (was plyr_UpdateLarge_40)
+0x06090088 func chr_DispatchStateJump hand jump-table dispatch on state byte, calls per-state handler
 0x0609014e func chr_DispatchStateTable14 hand small helper operating on object fields (was chr_Helper)
 0x060901fa func chr_TryCancelMove hand state step calling anim and movement helpers (was chr_StepState)
 0x06090356 func chr_TryCancelMoveBuffered hand small helper operating on object fields (was chr_Helper_2)
@@ -1095,10 +1095,10 @@
 0x060b51ac func chr_TryTransition_57 hand check command pattern then enter next move state
 0x060b5200 func chr_TryTransition_58 hand check command pattern then enter next move state
 0x060b5256 func chr_SetState_7 hand set state byte and clear sub-step flags
-0x060b53b4 func chr_StepState_6 hand provisional state step calling anim and movement helpers
-0x060b5480 func chr_Helper_28 hand provisional small helper operating on object fields
+0x060b53b4 func plyr_TryGuardClashState7 hand state step calling anim and movement helpers (was chr_StepState_6)
+0x060b5480 func plyr_TryBufferedInputReactState7 hand small helper operating on object fields (was chr_Helper_28)
 0x060b5574 func chr_TryButtonStartTransition hand large per-state logic routine with many helper calls (was chr_RunStateLogic_4)
-0x060b56ee func chr_StepState_7 hand provisional state step calling anim and movement helpers
+0x060b56ee func chr_TryBufferedCancelEnterState9 hand state step calling anim and movement helpers (was chr_StepState_7)
 0x060b5826 func chr_ResetPlayerTableIfUnset hand small helper operating on object fields (was chr_Helper_29)
 0x060b5a30 func game_ClearTables hand loop over table entries clearing or copying fields (was mem_LoopFill_4)
 0x060b5a90 func chr_CallTableEntry_2 hand call handler from table indexed by param if entry not -1
@@ -1117,8 +1117,8 @@
 0x060b7090 func chr_CountdownOrOpponentNear hand small helper operating on object fields (was chr_Helper_34)
 0x060b9260 func chr_Helper_35 hand provisional small helper operating on object fields
 0x060b9e44 func chr_ClampFieldByFacing hand small helper operating on object fields (was chr_Helper_36)
-0x060bad9e func chr_UpdateState_13 hand provisional per-state update, anim set and sub-step counter
-0x060bbb8a func chr_Helper_37 hand provisional small helper operating on object fields
+0x060bad9e func chr_IsPushingIntoStageEdge hand per-state update, anim set and sub-step counter (was chr_UpdateState_13)
+0x060bbb8a func chr_StartRoundEndScriptIfGrounded hand small helper operating on object fields (was chr_Helper_37)
 0x060bbb9e func chr_DispatchStateJump_22 hand jump-table dispatch on state byte, calls per-state handler
 0x060bbba6 func chr_CallWithField_2 hand call helper with object field argument
 0x060bbbae func chr_NearestOpponentOnRight hand small helper operating on object fields (was chr_Helper_38)
@@ -1243,7 +1243,7 @@
 0x060de434 func chr_UpdateState_21 hand per-state update, anim set and sub-step counter
 0x060deb0e func chr_DispatchStateJump_45 hand jump-table dispatch on state byte, calls per-state handler
 0x060def04 func chr_SpawnEffectByIndex hand jump-table dispatch on state byte, calls per-state handler (was chr_DispatchStateJump_46)
-0x060df1e4 func chr_Helper_54 hand provisional small helper operating on object fields
+0x060df1e4 func chr_PlayPannedSoundByVariant hand small helper operating on object fields (was chr_Helper_54)
 0x060df224 func chr_AnyObjectNearX hand loop over table entries clearing or copying fields (was mem_LoopFill_6)
 0x060df262 func chr_PushXFromObjects hand loop over table entries clearing or copying fields (was mem_LoopFill_7)
 0x060df2e6 func chr_SnapXToNearestObject hand small helper operating on object fields (was chr_Helper_55)
@@ -1279,7 +1279,7 @@
 0x060e1a4e func dbg_CycleMotionIndex hand small helper operating on object fields (was chr_Helper_61)
 0x060e1a9a func chr_Helper_62 hand provisional small helper operating on object fields
 0x060e1ae0 func dbg_AdjustMarksByPad hand small helper operating on object fields (was chr_Helper_63)
-0x060e1b20 func chr_Helper_64 hand provisional small helper operating on object fields
+0x060e1b20 func dbg_StepAnimTableEntry hand small helper operating on object fields (was chr_Helper_64)
 0x060e21f2 func obj_SpawnOwnedFxByKind hand set state byte and clear sub-step flags (was chr_SetState_13)
 0x060e2550 func obj_SpawnCopyType24 hand state step calling anim and movement helpers (was chr_StepState_10)
 0x060e2682 func obj_SpawnCopyType25 hand jump-table dispatch on state byte, calls per-state handler (was chr_DispatchStateJump_49)
@@ -1293,7 +1293,7 @@
 0x060e35f8 func ui_SpawnPlayerPairByKindAlt hand allocate object slot, set type byte and update routine pointer (was obj_SpawnEffect_13)
 0x060e3b90 func ui_SpawnSpritesByKind hand allocate object slot, set type byte and update routine pointer (was obj_SpawnEffect_14)
 0x060e40a8 func ui_SyncSpriteToOwnerIndex hand per-state update, anim set and sub-step counter (was chr_UpdateState_23)
-0x060e41e8 func chr_UpdateState_24 hand provisional per-state update, anim set and sub-step counter
+0x060e41e8 func dbg_SyncAnimViewerToOwnerState hand per-state update, anim set and sub-step counter (was chr_UpdateState_24)
 0x060e4684 func ui_SpawnSpriteUnlessMode3 hand allocate object slot, set type byte and update routine pointer (was obj_SpawnEffect_15)
 0x060e47e4 func ui_SpawnFadeSprite hand allocate object slot, set type byte and update routine pointer (was obj_SpawnEffect_16)
 0x060e4968 func ui_SpawnOwnedSpriteGroup hand allocate object slot, set type byte and update routine pointer (was obj_SpawnEffect_17)
@@ -1723,7 +1723,7 @@
 0x061633e2 func fx_SpawnPlayerEffect_Type18_A hand allocs pool 2 or 3, type 0x18, copies side bytes from parent
 0x06163a08 func fx_SpawnPlayerEffect_Type18_B hand allocs pool 2 or 3, type 0x18, copies side bytes from parent variant
 0x06163b84 func obj_SpawnChildType07 hand allocates child type 7 linked to parent with two byte params
-0x06164250 func obj_UpdateStub_A hand provisional tiny per-frame callback copies byte from owner and clears flag
+0x06164250 func obj_RemoveFromListsClearOwnerFlag hand tiny per-frame callback copies byte from owner and clears flag (was obj_UpdateStub_A)
 0x06164288 func obj_ApplyVelocityAndCall hand adds velocity to x y then calls two helper functions
 0x061642cc func obj_SetFacingFromIndex hand sets facing flag by index threshold and calls script setter from table
 0x06164360 func obj_ClearStateFields hand clears several fields at index offset and loads table pointer
@@ -1797,22 +1797,22 @@
 0x06173688 func obj_SetDecayFromScroll hand sets field from global scroll value minus 0x40 times 3
 0x061736b8 func obj_IsFrameBelow12 hand returns 1 if counter byte below 12
 0x061736f6 func fx_SpawnType30_A hand allocs pool 2 or 3, type 0x30 effect with byte param
-0x06173fb4 func obj_CanSpawnCheck_A hand provisional returns 0 under owner state and global flag conditions, state 0x1a check
-0x061746ac func obj_CanSpawnCheck_B hand provisional returns 0 under owner state and global flag conditions, state 0x1a check
+0x06173fb4 func obj_TryInitStateRecord2 hand returns 0 under owner state and global flag conditions, state 0x1a check (was obj_CanSpawnCheck_A)
+0x061746ac func obj_TryInitStateRecord3 hand returns 0 under owner state and global flag conditions, state 0x1a check (was obj_CanSpawnCheck_B)
 0x06176110 func game_AddScoreOrPoints hand provisional for param 1 or 2 calls helper with 5 and adds result to two accumulators
 0x061761fe func fx_SpawnType30_B hand allocs pool 2 or 3, type 0x30 effect
-0x06176898 func game_UpdateObjectPool hand provisional large routine allocs pool 7, loops object list, calls update callbacks
-0x06178918 func game_UpdateSceneState_A hand provisional large state routine reading many global pointers, returns int pointer
-0x06178c74 func game_UpdateSceneState_B hand provisional state routine reading many global pointers with player index
-0x06178e38 func game_UpdateSceneState_C hand provisional state routine reading many global pointers with player index
-0x06178fd6 func game_UpdateSceneState_D hand provisional state routine reading many global pointers with player index
-0x06179180 func game_AdvanceDispatch hand provisional adds 8 to counter then calls handler from byte-indexed jump table
-0x061791f8 func game_CheckModeCounter hand provisional reads mode byte and global flags, returns computed value
+0x06176898 func game_InitStageScrollObjects hand large routine allocs pool 7, loops object list, calls update callbacks (was game_UpdateObjectPool)
+0x06178918 func game_ScrollStageLayersToTarget hand large state routine reading many global pointers, returns int pointer (was game_UpdateSceneState_A)
+0x06178c74 func game_ScrollStageLayersByDeltaPos hand state routine reading many global pointers with player index (was game_UpdateSceneState_B)
+0x06178e38 func game_ScrollStageLayersByDeltaNeg hand state routine reading many global pointers with player index (was game_UpdateSceneState_C)
+0x06178fd6 func game_ScrollStageLayersByDeltaSlow hand state routine reading many global pointers with player index (was game_UpdateSceneState_D)
+0x06179180 func game_ScrollStageStep8 hand adds 8 to counter then calls handler from byte-indexed jump table (was game_AdvanceDispatch)
+0x061791f8 func game_UpdateZoomStateMachine hand reads mode byte and global flags, returns computed value (was game_CheckModeCounter)
 0x061792f8 func input_CheckButtonMask hand tests input bits against mask words, checks flag byte, returns value
-0x06179508 func game_UpdateModeLarge hand provisional large routine over global pointer tables, returns uint status
+0x06179508 func game_ApplyLayerShakeOffsets hand large routine over global pointer tables, returns uint status (was game_UpdateModeLarge)
 0x06179d58 func cam_SetScrollFromObject hand copies object x field into two scroll shorts with offset
 0x0617aac4 func gfx_ClearLayers hand calls several layer clear helpers with global value then zero
-0x0617af8a func game_UpdateHudLayout hand provisional reads global tables and function pointers to update layout for param
+0x0617af8a func game_BlitStageLayerTileBlocks hand reads global tables and function pointers to update layout for param (was game_UpdateHudLayout)
 0x0617b558 func txt_DrawLine_A hand draws text line via helper (2,...) for param 1 using 8-byte table
 0x0617b5b4 func txt_DrawLine_B hand draws text line via helper with char selectors and 8-byte table
 0x0617ba9e func txt_DrawLine_C hand two helper calls (3,...) drawing text with 16-byte table entry by index
@@ -1856,9 +1856,9 @@
 0x0617fb92 func plyr_SlideTowardCamera hand moves player X obj+0x5c toward camera centre
 0x0617fc38 func plyr_ClampToStageBounds hand clamps player X obj+0x5c to stage left right bounds
 0x0617fc8a func stage_IsCameraAtEdge hand returns whether camera is at stage edge
-0x0617fce0 func game_InitRound_A hand provisional big mode or round init routine variant A
-0x06180324 func game_InitRound_B hand provisional big mode or round init routine variant B
-0x061807f4 func game_InitRound_C hand provisional big mode or round init routine variant C
+0x0617fce0 func game_InitRound_A hand big mode or round init routine variant A
+0x06180324 func game_InitSceneLayersTasksB hand big mode or round init routine variant B (was game_InitRound_B)
+0x061807f4 func game_InitSceneLayersTasksC hand big mode or round init routine variant C (was game_InitRound_C)
 0x06180c7c func round_InitPlayers hand initialises both player objects at round start
 0x06180d90 func plyr_InitP1 hand initialises P1 object 0x02034800 fields
 0x06180ed6 func plyr_InitP2 hand initialises P2 object 0x02034c20 fields
@@ -1964,8 +1964,8 @@
 0x061886e4 func hit_CheckThrowStart hand starts throw when target in throw state
 0x06188884 func hit_SetStandStunState hand sets state 3 and values on both players and stand
 0x061888cc func plyr_UpdateGuardCounter hand counts guard frames up to 7
-0x061889b0 func plyr_DoActionA hand provisional calls two indirect action handlers
-0x061889c6 func plyr_DoActionB hand provisional sets state 3 then calls handlers
+0x061889b0 func plyr_PlayHitSparkAndVoice hand calls two indirect action handlers (was plyr_DoActionA)
+0x061889c6 func plyr_EnterHitState3SparkAndVoice hand sets state 3 then calls handlers (was plyr_DoActionB)
 0x06188f78 func hud_DrawChallenger hand draws challenger text for both players
 0x06188f94 func hud_DrawPlayerName hand draws challenger or character name string for player
 0x06189014 func anim_LoadScriptPtrs hand loads move script table pointers by state obj+0x13

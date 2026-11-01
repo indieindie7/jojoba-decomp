@@ -1,0 +1,60 @@
+JJ 0x06084580 plyr_UpdateMisc_111 UNSURE plyr_UpdateMisc_111 sets a few state bytes, no callers, no clear role
+JJ 0x0608459e plyr_UpdateMisc_112 UNSURE plyr_UpdateMisc_112 sets state 10, voice, velocity, anim; role unclear
+JJ 0x06084606 plyr_UpdateMisc_113 UNSURE plyr_UpdateMisc_113 conditional field clear then sets timer 0x14; no context
+JJ 0x06084620 plyr_UpdateMisc_114 UNSURE plyr_UpdateMisc_114 sets state 5, velocity, starts script; no callers
+JJ 0x06084688 plyr_UpdateLarge_34 RENAME plyr_DispatchActionTransitions priority chain of transition checks each followed by a handler
+JJ 0x0608a468 plyr_UpdateMisc_144 RENAME plyr_TryCounterHitState18 called from throw check for defender state 0x18; position checks, effect, sound, hitstop 0x1e
+JJ 0x0608cac0 plyr_UpdateMisc_151 RENAME plyr_IsWithinRangeX tests abs x difference against param range
+JJ 0x0608cb00 plyr_UpdateLarge_35 RENAME plyr_TryCounterHitState19 called by hit resolvers for state 0x19; sound, effect, hitstop
+JJ 0x0608cbd4 plyr_ClearTable_8 RENAME plyr_MatchBufferedInput searches per-player input buffer for matching byte
+JJ 0x0608cc8e plyr_ClearTable_9 RENAME plyr_TryBufferedInputReact buffer match then move state, sound, effects, hitstop
+JJ 0x0608d558 plyr_UpdateMisc_152 RENAME plyr_RunStandStateTable jump table by state byte then register active object
+JJ 0x0608df48 plyr_UpdateLarge_36 RENAME plyr_EndActionChooseNext clears flags on owner and stand, pops input queue, tries cancel or throw
+JJ 0x0608e5d4 plyr_UpdateMisc_153 RENAME plyr_IsHoldingBackGuard input nibble 4 plus attack-type field in set; used by reaction choice
+JJ 0x0608e696 plyr_UpdateMisc_154 UNSURE plyr_UpdateMisc_154 voice A or B, timers, state 9; role unclear
+JJ 0x0608ee1c plyr_UpdateLarge_37 RENAME plyr_PlayReactionAnimTriggerOwner anim select by state then owner hit reaction start gated by range
+JJ 0x0608ef58 plyr_UpdateMisc_155 RENAME plyr_IsOutsideOwnerRangeX facing-aware x range check against owner
+JJ 0x0608efb4 plyr_UpdateMisc_156 RENAME plyr_InitKnockbackCounter table value by state, flags, then calls knockback start
+JJ 0x0608f012 plyr_UpdateMisc_157 RENAME plyr_RepeatKnockbackWithVoice voice, flag, copies height, decrements counter, calls knockback start
+JJ 0x0608f050 plyr_UpdateLarge_38 RENAME plyr_StartKnockbackFromTable state 6, velocity from table, anim select, owner thrown anim
+JJ 0x0608f210 plyr_UpdateMisc_158 RENAME plyr_SelectKnockbackAnim picks anim id by substate and flag
+JJ 0x0608f27e plyr_UpdateLarge_39 RENAME plyr_StartKnockbackAltTable same as knockback start but other table and clears +0x7c
+JJ 0x0608f8e2 plyr_UpdateMisc_159 RENAME plyr_EnterWallBounceStun effect for state 10, hit sound, anim 0x10, owner wall bounce anim
+JJ 0x0608faf8 plyr_UpdateMisc_160 RENAME plyr_StartStandGuardRecoverAnim stand flag 3, anim 2 or 3, owner guard recovery
+JJ 0x0608fc3a plyr_UpdateMisc_161 RENAME plyr_StartStandCrouchGuardAnim stand flag 4, anim 5, owner crouch guard
+JJ 0x0608fed6 plyr_UpdateLarge_40 RENAME plyr_DispatchStateAndSyncPartner throw check, state jump table, then syncs partner
+JJ 0x06090088 chr_DispatchStateJump CONFIRM chr_DispatchStateJump jump-table dispatch by state byte then partner sync
+JJ 0x060a4584 chr_Helper_16 UNSURE chr_Helper_16 chain of field compares returning 0/1, no callers
+JJ 0x060a5fe2 chr_Helper_18 UNSURE chr_Helper_18 shift, negate, store field; no callers
+JJ 0x060a6720 chr_Helper_20 UNSURE chr_Helper_20 clamped table lookup plus constant; no callers, purpose unknown
+JJ 0x060b53b4 chr_StepState_6 RENAME plyr_TryGuardClashState7 same pattern as state 0x19 counter for state 7 with fx and sound
+JJ 0x060b5480 chr_Helper_28 RENAME plyr_TryBufferedInputReactState7 grounded check plus input buffer match then sets reaction byte; called for defender state 7 in hit link
+JJ 0x060b56ee chr_StepState_7 RENAME chr_TryBufferedCancelEnterState9 grounded, buffer match, TryCancelMove, then state 9 with fx and sound
+JJ 0x060b9260 chr_Helper_35 UNSURE chr_Helper_35 predicate on four fields (1,0,0x1a,0x0e/0x0f), no callers
+JJ 0x060bad9e chr_UpdateState_13 RENAME chr_IsPushingIntoStageEdge airborne, velocity sign vs edge bound x and edge flag bits
+JJ 0x060bbb8a chr_Helper_37 RENAME chr_StartRoundEndScriptIfGrounded starts script when height<1; called by round end pose for state 8
+JJ 0x060c42a8 chr_Helper_39 UNSURE chr_Helper_39 predicate on partner state 0x0a and sub-fields; no callers
+JJ 0x060c757e chr_Helper_40 UNSURE chr_Helper_40 compares two bytes to table by global index; no callers
+JJ 0x060df1e4 chr_Helper_54 RENAME chr_PlayPannedSoundByVariant switch on byte 0/1/2 selects sound id for panned play
+JJ 0x060e1a9a chr_Helper_62 UNSURE chr_Helper_62 toggles +0x39 between 4 and 10 with table byte; no callers
+JJ 0x060e1b20 chr_Helper_64 RENAME dbg_StepAnimTableEntry increments index mod 10 and loads table entry into anim pointer; used by anim viewer spawners
+JJ 0x060e41e8 chr_UpdateState_24 RENAME dbg_SyncAnimViewerToOwnerState on owner state change loads anim by state*0x300, speed state, blit
+JJ 0x06164250 obj_UpdateStub_A RENAME obj_RemoveFromListsClearOwnerFlag removes self from two lists and clears owner byte
+JJ 0x06173fb4 obj_CanSpawnCheck_A RENAME obj_TryInitStateRecord2 conditions on owner, else clears record and sets mode 2, returns 1
+JJ 0x061746ac obj_CanSpawnCheck_B RENAME obj_TryInitStateRecord3 same as variant A but sets mode 3
+JJ 0x06176110 game_AddScoreOrPoints UNSURE game_AddScoreOrPoints tiered scale 1/3/4 added to two accumulators; target meaning unknown
+JJ 0x06176898 game_UpdateObjectPool RENAME game_InitStageScrollObjects clears pool 7, builds scroll layer objects with per-stage tables, camera scroll
+JJ 0x06178918 game_UpdateSceneState_A RENAME game_ScrollStageLayersToTarget shifts layer positions toward target by delta, then sets stage layer scroll
+JJ 0x06178c74 game_UpdateSceneState_B RENAME game_ScrollStageLayersByDeltaPos adds delta to layers, clamps to stage bounds, sets layer scroll
+JJ 0x06178e38 game_UpdateSceneState_C RENAME game_ScrollStageLayersByDeltaNeg mirror of B with reversed delta sign
+JJ 0x06178fd6 game_UpdateSceneState_D RENAME game_ScrollStageLayersByDeltaSlow quarter-rate delta variant with stage bound clamp
+JJ 0x06179180 game_AdvanceDispatch RENAME game_ScrollStageStep8 adds 8 to scroll counter, calls stage handler, clamps to bounds
+JJ 0x061791f8 game_CheckModeCounter RENAME game_UpdateZoomStateMachine four-state zoom in/hold/out cycle using add/sub zoom
+JJ 0x06179508 game_UpdateModeLarge RENAME game_ApplyLayerShakeOffsets modes 1-3 add table offsets to many layer objects with step counter to 0x10
+JJ 0x0617af8a game_UpdateHudLayout RENAME game_BlitStageLayerTileBlocks blits 8x8 tile blocks to layers 2 and 3 per param, then dma transfer
+JJ 0x0617fce0 game_InitRound_A CONFIRM game_InitRound_A full init incl. round_InitPlayers and meter_Reset
+JJ 0x06180324 game_InitRound_B RENAME game_InitSceneLayersTasksB same init sequence without player or meter init; variant B
+JJ 0x061807f4 game_InitRound_C RENAME game_InitSceneLayersTasksC same init sequence without player or meter init; variant C
+JJ 0x061889b0 plyr_DoActionA RENAME plyr_PlayHitSparkAndVoice spawns type 0x26 fx then facing-guard voice; called by hit resolvers
+JJ 0x061889c6 plyr_DoActionB RENAME plyr_EnterHitState3SparkAndVoice sets state 3, spawns fx, plays const voice; called from hit link
+JJ 0x061bac98 test_CountCoinCost UNSURE test_CountCoinCost sums weights from two tables; meaning not provable, no callers

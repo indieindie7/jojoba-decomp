@@ -1,0 +1,62 @@
+JJ 0x0604a734 plyr_UpdateMisc RENAME plyr_EnterAnimWithTableVelocity sets state 5 and velocity from per-move table then anim 0xb
+JJ 0x0604a7a4 plyr_UpdateMisc_2 RENAME plyr_BeginActionDispatchByMove clears fields, tries throw start, then jump table by move id
+JJ 0x0604a984 plyr_UpdateMisc_3 RENAME plyr_SetState14Dispatch sets state 0x14 and jumps via per-move table
+JJ 0x0604aa02 plyr_UpdateMisc_4 RENAME plyr_EnterState15 sets state 0x15 then hit reaction/landing/anim select
+JJ 0x0604aaa4 plyr_CheckMoveInput RENAME plyr_EnterState17 no input matching; sets state 0x17, voice, table velocity, anim 0x11
+JJ 0x0604ab5a plyr_UpdateMisc_5 RENAME plyr_IsBelowGround returns 1 when height field negative; used as landed test
+JJ 0x0604ab6c plyr_UpdateMisc_6 RENAME plyr_IsDownHeldGated returns 0 if flag==1 else down bit of input
+JJ 0x0604ab8e plyr_UpdateMisc_7 RENAME plyr_IsDownNotHeld returns 1 when down bit clear
+JJ 0x0604aba2 plyr_UpdateMisc_8 UNSURE plyr_UpdateMisc_8 only tests one byte flag nonzero; meaning unknown
+JJ 0x0604abb4 plyr_UpdateMisc_9 RENAME plyr_IsUpHeld returns 1 when up bit set
+JJ 0x0604abee plyr_UpdateMisc_10 RENAME plyr_IsUpHeldGated flag set and up bit held
+JJ 0x0604ac0e plyr_UpdateMisc_11 UNSURE plyr_UpdateMisc_11 single byte flag test, no callers
+JJ 0x0604ac20 plyr_UpdateLarge UNSURE plyr_UpdateLarge many opponent state/hp gates plus bit 0x80; purpose unclear
+JJ 0x0604ad48 plyr_UpdateMisc_12 RENAME plyr_StoreInputMaskIfAny calls BuildInputMask and stores result byte if found
+JJ 0x0604ae32 plyr_UpdateMisc_14 RENAME plyr_IsFacingFlipped returns facing byte != stored side, unless global flag
+JJ 0x0604ae54 plyr_UpdateMisc_15 UNSURE plyr_UpdateMisc_15 chain of flag zero tests then one set; meaning unclear
+JJ 0x0604ae9e plyr_UpdateMisc_16 RENAME plyr_CanAirRecoverInput hitstun/airborne gate plus button combos 0x70; used by air recover
+JJ 0x0604af32 plyr_UpdateMisc_17 RENAME plyr_IsMaskedButtonPressed edge test cur & ~prev against mask for player slot
+JJ 0x0604af98 plyr_UpdateMisc_19 RENAME plyr_LatchHorizInputFacing latches left/right input into direction and facing bytes
+JJ 0x0604b052 plyr_UpdateLarge_2 RENAME plyr_LatchHorizInputRelative same left/right latch but relative to facing byte
+JJ 0x0604b13c plyr_UpdateLarge_3 RENAME plyr_DetectDoubleTapDash phase counter, 12-frame window, same horizontal direction twice sets dash flag
+JJ 0x0604b2cc plyr_UpdateMisc_20 RENAME plyr_DetectInputPairWindow phase machine with 12-frame window for two successive inputs
+JJ 0x0604b35a plyr_UpdateMisc_21 RENAME plyr_ClearDashDetectState clears two phase bytes; only caller is dash detect
+JJ 0x0604b37e plyr_UpdateLarge_4 RENAME plyr_TryStartSuperMove motion match, meter_SpendLevel, sets state 0x21, clears table
+JJ 0x0604b4f4 plyr_UpdateLarge_5 UNSURE plyr_UpdateLarge_5 state 0x16 with all three buttons grounded sets 0x28; meaning unclear
+JJ 0x0604b626 plyr_UpdateMisc_24 RENAME plyr_AllButtonsHeldGrounded grounded unless state 0x14, and 0x70 button mask full
+JJ 0x0604b650 plyr_UpdateMisc_25 RENAME plyr_AddTableOffsetX adds table x offset by subtype, mirrored by facing
+JJ 0x0604b8f8 plyr_UpdateMisc_26 RENAME plyr_UpdateInputLatchPair latches inputs for both players with facing swap
+JJ 0x0604ba1e plyr_UpdateLarge_6 RENAME plyr_CanGrabTarget range and box checks vs opponent and stand; callers are throw/grab starts
+JJ 0x0604bbf6 plyr_UpdateLarge_7 RENAME plyr_IsTargetInGrabReach direction bits plus x distance 0x50 check
+JJ 0x0604bd0a plyr_UpdateMisc_28 RENAME plyr_IsHoldingTowardTarget direction bit matches side of target
+JJ 0x0604bda0 plyr_UpdateMisc_29 RENAME plyr_IsBetweenPair tests x lies between two objects
+JJ 0x0604bdf6 plyr_UpdateMisc_30 RENAME plyr_CheckThreeBoxOverlap three CheckBoxOverlap calls, any hit
+JJ 0x0604bf66 plyr_UpdateLarge_9 RENAME plyr_StepNextMoveOnButton on button edge advances move id 0..0x19 with sound stop/load, mode init
+JJ 0x0604c0b8 plyr_UpdateMisc_31 RENAME plyr_ResetPlayerFields bulk clears player fields and table
+JJ 0x0604c14e plyr_UpdateMisc_32 RENAME plyr_ResetPartnerFields similar clear, sets facing from side field
+JJ 0x0604c238 plyr_UpdateMisc_33 RENAME plyr_IsPlayerBitClear global mask zero or player bit clear returns 1
+JJ 0x0604c260 plyr_UpdateMisc_34 UNSURE plyr_UpdateMisc_34 clears five short fields; purpose unknown
+JJ 0x0604c278 plyr_ClearTable_2 RENAME plyr_ApplyPushQueue loops 4 queue entries calling per-entry apply
+JJ 0x0604c2a4 plyr_UpdateLarge_10 RENAME plyr_ApplyPushQueueEntry steps table offsets onto linked object x with edge clamp
+JJ 0x0604c47e plyr_UpdateMisc_35 RENAME plyr_QueuePushEntry spawns fx and registers linked object in table slot
+JJ 0x0604c534 plyr_UpdateMisc_36 RENAME plyr_JumpByStateByte calls indexed function table by a byte field
+JJ 0x0604c7b4 plyr_UpdateMisc_37 RENAME plyr_IsForwardInputHeld facing-relative left/right bit test with global mode
+JJ 0x0604c89c plyr_UpdateMisc_38 RENAME plyr_SyncPartnerToState14 copies pos/facing to partner, state 0x14, jump handler
+JJ 0x0604e016 plyr_UpdateLarge_11 RENAME plyr_TryStartMeterMove motion match D, meter level check, state 0x11 or CheckEnd with sound
+JJ 0x0604e248 plyr_ClearTable_3 CONFIRM plyr_ClearTable_3 loop clears 5 entries of 3 bytes plus 3 bytes; many callers
+JJ 0x0604fd76 plyr_UpdateMisc_40 RENAME plyr_TryButtonMoveStart button 0x80 edge, CanStartMove, air/ground check, set strength
+JJ 0x0604fe0c plyr_UpdateMisc_41 RENAME plyr_TryButtonMoveStartNoFlag same as 40 but also requires bit 2 of a field clear
+JJ 0x06050876 plyr_UpdateLarge_24 RENAME plyr_CanStartMove large gating on states, flags; true if move allowed; callers are move matchers
+JJ 0x06050ce2 plyr_UpdateLarge_25 RENAME plyr_ConsumeMoveInput clears matched input entries for both slots, sets flag
+JJ 0x060537b6 plyr_UpdateMisc_51 RENAME plyr_StartMoveScriptByInput forward input picks script/frame field and meter gain
+JJ 0x06053daa plyr_UpdateMisc_52 RENAME plyr_StartMoveScriptWithSound sets flags, panned sound, meter gain, script start
+JJ 0x0605520a plyr_SetMoveState_3 RENAME plyr_SetPartnerAssistState sets partner to state 0x1a, offset +-0x10, switch on param
+JJ 0x060559d6 plyr_UpdateMisc_53 RENAME plyr_IsTowardInputHeld facing-relative left/right bit test
+JJ 0x06058e9c plyr_UpdateMisc_56 RENAME plyr_RestartOrResumeByPos compares fields with partner, script_Restart or ResumeSaved
+JJ 0x0605b334 plyr_UpdateLarge_28 RENAME plyr_RunKnockdownRecoverScript phased knockback table, anims 0x19/0x17/0x43-0x45, landing check
+JJ 0x0605b5ea plyr_UpdateMisc_57 RENAME plyr_SetStartPosFacing x = global + offset by side flag, sets facing
+JJ 0x0605b746 plyr_UpdateLarge_29 RENAME plyr_RunEffectScriptPhasesA phased script with efx spawn param 0
+JJ 0x0605b83a plyr_UpdateLarge_30 RENAME plyr_RunEffectScriptPhasesB phased script with efx spawn param 1
+JJ 0x0605b93a plyr_UpdateLarge_31 RENAME plyr_RunEffectScriptPhasesC phased script with efx spawn param 2
+JJ 0x0605c496 plyr_UpdateMisc_58 RENAME plyr_TryStartCounterHit position/facing gate, state 0x11, effect, voice, sound; called from hit code
+JJ 0x0605fae6 plyr_UpdateMisc_61 RENAME plyr_ApplyPartnerOffset adds offset to x and copies height from partner

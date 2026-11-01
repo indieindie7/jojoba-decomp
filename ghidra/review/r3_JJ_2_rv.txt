@@ -1,0 +1,62 @@
+JJ 0x0605fb08 plyr_UpdateMisc_62 RENAME plyr_CopyLinkedField60AndFollow copies linked obj field 0x60 then calls stand_FollowUserFast
+JJ 0x0605fc78 plyr_UpdateMisc_63 RENAME plyr_CopyLinkedByteField loads byte from linked obj table into own field; called in knockdown entry when state 6
+JJ 0x06060d80 plyr_UpdateMisc_64 RENAME plyr_StartScriptFromFlagTable picks one of two script tables by linked flag, starts script at index
+JJ 0x0606178c plyr_UpdateMisc_65 RENAME plyr_RunWaitLinkedStateScript phase0 start script, then waits while linked state 0x1a else landing/guard anim
+JJ 0x06061b2c plyr_UpdateMisc_66 RENAME plyr_SetXFromCameraByFacing sets x field from global camera x plus offset by facing, clears 0x60
+JJ 0x0606260e plyr_UpdateMisc_67 RENAME plyr_StartScriptOnLinkedChange on linked byte change to 0 starts scripts by flags and spawns child
+JJ 0x060627b6 plyr_UpdateMisc_68 RENAME plyr_StartMoveFrame0Script sets frame field 0 then start script
+JJ 0x060628f8 plyr_UpdateMisc_69 RENAME plyr_StartMoveSoundMeter sets flags, plays sound, adds meter, starts script
+JJ 0x0606292e plyr_UpdateMisc_70 RENAME plyr_StartMoveByPhaseSoundMeter 3-way phase: frame field, sound, meter, script per phase
+JJ 0x060629e0 plyr_UpdateMisc_71 RENAME plyr_StartMoveByPhaseSetVelocity 3-way phase with velocity set by facing, sound, meter, script
+JJ 0x06063740 plyr_SetMoveState_7 RENAME plyr_SetPairMoveState sets move id and state 0x1a on self and/or linked partner by param 1/2/3
+JJ 0x06063c84 plyr_CheckMoveInput_6 RENAME plyr_PlaySoundFromTable plays sound id from table unless -1
+JJ 0x0606461e plyr_UpdateMisc_72 RENAME plyr_IsStateByteCR returns 1 if state byte equals 0x0d
+JJ 0x060647b4 plyr_RunStateHandler_2 CONFIRM plyr_RunStateHandler_2 clears fields, calls handler from jumptable by index; 8 TryMoveCmd callers
+JJ 0x06065b36 plyr_NegateDistance_2 RENAME plyr_StoreNegShiftedValue stores negated arithmetic-shift result into field; no distance evidence
+JJ 0x06066aec plyr_CheckMoveInput_7 RENAME plyr_MatchSeqSetPairMoveOne matches motion seq then sets move id 1, state 0x1a on pair
+JJ 0x06066b52 plyr_CheckMoveInput_8 RENAME plyr_MatchSeqSetPairMoveTwo same with move id 2
+JJ 0x06066bd8 plyr_CheckMoveInput_9 RENAME plyr_MatchSeqSetPairMoveThree same with move id 3
+JJ 0x06066d0e plyr_UpdateMisc_73 RENAME plyr_StartMoveFrame11Script sets frame field 0x11 then start script
+JJ 0x06066eaa plyr_UpdateLarge_32 RENAME plyr_RunMovePhasesLinkedStand 3-phase move: scripts, sound, meter, sets linked stand state 0x14 and dispatches
+JJ 0x06067588 plyr_UpdateMisc_74 RENAME plyr_StartMoveFrame1ESoundMeter flags, sound, frame field 0x1e, meter, script
+JJ 0x06069a04 plyr_UpdateMisc_75 RENAME plyr_StartMoveFrame1Meter frame field 1, script, meter add
+JJ 0x0606b096 plyr_UpdateLarge_33 RENAME plyr_SetXFromCameraByCase picks x offset from camera x by facing/stage cases, writes field 0x5c
+JJ 0x0606b26c plyr_UpdateMisc_76 RENAME plyr_TickAdvancePhase tick wait then increments phase and sets fields if anim not ended
+JJ 0x0606c566 plyr_UpdateMisc_77 RENAME plyr_IsBelowBothThresholds returns 0 if both bytes below table threshold else 1
+JJ 0x0606cb64 plyr_CheckMoveInput_10 RENAME plyr_PlayRandomSoundFromTable coin-flip (rand) unless flag, plays sound from table
+JJ 0x0606ccf2 plyr_UpdateMisc_79 RENAME plyr_TickCancelCheckDispatch tick wait, cancel checks, then state dispatch or landing/guard
+JJ 0x0606dc86 plyr_NegateDistance_3 RENAME plyr_StoreNegShiftedValueB negated shift result stored; same as sibling
+JJ 0x0606ede8 plyr_NegateDistance_4 RENAME plyr_StoreNegShiftedValueC negated shift result stored; same as sibling
+JJ 0x06070778 plyr_RunMoveScript_3 RENAME plyr_RunTeleportBesideTargetMove phases: fx, then repositions x +-0x30 from linked target using camera-edge check
+JJ 0x06072156 plyr_RunMoveScript_4 RENAME plyr_RunDecelSlideMove phases of velocity decel, clear hitstun pair, anim 0x4f, spawn effect
+JJ 0x0607246c plyr_RunMoveScript_5 RENAME plyr_RunSpawnFxMove start script, wait for end, spawn owned fx kinds 4 and 5
+JJ 0x06072610 plyr_UpdateMisc_81 RENAME plyr_TryStartStandStunReact if state bytes match sets 0x28 and plays sound, returns 1; used by throw start check
+JJ 0x06072650 plyr_UpdateMisc_82 RENAME plyr_IsLinkedStateEAnim10 linked obj state 0x0e and own byte 0x10
+JJ 0x06078868 plyr_CheckMoveInput_17 RENAME plyr_PlayMoveSoundByIndex plays sound from table unless -1
+JJ 0x06078c5c plyr_UpdateMisc_83 RENAME plyr_SyncLinkedStateAndPos sets linked state 0x14, copies pos and facing
+JJ 0x0607a2e8 plyr_UpdateMisc_85 RENAME plyr_ClearTwoFlags clears two adjacent bytes
+JJ 0x0607a8de plyr_NegateDistance_5 RENAME plyr_StoreNegShiftedValueD negated shift result stored; same as sibling
+JJ 0x0607af02 plyr_UpdateMisc_86 RENAME plyr_RunTimedHoldScript phase0 start script and set timer 0x28, phase1 counts down then advances
+JJ 0x0607b312 plyr_UpdateMisc_87 RENAME plyr_SyncScriptWithLinked restart or resume script by comparing ushort with linked obj
+JJ 0x0607b340 plyr_UpdateMisc_88 RENAME plyr_IsLinkedState11Anim36 linked state 0x11 and own byte 0x36
+JJ 0x0607b872 plyr_UpdateMisc_89 RENAME plyr_SyncLinkedStateAndDispatch like state sync then dispatch via chr_DispatchStateJump
+JJ 0x0607c89a plyr_RunMoveScript_6 RENAME plyr_RunAirDiveMove phases: start anim, apply velocity XY, then air-hit or landing anim
+JJ 0x0607db8c plyr_RunMoveScript_7 RENAME plyr_RunSlideSpawnMove phases: wait, spawn type 4E effect with anim 0x4f, decel, anim 0x50
+JJ 0x0607e0f0 plyr_CheckMoveInput_18 RENAME plyr_PlayCmdSoundByIndex plays sound from table unless -1
+JJ 0x0607e116 plyr_UpdateMisc_90 RENAME plyr_JumpByStateByte indirect jump through table indexed by state byte
+JJ 0x0607e2f6 plyr_UpdateMisc_91 RENAME plyr_TickCancelCheckCrouch tick wait, cancel checks, crouch guard start, state jump or landing
+JJ 0x0607e3e0 plyr_UpdateMisc_92 RENAME plyr_SyncLinkedStateAndPosFlag sets linked state 0x14, copies pos and facing, sets flag
+JJ 0x0607fab6 plyr_UpdateMisc_98 RENAME plyr_TryStandAutoGuard if linked conditions and facing ok sets timer, spawns fx and sound, returns 1; called by hit resolve
+JJ 0x0607fb40 plyr_UpdateMisc_99 RENAME plyr_TryArmHitReactTimer state 0x16 with row match sets timers, returns 1; caller hit_ApplyHitLink
+JJ 0x0607fbc8 plyr_UpdateMisc_100 RENAME plyr_TryStartCounterReact state 0x16 row match then handler 9, fx, sound, returns 1
+JJ 0x0608071a plyr_NegateDistance_6 RENAME plyr_StoreNegShiftedValueE negated shift result stored; same as sibling
+JJ 0x06080c22 plyr_UpdateMisc_101 RENAME plyr_SyncScriptWithLinkedB restart or resume script by comparing ushort with linked obj
+JJ 0x06084300 plyr_UpdateMisc_103 RENAME plyr_IsOnlyFlagDSet returns 1 only if three bytes zero and fourth set
+JJ 0x06084336 plyr_UpdateMisc_104 RENAME plyr_CanActAtLowStun field 0x60 <= 0x6f and helper true; gate for recovery move
+JJ 0x06084360 plyr_UpdateMisc_105 RENAME plyr_IsLowStunInputBitA field 0x60 <= 0x6f and input bit 1 set
+JJ 0x06084382 plyr_UpdateMisc_106 RENAME plyr_IsLowStunInputBitB field 0x60 <= 0x6f and input bit 1 set (other word)
+JJ 0x060843c0 plyr_CheckMoveInput_23 RENAME plyr_StartDirectionalRecoveryMove sets state 5, velocity by input direction, starts script
+JJ 0x06084446 plyr_UpdateMisc_107 RENAME plyr_EnterState5ClearScript sets state 5, clears many fields and timers, starts script
+JJ 0x060844b8 plyr_UpdateMisc_108 RENAME plyr_EnterState5AnimByFacing sets state 5, clears velocities, anim 6 plus byte
+JJ 0x06084528 plyr_UpdateMisc_109 RENAME plyr_EnterState5SubFourScript sets state 5 substate 4, copies facing, starts script
+JJ 0x0608454c plyr_UpdateMisc_110 RENAME plyr_EnterState5SubSixAnim sets state 5 substate 6, anim 8 plus byte
