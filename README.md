@@ -30,6 +30,7 @@ database. You need your own dump of the board to use any of this.
 
 - Globals + types (11-01): CPS3 work RAM 0x02000000-0x0207ffff was unmapped, so SH-2 literal-pool slots never became pointers; `ResolvePools.java` maps that range as an uninitialized RW block, makes ROM read-only and types the 15,180 pool slots that point into it (2,629 RAM targets). `CsDumpRo.java` decompiles with the program's options so read-only pool values propagate. All 1,655 RAM globals used in code named by 5 agent batches (`ghidra/globals/gl_prompt_JJ.txt`, merged by `tools/glmergejj.py`); 0 `DAT_020` left in code, about 425 names still end in `_<addr>`. Fighter object `JJ_Obj` (0x420 bytes, 85 fields; P1 0x0203488c, P2 +0x420, stands +0x840 / +0xc60, health +0x141) in `structs_JJ.txt`, the 4 objects typed (`gtypes_JJ.txt`).
 - Review round 4 (11-01): the last 20 provisional names reviewed with named globals and the fighter struct as evidence (`ghidra/review/r4_JJ_verdicts.txt`): 1 confirmed, 19 renamed, 0 provisional left.
+- Weak-name round (11-01): the 424 globals still ending in `_<addr>` got name-based contexts (`tools/glctxn.py`); 99 renamed (28 from `JJ_Obj` field names, 71 from usage). The remaining 327 have no usage line left in the decompile (fields of typed objects, pool-only references), so their names stay.
 
 ## What is here
 
