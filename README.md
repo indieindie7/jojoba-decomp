@@ -28,6 +28,8 @@ Non-commercial, done for study (fighting-game stand / combo design reference).
 **No game data is included**: no ROMs, no BIOS, no decrypted images, no decompiled C, no game text, no Ghidra
 database. You need your own dump of the board to use any of this.
 
+- Globals + types (11-01): CPS3 work RAM 0x02000000-0x0207ffff was unmapped, so SH-2 literal-pool slots never became pointers; `ResolvePools.java` maps that range as an uninitialized RW block, makes ROM read-only and types the 15,180 pool slots that point into it (2,629 RAM targets). `CsDumpRo.java` decompiles with the program's options so read-only pool values propagate. All 1,655 RAM globals used in code named by 5 agent batches (`ghidra/globals/gl_prompt_JJ.txt`, merged by `tools/glmergejj.py`); 0 `DAT_020` left in code, about 425 names still end in `_<addr>`. Fighter object `JJ_Obj` (0x420 bytes, 85 fields; P1 0x0203488c, P2 +0x420, stands +0x840 / +0xc60, health +0x141) in `structs_JJ.txt`, the 4 objects typed (`gtypes_JJ.txt`).
+
 ## What is here
 
 | Path | Content |
@@ -37,8 +39,9 @@ database. You need your own dump of the board to use any of this.
 | `ghidra/funcinfo_JOJOBA.tsv` | per-function export: `F` address name source size, `C` callees (string rows removed) |
 | `ghidra/naming/prompt_JOJO.txt` | the round-1 naming prompt |
 | `ghidra/review/` | round-2 review prompt + verdict lines (`JJ 0x<addr> <old> CONFIRM/RENAME/UNSURE <new> <reason>`) |
-| `ghidra/scripts/` | `FindSh2FunctionsMem.java` (SH-2 prologue scan), `CreateAt.java`, `CsDumpAll.java` (decompile dump with headers) |
-| `tools/` | `cps3dec.py` (SIMM de-interleave + CPS3 decrypt), `splitdump.py` (cut the dump into slices), `ckprovctx.py`, `srprovapply.py`, `pubfuncinfo.py` |
+| `ghidra/scripts/` | `FindSh2FunctionsMem.java` (SH-2 prologue scan), `CreateAt.java`, `CsDumpAll.java` (decompile dump with headers), `ResolvePools.java`, `CsDumpRo.java`, `ListBlocks.java`, `ApplyGlobals.java`, `DefineStructs.java` |
+| `ghidra/globals/` | `globals_JOJOBA.txt` (`0x<addr> <name>`), `structs_JJ.txt` (DefineStructs spec, category /JoJo), `gtypes_JJ.txt`, naming prompt; apply with `ResolvePools.java 02000000 02080000`, then `DefineStructs.java <spec> /JoJo` and `ApplyGlobals.java <file>` |
+| `tools/` | `cps3dec.py` (SIMM de-interleave + CPS3 decrypt), `splitdump.py` (cut the dump into slices), `ckprovctx.py`, `srprovapply.py`, `pubfuncinfo.py`, `glscan.py` / `glctx.py` / `glmergejj.py` (globals) |
 
 ## Licence
 

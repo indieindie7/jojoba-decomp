@@ -1,0 +1,4 @@
+0x0203488c obj_p1_player JJ_Obj
+0x02034cac obj_p2_player JJ_Obj
+0x020350cc obj_p1_stand JJ_Obj
+0x020354ec obj_p2_stand JJ_Obj
