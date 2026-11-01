@@ -1,0 +1,20 @@
+JJ 0x0604aba2 plyr_UpdateMisc_8 RENAME plyr_IsFlag250Set returns whether byte at +0x250 nonzero; caller then enters state5 sub-six anim
+JJ 0x0604ac0e plyr_UpdateMisc_11 RENAME plyr_IsFlag252Set returns whether byte at +0x252 nonzero; ChooseReaction tests same byte before knockback
+JJ 0x0604ac20 plyr_UpdateLarge RENAME plyr_CheckPartnerReactionGate returns 1 only if partner state not in blocked list and input bit 0x80 set; used by ChooseReaction/EndActionChooseNext
+JJ 0x0604ae54 plyr_UpdateMisc_15 RENAME plyr_IsAllButtonsFlagArmed returns 1 when +0x253 set and not attract/round-result/+0x193/+0x226/+0x254
+JJ 0x0604b4f4 plyr_UpdateLarge_5 RENAME plyr_UpdateAllButtonsFlag per-frame: sets +0x253 from all-buttons-held-grounded, or sets +0x254 and state 0x28 in state 0x16
+JJ 0x0604c260 plyr_UpdateMisc_34 RENAME plyr_ClearInputState zeroes five input/held-button halfwords at +0x170..+0x186
+JJ 0x06084580 plyr_UpdateMisc_111 RENAME plyr_EnterState5SubSeven sets state 5, sub 7, clears sub8/sub7 bytes, sets Y-ish velocity 0x4000
+JJ 0x0608459e plyr_UpdateMisc_112 RENAME plyr_EnterState5SubEightLaunch state 5 sub 8: voice, facing copy, signed launch velocity, anim 0x11
+JJ 0x06084606 plyr_UpdateMisc_113 RENAME plyr_ConsumeFlagAeSetTimer195 if byte +0xae is 0x80 clear it and set +0x195 to 0x14
+JJ 0x06084620 plyr_UpdateMisc_114 RENAME plyr_EnterState5SubNineScript state 5 sub 9, sets velocities, facing copy, starts script from table
+JJ 0x0608e696 plyr_UpdateMisc_154 RENAME plyr_StartGrabResultState on +0x18e==1 picks state 0x1e (both players, voice A) or 0x25 (voice B) by +0x193
+JJ 0x060a4584 chr_Helper_16 RENAME chr_IsState1AMove10Active tests +0x194 nonzero, e4==1,e5==0, state 0x1a, move id 0x10
+JJ 0x060a5fe2 chr_Helper_18 RENAME chr_SetNegShiftedVelocityF8 stores negated arithmetic shift result into +0xf8, returns byte +0x24f
+JJ 0x060a6720 chr_Helper_20 RENAME chr_GetZoomOffsetFromTable clamps gfx_zoom_x-0x40 to 0..0x10, indexes table, adds 0xe0
+JJ 0x060b9260 chr_Helper_35 RENAME chr_IsState1AMove0E0F tests e4==1,e5==0, state 0x1a, move id 0x0e or 0x0f
+JJ 0x060c42a8 chr_Helper_39 RENAME chr_IsPartnerInHitPhase partner state 0x0a, phase bytes e5==2, e6 nonzero, +0x21a in 1/3, e7 in 3/4
+JJ 0x060c757e chr_Helper_40 RENAME chr_HasPlayerReachedWinsNeeded returns 1 if either player round wins reach table value indexed by wins_needed
+JJ 0x060e1a9a chr_Helper_62 RENAME chr_ToggleField38Mode toggles +0x39 between 4 and 10 and sets +0x38 to default or round-ui value
+JJ 0x06176110 game_AddScoreOrPoints RENAME game_AddTierScaledDivide param_2 tier 1-2 x1, 3-4 x3, 5-7 x4; adds divide-step results into two accumulators
+JJ 0x061bac98 test_CountCoinCost CONFIRM test_CountCoinCost sums weights over coin/credit setting tables, no callers, test-menu style
