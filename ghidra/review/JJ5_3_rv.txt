@@ -1,0 +1,64 @@
+JJ 0x060feef8 fx_InitType5B CONFIRM fx_InitType5B sets type 0x5b effect fields and defaults
+JJ 0x060fef4e fx_SpawnType5BVariant CONFIRM fx_SpawnType5BVariant allocs object, inits type 5B, switch on variant
+JJ 0x061008fa fx_CallByIndex_2 RENAME fx_CallTableByIndex indirect call through table by index, numeric suffix not allowed
+JJ 0x061035b8 fx_InitType5C CONFIRM fx_InitType5C sets type 0x5c fields
+JJ 0x0610efec fx_SpawnType5D CONFIRM fx_SpawnType5D allocs and fills type 0x5d by variant
+JJ 0x0611442c fx_SpawnType5E CONFIRM fx_SpawnType5E allocs and fills type 0x5e
+JJ 0x06114664 fx_SpawnType5FQuad CONFIRM fx_SpawnType5FQuad spawns quad of type 0x5f objects
+JJ 0x0611487c fx_AllocScrollSlot CONFIRM fx_AllocScrollSlot claims free slot, returns index to caller
+JJ 0x061148bc fx_InitType60 CONFIRM fx_InitType60 sets type 0x60 fields
+JJ 0x06114914 fx_SpawnType60Variant CONFIRM fx_SpawnType60Variant large variant switch, calls fx_InitType60
+JJ 0x06116a2c fx_SpawnEffectByType CONFIRM fx_SpawnEffectByType dispatches spawn by effect type
+JJ 0x0611718c fx_SpawnRandomSparkType15 CONFIRM fx_SpawnRandomSparkType15 random spark of type 0x15
+JJ 0x06117f98 fx_StepOrFinishStub CONFIRM fx_StepOrFinishStub steps or finishes effect
+JJ 0x06119428 fx_UpdateUntilXLimit CONFIRM fx_UpdateUntilXLimit moves until x bound reached
+JJ 0x0611aa5c fx_SpawnStandTrailPart CONFIRM fx_SpawnStandTrailPart one trail part for stand
+JJ 0x0611b2cc fx_SpawnTrailType63Variant CONFIRM fx_SpawnTrailType63Variant trail type 0x63 variants
+JJ 0x0611b40c fx_SpawnTrailType63Layer2 CONFIRM fx_SpawnTrailType63Layer2 trail on layer 2
+JJ 0x0611b4b8 fx_SpawnTrailType63Copy CONFIRM fx_SpawnTrailType63Copy trail copying owner fields
+JJ 0x0611b594 fx_SpawnTrailType63Offset CONFIRM fx_SpawnTrailType63Offset trail with position offset
+JJ 0x0611b674 fx_SpawnType100Marker CONFIRM fx_SpawnType100Marker spawns marker type 100
+JJ 0x0611b75c fx_SpawnType100ByIndex CONFIRM fx_SpawnType100ByIndex switch by index, type byte 100, matches caller use
+JJ 0x0611fd86 efx_CallStateTable CONFIRM efx_CallStateTable jump table call by state index
+JJ 0x06121ee0 efx65_Init CONFIRM efx65_Init sets type 0x65 object fields
+JJ 0x06121f40 efx65_Init_2 RENAME efx65_InitLayer2 same init but layer 2
+JJ 0x06121fd4 efx65_Init_3 RENAME efx65_InitAlt alternate init variant of type 0x65
+JJ 0x06122034 efx65_Init_4 RENAME efx65_InitFixed45 init with fixed 0x45 scale constant
+JJ 0x06122094 efx65_Init_5 RENAME efx65_InitSpeedShift init derives +0x44 from speed shift
+JJ 0x06122120 efx65_Init_6 RENAME efx65_InitBySide init picks values by facing side
+JJ 0x06122b8e efx66_Init CONFIRM efx66_Init sets type 0x66 fields
+JJ 0x06122bee efx66_CallStateTable CONFIRM efx66_CallStateTable jump table by state
+JJ 0x061239ac efx66_Init_2 RENAME efx67_InitDispatch dispatches into type 0x67 init, belongs to efx67
+JJ 0x061239f0 efx67_Spawn CONFIRM efx67_Spawn allocs type 0x67 object
+JJ 0x06123a50 efx67_Spawn_2 RENAME efx67_SpawnFromOwner copies owner fields into new object
+JJ 0x06124c74 efx67_Helper RENAME efx67_PlaceRelativeToOwner sets position relative to owner; no callers, moderate confidence
+JJ 0x061255c8 efx68_Init CONFIRM efx68_Init sets type 0x68 fields
+JJ 0x06125628 efx68_CallStateTable CONFIRM efx68_CallStateTable jump table by state
+JJ 0x06126cb6 efx68_CallStateTable_2 RENAME efx68_CallStateTableB second jump table dispatcher
+JJ 0x0612727a efx68_Update RENAME efx68_PlaceCursorPair body sets fields on two global objects from table, not free or timer; no callers
+JJ 0x061276de efx68_SpawnMisc RENAME efx68_SpawnFromOwnerPos allocs object, inits via efx6a layer-1 init, copies owner x y and palette
+JJ 0x06127a18 efx6a_Init CONFIRM efx6a_Init sets type 0x6a defaults, layer 2
+JJ 0x06127a84 efx6a_Init_2 RENAME efx6a_InitTableB same init, different sprite table and scale; used by pair spawner
+JJ 0x06127af0 efx6a_Init_3 RENAME efx6a_InitTableC same init, third sprite table
+JJ 0x06127b7c efx6a_Init_4 RENAME efx6a_InitLayer1 layer 1 variant without flag bytes 5a 5b
+JJ 0x06127bdc efx6a_SpawnMisc RENAME efx6a_SpawnKind3 one object kind 3 at fixed position, frame from table
+JJ 0x06127c64 efx6a_SpawnMisc_2 RENAME efx6a_SpawnPairKind2 two kind 2 objects, sprite chosen by mode and character
+JJ 0x06127e90 efx6b_SpawnBurst CONFIRM efx6b_SpawnBurst loop of two type 0x6b objects
+JJ 0x06128078 efx6c_SpawnBurst CONFIRM efx6c_SpawnBurst loop of type 0x6c objects with velocities from tables
+JJ 0x061282dc efx6d_Spawn CONFIRM efx6d_Spawn allocs type 0x6d object from row table, jumps by index
+JJ 0x06128988 efx6d_SpawnListFromTable CONFIRM efx6d_SpawnListFromTable walks triplet list, calls efx6e_Spawn per entry
+JJ 0x061289d8 efx6e_Spawn CONFIRM efx6e_Spawn allocs type 0x6e object from 16-byte row, owner set
+JJ 0x06128af4 efx6e_SpawnListFromTable CONFIRM efx6e_SpawnListFromTable walks list, calls SpawnFromRow
+JJ 0x06128b30 efx6e_SpawnFromRow CONFIRM efx6e_SpawnFromRow looks up row, forwards two fields if valid
+JJ 0x0612c05c efx6e_Init RENAME efx6e_ClaimSlot finds free slot in 8-entry table, sets owner and layer; callers pass spawned object
+JJ 0x0612c096 efx6e_Helper RENAME efx6e_ReleaseSlot finds slot owned by object and clears it
+JJ 0x0612c2d0 efx6f_Init CONFIRM efx6f_Init sets type 0x6f fields
+JJ 0x0612c6f6 efx6f_CallStateTable CONFIRM efx6f_CallStateTable jump table by index
+JJ 0x0612ec04 efx5d_Spawn CONFIRM efx5d_Spawn type 0x5d big variant switch
+JJ 0x0612ff94 efx71_Spawn CONFIRM efx71_Spawn type 0x71 copies fields from owner
+JJ 0x06131974 efx73_Spawn CONFIRM efx73_Spawn allocs type 0x73 after screen setup calls
+JJ 0x06131a88 efx73_SpawnBurst CONFIRM efx73_SpawnBurst loop of four type 0x73 objects
+JJ 0x06131bf4 efx73_SpawnBurst_2 RENAME efx73_SpawnBurstWithTail four objects plus one extra kind 9 object
+JJ 0x06131ee8 efx30_Spawn CONFIRM efx30_Spawn allocs type 0x30 object, x by facing
+JJ 0x06132024 efx30_Spawn_2 RENAME efx30_SpawnOffsetFromOwner type 0x30 at owner pos plus offset, pool by owner state
+JJ 0x06132184 efx30_Spawn_3 RENAME efx30_SpawnOffsetFromOwnerAlt twin of offset spawner with own handler and table

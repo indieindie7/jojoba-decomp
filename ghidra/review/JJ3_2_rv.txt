@@ -1,0 +1,64 @@
+JJ 0x060930dc chr_TryTransition_7 RENAME chr_TryEnterStateA13 command check plus global gate then SetState 0x13
+JJ 0x06093136 chr_TryTransition_8 RENAME chr_TryEnterStateA12 command check, meter level gate, SetState 0x12 or alt call
+JJ 0x0609322c chr_SetState CONFIRM chr_SetState writes state byte, clears substep, mirrors facing and position to partner
+JJ 0x06095e1e chr_Helper_9 RENAME chr_IsWithinXRange returns 1 if x distance between two objects within 2x param
+JJ 0x06095e3c chr_ResetMarks CONFIRM chr_ResetMarks sets marks 0x5a/0x5b to 0x3f and a flag; no dispatch in body
+JJ 0x06095e4e chr_UpdateState_3 RENAME chr_UpdateBlinkAnimStep blink bit from frame counter, advance substep on anim end -1, run anim
+JJ 0x06095ea2 chr_UpdateFlicker CONFIRM chr_UpdateFlicker blink bit from frame counter, mark bytes ramp and clamp, clears flags at end
+JJ 0x0609727a chr_Helper_10 RENAME chr_InitFacingVelocityTimers sets timers 60 and 10, x velocity by facing, zeroes vector; 7 state callers
+JJ 0x060972b4 chr_Helper_11 RENAME chr_UpdateShakeOffset counts down two timers, writes offset from 16-entry table plus rand&3, mirrors to partner
+JJ 0x0609733e chr_Helper_12 RENAME chr_RunSubstateWithShake substep 0 or 1 handler then shake offset update
+JJ 0x06097390 chr_UpdateState_4 RENAME chr_AdvanceSubstateInitMotion advance substep, timer 3, init motion helper, set anim from table
+JJ 0x060973c0 chr_UpdateState_5 RENAME chr_RunSubstateAnimTimer 3-frame countdown calling with 0xf, every 4 frames sets anim from table
+JJ 0x06097414 chr_DispatchStateJump_4 RENAME chr_StepThreePhaseAction substep 0 setup, 1 wait done then next anim, 2 end-of-anim jump
+JJ 0x060975c0 chr_DispatchStateJump_5 RENAME chr_ResetMarksClearDispatchSubstate sets marks 0x3f, clears short, indexed jump by substep byte
+JJ 0x060980da chr_TryTransition_9 RENAME chr_TryEnterStateB0 command check, +0x60 zero, SetState_2 state 0
+JJ 0x0609813e chr_TryTransition_10 RENAME chr_TryEnterStateB2 command check then SetState_2 state 2
+JJ 0x06098184 chr_TryTransition_11 RENAME chr_TryEnterStateB3 command check then SetState_2 state 3
+JJ 0x060981ca chr_TryTransition_12 RENAME chr_TryEnterStateB6 grounded gate, command check, SetState_2 state 6
+JJ 0x0609823e chr_TryTransition_13 RENAME chr_TryEnterStateB9 grounded, command check, button-bit gate by byte, SetState_2 state 9
+JJ 0x060982d0 chr_TryTransition_14 RENAME chr_TryEnterStateBD command check then SetState_2 state 0xd
+JJ 0x06098336 chr_TryTransition_15 RENAME chr_TryEnterStateBE command check, global gate, meter nonzero, SetState_2 state 0xe
+JJ 0x060983b6 chr_TryTransition_16 RENAME chr_TryEnterStateBA airborne gate, button-bit gates, SetState_2 state 10
+JJ 0x0609846a chr_TryTransition_17 RENAME chr_TryEnterStateB1 airborne gate, command check, SetState_2 state 1
+JJ 0x060984c0 chr_TryTransition_18 RENAME chr_TryEnterStateB8 flag and airborne gate, command check, SetState_2 state 8
+JJ 0x06098534 chr_TryTransition_19 RENAME chr_TryEnterStateB18 command check then SetState_2 state 0x18
+JJ 0x0609858c chr_SetState_2 RENAME chr_SetStateSyncPartner like SetState: state byte, clear substep, set marks, per-state partner copy
+JJ 0x0609c01a chr_UpdateState_6 RENAME chr_AdvanceSubstateSetAnim advance substep, one call, set anim from table
+JJ 0x0609c03c chr_DispatchStateJump_6 RENAME chr_PeriodicSubstateEffect every 4 frames if byte nonzero, anim from table then effect calls
+JJ 0x0609c09e chr_DispatchStateJump_7 RENAME chr_StepAirbornePhases substep 0 setup, 1 integrates height until <1, 2 jump on anim end
+JJ 0x060a0198 chr_TryTransition_20 RENAME chr_TryEnterStateC3 command check then SetState_3 state 3
+JJ 0x060a01e0 chr_TryTransition_21 RENAME chr_TryEnterStateC4 command check, field zero gate, SetState_3 state 4
+JJ 0x060a0238 chr_TryTransition_22 RENAME chr_TryEnterStateC5 command check then SetState_3 state 5
+JJ 0x060a0286 chr_TryTransition_23 RENAME chr_TryEnterStateC7 command check then SetState_3 state 7
+JJ 0x060a02fc chr_TryTransition_24 RENAME chr_TryEnterStateCA flag gate, command check, SetState_3 state 10
+JJ 0x060a033c chr_TryTransition_25 RENAME chr_TryEnterStateCB command check then SetState_3 state 0xb
+JJ 0x060a0384 chr_TryTransition_26 RENAME chr_TryEnterStateC9 global and airborne gates, command check, SetState_3 state 9
+JJ 0x060a0412 chr_TryTransition_27 RENAME chr_TryEnterStateC16 command check then SetState_3 state 0x16
+JJ 0x060a0460 chr_SetState_3 RENAME chr_SetStateFaceSync sets state, clears substep, per-state facing and partner state sync
+JJ 0x060a09b2 chr_DispatchStateJump_8 RENAME chr_RunSubstateStep substep 0 or 1 handler then tail call
+JJ 0x060a09e0 chr_DispatchStateJump_9 RENAME chr_AdvanceSubstateSetAnimJump advance substep, call, tail call with table anim
+JJ 0x060a0a3c chr_DispatchStateJump_10 RENAME chr_UpdateCountdownAnim counter decrement calling with value, every 4 frames tail call
+JJ 0x060a0b1c chr_DispatchStateJump_11 RENAME chr_JumpOnAnimEnd one call then tail call if anim byte is -1
+JJ 0x060a0b70 chr_CallTableEntry CONFIRM chr_CallTableEntry calls handler from table by index unless entry is -1
+JJ 0x060a0b96 chr_DispatchStateJump_12 RENAME chr_ResetMarksDispatchSubstate sets marks 0x3f then indexed jump by substep byte
+JJ 0x060a130c chr_DispatchStateJump_13 RENAME chr_EnterMoveJump common move entry: copy byte, call, set flag, indexed jump by arg; 7 TryEnter callers
+JJ 0x060a133e chr_TryTransition_28 RENAME chr_TryEnterStateD1 command check then EnterMoveJump arg 1
+JJ 0x060a13ec chr_TryTransition_29 RENAME chr_TryEnterStateD5 command check then EnterMoveJump arg 5
+JJ 0x060a1514 chr_TryTransition_30 RENAME chr_TryEnterStateDD command check then EnterMoveJump arg 0xd
+JJ 0x060a15c4 chr_Helper_13 RENAME chr_ClearButtonHold zeroes the three hold-tracking bytes used by Helper_14
+JJ 0x060a15d8 chr_Helper_14 RENAME chr_UpdateButtonHold tracks held attack-button bits 0x70: hold count to 12, repeat count, last mask
+JJ 0x060a1644 chr_TryTransition_31 RENAME chr_TryEnterStateD9 any of three command patterns then EnterMoveJump arg 9
+JJ 0x060a1732 chr_TryTransition_32 RENAME chr_TryEnterStateD10 flag gate, command check, meter nonzero, EnterMoveJump arg 0x10
+JJ 0x060a181c chr_TryTransition_33 RENAME chr_TryEnterStateD12 several command patterns, meter nonzero, EnterMoveJump arg 0x12
+JJ 0x060a1974 chr_TryTransition_34 RENAME chr_TryEnterStateD1D flag gate, command check, meter level 3, EnterMoveJump arg 0x1d
+JJ 0x060a1d46 chr_UpdateState_7 RENAME chr_SetFlickerDelay stores delay byte from table by param, plays two effects if global set
+JJ 0x060a1d8c chr_UpdateFlicker_2 RENAME chr_UpdateFlickerFade counts down delay then fades mark bytes, returns 1 when done
+JJ 0x060a31f2 chr_StepState_5 RENAME chr_SetClampedVelocity computes velocity from facing, clamps to table min/max, copies two values
+JJ 0x060a32ce chr_Helper_15 RENAME chr_AimAtTargetSetVelocity sets facing toward target x, angle quantized to table, sets velocities
+JJ 0x060a4584 chr_Helper_16 UNSURE chr_Helper_16 returns 1 if five state bytes match fixed values, meaning unclear
+JJ 0x060a52ca chr_Helper_17 RENAME chr_SetFlashValueByFrame sets field 0x48 to 9 or 0 from frame counter bit 1
+JJ 0x060a5862 chr_UpdateState_8 RENAME chr_BeginEffectFrames advance substep, set anim from table, set frame 0x79 and one more call
+JJ 0x060a589e chr_UpdateState_9 RENAME chr_CycleEffectFrames every 4 frames set frame 0x79+byte, every 8 frames helper call
+JJ 0x060a58e2 chr_DispatchStateJump_14 RENAME chr_StepAirbornePhasesGround like StepAirbornePhases plus marks reset on land and ground-state check
+JJ 0x060a5fe2 chr_Helper_18 UNSURE chr_Helper_18 stores negated call result into a field and returns a byte; purpose unclear

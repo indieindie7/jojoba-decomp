@@ -1,0 +1,192 @@
+JJ 0x06064992 plyr_TryMoveCmd7_5 CONFIRM plyr_TryMoveCmd7_5 matches command then enters move state N via handler, some gated on stand/meter byte
+JJ 0x06064a4a plyr_TryMoveCmdE CONFIRM plyr_TryMoveCmdE matches command then enters move state N via handler, some gated on stand/meter byte
+JJ 0x06064b36 plyr_TryMoveCmd10_5 CONFIRM plyr_TryMoveCmd10_5 matches command then enters move state N via handler, some gated on stand/meter byte
+JJ 0x06064c32 plyr_TryMoveCmd14 CONFIRM plyr_TryMoveCmd14 matches command then enters move state N via handler, some gated on stand/meter byte
+JJ 0x06064cf2 plyr_TryMoveCmd13 CONFIRM plyr_TryMoveCmd13 matches command then enters move state N via handler, some gated on stand/meter byte
+JJ 0x06064d62 plyr_TryMoveCmd12 CONFIRM plyr_TryMoveCmd12 matches command then enters move state N via handler, some gated on stand/meter byte
+JJ 0x06065b36 plyr_NegateDistance_2 UNSURE plyr_NegateDistance_2 stores negated helper result; meaning of helper unknown, no callers
+JJ 0x06066aec plyr_CheckMoveInput_7 UNSURE plyr_CheckMoveInput_7 command match then sets mode 1 on self and partner object; purpose unclear
+JJ 0x06066b52 plyr_CheckMoveInput_8 UNSURE plyr_CheckMoveInput_8 same as _7 with mode 2
+JJ 0x06066bd8 plyr_CheckMoveInput_9 UNSURE plyr_CheckMoveInput_9 same as _7 with mode 3
+JJ 0x06066d0e plyr_UpdateMisc_73 UNSURE plyr_UpdateMisc_73 two helper calls with id 0x11 and a table pointer; unclear
+JJ 0x06066eaa plyr_UpdateLarge_32 UNSURE plyr_UpdateLarge_32 branches on mode byte and initialises partner object state 0x14 with copied pos; stand-like but not certain
+JJ 0x06067588 plyr_UpdateMisc_74 UNSURE plyr_UpdateMisc_74 sets flags then four helper calls; unclear
+JJ 0x06068d34 plyr_TryMoveCmd2_5 CONFIRM plyr_TryMoveCmd2_5 matches command then enters move state N via plyr_SetMoveState_8, caller of it
+JJ 0x06068d60 plyr_TryMoveCmd3_5 CONFIRM plyr_TryMoveCmd3_5 matches command then enters move state N via plyr_SetMoveState_8, caller of it
+JJ 0x06068d8a plyr_TryMoveCmd5_5 CONFIRM plyr_TryMoveCmd5_5 matches command then enters move state N via plyr_SetMoveState_8, caller of it
+JJ 0x06068dd8 plyr_TryMoveCmd8_3 CONFIRM plyr_TryMoveCmd8_3 matches command then enters move state N via plyr_SetMoveState_8, caller of it
+JJ 0x06068e04 plyr_TryMoveCmd9_3 CONFIRM plyr_TryMoveCmd9_3 matches command then enters move state N via plyr_SetMoveState_8, caller of it
+JJ 0x06068e30 plyr_TryMoveCmdE_2 CONFIRM plyr_TryMoveCmdE_2 matches command then enters move state N via plyr_SetMoveState_8, caller of it
+JJ 0x06068e5a plyr_TryMoveCmd10_6 CONFIRM plyr_TryMoveCmd10_6 matches command then enters move state N via plyr_SetMoveState_8, caller of it
+JJ 0x06068ea4 plyr_SetMoveState_8 CONFIRM plyr_SetMoveState_8 writes move id, state 0x1a, resets anim, per-move partner setup; 7 TryMoveCmd callers
+JJ 0x06069a04 plyr_UpdateMisc_75 UNSURE plyr_UpdateMisc_75 three helper calls, one with id 1 and a table ptr; unclear
+JJ 0x0606b096 plyr_UpdateLarge_33 UNSURE plyr_UpdateLarge_33 sets x pos 0x5c from offset table by level and side; exact role unclear
+JJ 0x0606b26c plyr_UpdateMisc_76 UNSURE plyr_UpdateMisc_76 helper call then bumps counter and zeros fields; unclear
+JJ 0x0606b788 plyr_TryMoveCmd2_6 CONFIRM plyr_TryMoveCmd2_6 matches command then enters move state N via plyr_SetMoveState_9
+JJ 0x0606b7ba plyr_TryMoveCmdD_3 CONFIRM plyr_TryMoveCmdD_3 matches command then enters move state N via plyr_SetMoveState_9
+JJ 0x0606b7ec plyr_TryMoveCmdC_4 CONFIRM plyr_TryMoveCmdC_4 matches command then enters move state N via plyr_SetMoveState_9
+JJ 0x0606b81e plyr_TryMoveCmd3_6 CONFIRM plyr_TryMoveCmd3_6 matches command then enters move state N via plyr_SetMoveState_9
+JJ 0x0606b858 plyr_TryMoveCmd8_4 CONFIRM plyr_TryMoveCmd8_4 matches command then enters move state N via plyr_SetMoveState_9
+JJ 0x0606b8b8 plyr_TryMoveCmd0_5 CONFIRM plyr_TryMoveCmd0_5 matches command then enters move state N via plyr_SetMoveState_9
+JJ 0x0606b8ec plyr_TryMoveCmdF_3 CONFIRM plyr_TryMoveCmdF_3 matches command then enters move state N via plyr_SetMoveState_9
+JJ 0x0606b972 plyr_TryMoveCmd11_3 CONFIRM plyr_TryMoveCmd11_3 matches command then enters move state N via plyr_SetMoveState_9
+JJ 0x0606b9dc plyr_TryMoveCmd12_2 CONFIRM plyr_TryMoveCmd12_2 matches command then enters move state N via plyr_SetMoveState_9
+JJ 0x0606ba0e plyr_TryMoveCmd14_2 CONFIRM plyr_TryMoveCmd14_2 matches command then enters move state N via plyr_SetMoveState_9
+JJ 0x0606ba88 plyr_SetMoveState_9 CONFIRM plyr_SetMoveState_9 writes move id, state 0x1a, anim reset, partner sync; 10 TryMoveCmd callers
+JJ 0x0606c566 plyr_UpdateMisc_77 UNSURE plyr_UpdateMisc_77 compares two bytes against a table value, returns bool; meaning unclear
+JJ 0x0606cb64 plyr_CheckMoveInput_10 UNSURE plyr_CheckMoveInput_10 picks move id from table by index and calls helper; trigger unclear
+JJ 0x0606cbaa plyr_UpdateMisc_78 RENAME plyr_DispatchStateHandler indirect jump through table indexed by byte field; caller UpdateMisc_79
+JJ 0x0606ccf2 plyr_UpdateMisc_79 UNSURE plyr_UpdateMisc_79 checks flags then dispatches via helpers and UpdateMisc_78; unclear
+JJ 0x0606d0c8 plyr_RunStateHandler_3 CONFIRM plyr_RunStateHandler_3 resets frame fields, calls handler from table by index; 6 TryMoveCmd callers
+JJ 0x0606d144 plyr_TryMoveCmd2_7 CONFIRM plyr_TryMoveCmd2_7 matches command then enters move state N via plyr_RunStateHandler_3
+JJ 0x0606d1fe plyr_TryMoveCmd4_7 CONFIRM plyr_TryMoveCmd4_7 matches command then enters move state N via plyr_RunStateHandler_3
+JJ 0x0606d2d8 plyr_TryMoveCmd6_4 CONFIRM plyr_TryMoveCmd6_4 matches command then enters move state N via plyr_RunStateHandler_3
+JJ 0x0606d3ac plyr_TryMoveCmd8_5 CONFIRM plyr_TryMoveCmd8_5 matches command then enters move state N via plyr_RunStateHandler_3
+JJ 0x0606d466 plyr_TryMoveCmd10_7 CONFIRM plyr_TryMoveCmd10_7 matches command then enters move state N via plyr_RunStateHandler_3
+JJ 0x0606d568 plyr_TryMoveCmdC_5 CONFIRM plyr_TryMoveCmdC_5 matches command then enters move state N via plyr_RunStateHandler_3
+JJ 0x0606dc86 plyr_NegateDistance_3 UNSURE plyr_NegateDistance_3 stores negated helper result; helper unknown
+JJ 0x0606e1d8 plyr_CheckMoveInput_11 RENAME plyr_StartRandomTableMove no-arg helper masked &7 indexes short table, calls start helper unless -1
+JJ 0x0606e20e plyr_CheckMoveInput_12 RENAME plyr_StartRandomTableMoveB same random pick from a second table
+JJ 0x0606e4e0 plyr_RunStateHandler_4 CONFIRM plyr_RunStateHandler_4 resets frame fields, calls handler from table by index; 5 TryMoveCmd callers
+JJ 0x0606e524 plyr_TryMoveCmd0_6 CONFIRM plyr_TryMoveCmd0_6 matches command then enters move state N via plyr_RunStateHandler_4, either of two commands
+JJ 0x0606e5e0 plyr_TryMoveCmd1_3 CONFIRM plyr_TryMoveCmd1_3 matches command then enters move state N via plyr_RunStateHandler_4, either of two commands
+JJ 0x0606e65e plyr_TryMoveCmd2_8 CONFIRM plyr_TryMoveCmd2_8 matches command then enters move state N via plyr_RunStateHandler_4, either of two commands
+JJ 0x0606e708 plyr_TryMoveCmd3_7 CONFIRM plyr_TryMoveCmd3_7 matches command then enters move state N via plyr_RunStateHandler_4, either of two commands
+JJ 0x0606e788 plyr_TryMoveCmd4_8 CONFIRM plyr_TryMoveCmd4_8 matches command then enters move state N via plyr_RunStateHandler_4, either of two commands
+JJ 0x0606ede8 plyr_NegateDistance_4 UNSURE plyr_NegateDistance_4 stores negated helper result; helper unknown
+JJ 0x0606f09c plyr_UpdateMisc_80 RENAME plyr_LoadSpeedFromTable copies 4 words from table row into object, negates two when facing flag set
+JJ 0x06070778 plyr_RunMoveScript_3 UNSURE plyr_RunMoveScript_3 phased routine with spawn and position choices; role unclear
+JJ 0x06071788 plyr_TryMoveCmd0_7 CONFIRM plyr_TryMoveCmd0_7 matches command then enters move state N via plyr_SetMoveState_10
+JJ 0x06071800 plyr_TryMoveCmd1_4 CONFIRM plyr_TryMoveCmd1_4 matches command then enters move state N via plyr_SetMoveState_10
+JJ 0x0607182a plyr_TryMoveCmd10_8 CONFIRM plyr_TryMoveCmd10_8 matches command then enters move state N via plyr_SetMoveState_10
+JJ 0x06071854 plyr_TryMoveCmd7_6 CONFIRM plyr_TryMoveCmd7_6 one command picks state 3-8 from input bits; fits
+JJ 0x06071926 plyr_TryMoveCmd9_4 CONFIRM plyr_TryMoveCmd9_4 matches command then enters move state N via plyr_SetMoveState_10
+JJ 0x06071950 plyr_TryMoveCmd2_9 CONFIRM plyr_TryMoveCmd2_9 matches command then enters move state N via plyr_SetMoveState_10
+JJ 0x060719b2 plyr_TryMoveCmdB_4 CONFIRM plyr_TryMoveCmdB_4 matches command then enters move state N via plyr_SetMoveState_10
+JJ 0x06071a24 plyr_TryMoveCmdC_6 CONFIRM plyr_TryMoveCmdC_6 matches command then enters move state N via plyr_SetMoveState_10
+JJ 0x06071a96 plyr_TryMoveCmdE_3 CONFIRM plyr_TryMoveCmdE_3 matches command then enters move state N via plyr_SetMoveState_10
+JJ 0x06071ad0 plyr_TryMoveCmd14_3 CONFIRM plyr_TryMoveCmd14_3 matches command then enters move state N via plyr_SetMoveState_10
+JJ 0x06071b38 plyr_SetMoveState_10 CONFIRM plyr_SetMoveState_10 sets move id, state 0x1a, per-move switch; 10 TryMoveCmd callers
+JJ 0x06072156 plyr_RunMoveScript_4 UNSURE plyr_RunMoveScript_4 phased routine with helper calls; role unclear
+JJ 0x0607246c plyr_RunMoveScript_5 UNSURE plyr_RunMoveScript_5 three-phase routine with indirect calls; role unclear
+JJ 0x06072610 plyr_UpdateMisc_81 UNSURE plyr_UpdateMisc_81 state-condition check then sets timer 0x28 and helper; callers hit check and throw start, role unclear
+JJ 0x06072650 plyr_UpdateMisc_82 UNSURE plyr_UpdateMisc_82 bool: opponent state 0x0e and own byte 0x10; used by three callers, role unclear
+JJ 0x06074098 plyr_ClearTable_6 CONFIRM plyr_ClearTable_6 clears 7 bytes at stride 10
+JJ 0x060740ac plyr_TryMoveCmd0_8 CONFIRM plyr_TryMoveCmd0_8 matches command then enters move state N via plyr_SetMoveState_11 and clears table
+JJ 0x060740ea plyr_TryMoveCmd1_5 CONFIRM plyr_TryMoveCmd1_5 matches command then enters move state N via plyr_SetMoveState_11 and clears table
+JJ 0x0607413c plyr_TryMoveCmd2_10 CONFIRM plyr_TryMoveCmd2_10 matches command then enters move state N via plyr_SetMoveState_11 and clears table
+JJ 0x0607417a plyr_TryMoveCmd3_8 CONFIRM plyr_TryMoveCmd3_8 matches command then enters move state N via plyr_SetMoveState_11 and clears table
+JJ 0x060741b8 plyr_TryMoveCmd7_7 CONFIRM plyr_TryMoveCmd7_7 matches command then enters move state N via plyr_SetMoveState_11 and clears table
+JJ 0x0607428e plyr_TryMoveCmd9_5 CONFIRM plyr_TryMoveCmd9_5 matches command then enters move state N via plyr_SetMoveState_11 and clears table
+JJ 0x060742c6 plyr_TryMoveCmd10_9 CONFIRM plyr_TryMoveCmd10_9 matches command then enters move state N via plyr_SetMoveState_11 and clears table
+JJ 0x06074324 plyr_TryMoveCmdC_7 CONFIRM plyr_TryMoveCmdC_7 matches command then enters move state N via plyr_SetMoveState_11 and clears table
+JJ 0x06074368 plyr_CheckMoveInput_13 CONFIRM plyr_CheckMoveInput_13 command match then picks sub-mode from direction bits and clears table
+JJ 0x060743cc plyr_CheckMoveInput_14 CONFIRM plyr_CheckMoveInput_14 command match then picks sub-mode from direction bits and clears table
+JJ 0x06074486 plyr_SetMoveState_11 CONFIRM plyr_SetMoveState_11 sets move id, state 0x1a, anim reset; 8 TryMoveCmd callers
+JJ 0x0607796e plyr_TryMoveCmd0_9 CONFIRM plyr_TryMoveCmd0_9 matches command then enters move state
+JJ 0x0607799e plyr_CheckMoveInput_15 CONFIRM plyr_CheckMoveInput_15 command match then sets mode/state
+JJ 0x060779fc plyr_TryMoveCmd2_11 CONFIRM plyr_TryMoveCmd2_11 matches command then enters move state
+JJ 0x06077a2c plyr_TryMoveCmd3_9 CONFIRM plyr_TryMoveCmd3_9 matches command then enters move state
+JJ 0x06077a6e plyr_CheckMoveInput_16 CONFIRM plyr_CheckMoveInput_16 command match then sets mode/state
+JJ 0x06077ab0 plyr_TryMoveCmd5_6 CONFIRM plyr_TryMoveCmd5_6 matches command then enters move state
+JJ 0x06077af0 plyr_TryMoveCmd6_5 CONFIRM plyr_TryMoveCmd6_5 matches command then enters move state
+JJ 0x06077b60 plyr_TryMoveCmd7_8 CONFIRM plyr_TryMoveCmd7_8 matches command then enters move state
+JJ 0x06077b92 plyr_TryMoveCmd8_6 CONFIRM plyr_TryMoveCmd8_6 matches command then enters move state
+JJ 0x06077bd2 plyr_TryMoveCmd9_6 CONFIRM plyr_TryMoveCmd9_6 matches command then enters move state
+JJ 0x06077c28 plyr_SetMoveState_12 CONFIRM plyr_SetMoveState_12 writes move id, state 0x1a, anim reset; TryMoveCmd callers
+JJ 0x06078868 plyr_CheckMoveInput_17 UNSURE plyr_CheckMoveInput_17 table lookup by index then helper call; trigger unclear
+JJ 0x06078c5c plyr_UpdateMisc_83 UNSURE plyr_UpdateMisc_83 sets up stand/partner object fields; exact role unclear
+JJ 0x060790b6 plyr_RunStateHandler_5 CONFIRM plyr_RunStateHandler_5 resets frame fields, calls handler from table by index
+JJ 0x0607912c plyr_TryMoveCmd5_7 CONFIRM plyr_TryMoveCmd5_7 matches command then enters move state
+JJ 0x06079200 plyr_TryMoveCmd8_7 CONFIRM plyr_TryMoveCmd8_7 matches command then enters move state
+JJ 0x060792a8 plyr_TryMoveCmd11_4 CONFIRM plyr_TryMoveCmd11_4 matches command then enters move state
+JJ 0x060793d0 plyr_TryMoveCmd13_2 CONFIRM plyr_TryMoveCmd13_2 matches command then enters move state
+JJ 0x06079480 plyr_TryMoveCmd19 CONFIRM plyr_TryMoveCmd19 matches command then enters move state
+JJ 0x06079f50 plyr_UpdateMisc_84 RENAME plyr_SetLinkedObjectsX writes x position of linked objects
+JJ 0x0607a2e8 plyr_UpdateMisc_85 UNSURE plyr_UpdateMisc_85 clears two bytes; role unclear
+JJ 0x0607a2f4 plyr_RunStateHandler_6 RENAME plyr_StepMoveTableFrame reads 0x1c-byte table row, sets pos/velocity/effects, runs phases 0-2; not a state-handler dispatcher
+JJ 0x0607a8de plyr_NegateDistance_5 UNSURE plyr_NegateDistance_5 stores negated helper result; helper unknown
+JJ 0x0607af02 plyr_UpdateMisc_86 UNSURE plyr_UpdateMisc_86 unclear object helper
+JJ 0x0607b312 plyr_UpdateMisc_87 UNSURE plyr_UpdateMisc_87 unclear object helper
+JJ 0x0607b340 plyr_UpdateMisc_88 UNSURE plyr_UpdateMisc_88 opponent-state predicate; role unclear
+JJ 0x0607b872 plyr_UpdateMisc_89 UNSURE plyr_UpdateMisc_89 stand/partner setup; role unclear
+JJ 0x0607c89a plyr_RunMoveScript_6 UNSURE plyr_RunMoveScript_6 phased routine with helper calls; role unclear
+JJ 0x0607cf56 plyr_TryMoveCmd4_9 CONFIRM plyr_TryMoveCmd4_9 matches command then enters move state via plyr_SetMoveState_13
+JJ 0x0607cf86 plyr_TryMoveCmd5_8 CONFIRM plyr_TryMoveCmd5_8 matches command then enters move state via plyr_SetMoveState_13
+JJ 0x0607cfdc plyr_TryMoveCmd7_9 CONFIRM plyr_TryMoveCmd7_9 matches command then enters move state via plyr_SetMoveState_13
+JJ 0x0607d00e plyr_TryMoveCmdB_5 CONFIRM plyr_TryMoveCmdB_5 matches command then enters move state via plyr_SetMoveState_13
+JJ 0x0607d08e plyr_TryMoveCmd3_10 CONFIRM plyr_TryMoveCmd3_10 matches command then enters move state via plyr_SetMoveState_13
+JJ 0x0607d0f4 plyr_TryMoveCmdF_4 CONFIRM plyr_TryMoveCmdF_4 matches command then enters move state via plyr_SetMoveState_13
+JJ 0x0607d124 plyr_TryMoveCmd16_2 CONFIRM plyr_TryMoveCmd16_2 matches command then enters move state via plyr_SetMoveState_13
+JJ 0x0607d156 plyr_TryMoveCmdC_8 CONFIRM plyr_TryMoveCmdC_8 matches command then enters move state via plyr_SetMoveState_13
+JJ 0x0607d1fc plyr_SetMoveState_13 CONFIRM plyr_SetMoveState_13 switch on move id sets state 0x1a, anim reset, partner pos by facing; 8 TryMoveCmd callers
+JJ 0x0607db8c plyr_RunMoveScript_7 UNSURE plyr_RunMoveScript_7 three-phase script with indirect calls and sound ids; role unclear
+JJ 0x0607e0f0 plyr_CheckMoveInput_18 UNSURE plyr_CheckMoveInput_18 table lookup by index then helper call; trigger unclear
+JJ 0x0607e116 plyr_UpdateMisc_90 UNSURE plyr_UpdateMisc_90 indirect jump through table indexed by byte field
+JJ 0x0607e2f6 plyr_UpdateMisc_91 UNSURE plyr_UpdateMisc_91 input/state checks then dispatch via helpers; role unclear
+JJ 0x0607e3e0 plyr_UpdateMisc_92 UNSURE plyr_UpdateMisc_92 inits linked object state 0x14 and copies pos; role unclear
+JJ 0x0607e908 plyr_RunStateHandler_7 CONFIRM plyr_RunStateHandler_7 resets frame fields, calls handler from table by index; 8 callers
+JJ 0x0607e970 plyr_TryMoveCmd1_6 CONFIRM plyr_TryMoveCmd1_6 matches command then enters move state
+JJ 0x0607e9d8 plyr_CheckMoveInput_19 CONFIRM plyr_CheckMoveInput_19 command match then sets pending code if zero
+JJ 0x0607ea84 plyr_CheckMoveInput_20 CONFIRM plyr_CheckMoveInput_20 command match then sets pending code if zero
+JJ 0x0607eb54 plyr_CheckMoveInput_21 CONFIRM plyr_CheckMoveInput_21 command match then sets pending code if zero
+JJ 0x0607eb94 plyr_TryMoveCmd7_10 CONFIRM plyr_TryMoveCmd7_10 matches command then enters move state
+JJ 0x0607ec8a plyr_TryMoveCmd8_8 CONFIRM plyr_TryMoveCmd8_8 matches command then enters move state
+JJ 0x0607ecf4 plyr_UpdateMisc_93 RENAME plyr_SummonStandMove8 sets linked stand object to state 0x1a move 8, copies pos offset by facing
+JJ 0x0607eddc plyr_TryMoveCmd10_10 CONFIRM plyr_TryMoveCmd10_10 matches command, needs gauge byte nonzero, enters state
+JJ 0x0607ee6a plyr_UpdateMisc_94 RENAME plyr_SummonStandMove10 same stand setup with move 10
+JJ 0x0607eef4 plyr_TryMoveCmdB_6 CONFIRM plyr_TryMoveCmdB_6 matches command, needs gauge byte nonzero, enters state
+JJ 0x0607f012 plyr_TryMoveCmdC_9 CONFIRM plyr_TryMoveCmdC_9 matches command then enters move state
+JJ 0x0607f0e8 plyr_UpdateMisc_95 RENAME plyr_SummonStandMoveC same stand setup with move 0xc
+JJ 0x0607f174 plyr_TryMoveCmdD_4 CONFIRM plyr_TryMoveCmdD_4 matches command then enters move state
+JJ 0x0607f200 plyr_UpdateMisc_96 RENAME plyr_SummonStandMoveD same stand setup with move 0xd
+JJ 0x0607f9e6 plyr_ClearTable_7 RENAME plyr_RowContainsValue searches per-object row list for a byte value, returns bool, does not clear
+JJ 0x0607fa6c plyr_UpdateMisc_97 RENAME plyr_AppendToRowList appends a byte to per-object row list and bumps count
+JJ 0x0607fab6 plyr_UpdateMisc_98 UNSURE plyr_UpdateMisc_98 side/position check then timer 100 and helper calls; role unclear
+JJ 0x0607fb40 plyr_UpdateMisc_99 UNSURE plyr_UpdateMisc_99 state 0x16 check, row lookup, sets counters; role unclear
+JJ 0x0607fbc8 plyr_UpdateMisc_100 UNSURE plyr_UpdateMisc_100 state 0x16 check, row lookup, starts move via helpers; role unclear
+JJ 0x0608071a plyr_NegateDistance_6 UNSURE plyr_NegateDistance_6 stores negated helper result; helper unknown
+JJ 0x06080c22 plyr_UpdateMisc_101 UNSURE plyr_UpdateMisc_101 compares linked object field and calls one of two helpers; role unclear
+JJ 0x060826fc plyr_TryMoveCmd1_7 CONFIRM plyr_TryMoveCmd1_7 matches command then enters move state via plyr_SetMoveState_14
+JJ 0x06082744 plyr_UpdateMisc_102 RENAME plyr_UpdateButtonHoldTimers three button-bit hold counters capped at 0x5a, helper call at limit
+JJ 0x060827fc plyr_CheckMoveInput_22 CONFIRM plyr_CheckMoveInput_22 command match then picks state 4 or 7
+JJ 0x06082880 plyr_TryMoveCmd5_9 CONFIRM plyr_TryMoveCmd5_9 matches command then enters move state via plyr_SetMoveState_14
+JJ 0x060828b2 plyr_TryMoveCmd6_6 CONFIRM plyr_TryMoveCmd6_6 matches command then enters move state, gauge byte checked
+JJ 0x06082904 plyr_TryMoveCmd3_11 CONFIRM plyr_TryMoveCmd3_11 matches command then enters move state via plyr_SetMoveState_14
+JJ 0x06082934 plyr_TryMoveCmd8_9 CONFIRM plyr_TryMoveCmd8_9 matches command then enters move state 8 via plyr_SetMoveState_14
+JJ 0x06082990 plyr_SetMoveState_14 CONFIRM plyr_SetMoveState_14 writes move id, state 0x1a, anim reset, special cases for ids 4-8; 6 callers
+JJ 0x06084300 plyr_UpdateMisc_103 UNSURE plyr_UpdateMisc_103 bool: three bytes zero and one nonzero; meaning unclear
+JJ 0x06084336 plyr_UpdateMisc_104 UNSURE plyr_UpdateMisc_104 bool: timer <=0x6f and helper result; meaning unclear
+JJ 0x06084360 plyr_UpdateMisc_105 UNSURE plyr_UpdateMisc_105 bool: timer <=0x6f and flag bit 0; meaning unclear
+JJ 0x06084382 plyr_UpdateMisc_106 UNSURE plyr_UpdateMisc_106 bool: timer <=0x6f and flag bit 0 of other word; meaning unclear
+JJ 0x060843c0 plyr_CheckMoveInput_23 UNSURE plyr_CheckMoveInput_23 no command match; sets mode 5 and velocities by facing; name misleading but purpose unclear
+JJ 0x06084446 plyr_UpdateMisc_107 UNSURE plyr_UpdateMisc_107 mode 5 setup clearing many fields; purpose unclear
+JJ 0x060844b8 plyr_UpdateMisc_108 UNSURE plyr_UpdateMisc_108 mode 5 setup zeroing velocity; purpose unclear
+JJ 0x06084528 plyr_UpdateMisc_109 UNSURE plyr_UpdateMisc_109 mode 5 sub-state 4 setup; purpose unclear
+JJ 0x0608454c plyr_UpdateMisc_110 UNSURE plyr_UpdateMisc_110 mode 5 sub-state 6 setup; purpose unclear
+JJ 0x06084580 plyr_UpdateMisc_111 UNSURE plyr_UpdateMisc_111 mode 5 sub-state 7 setup; purpose unclear
+JJ 0x0608459e plyr_UpdateMisc_112 UNSURE plyr_UpdateMisc_112 mode 5 sub-state 8 setup with signed velocity; purpose unclear
+JJ 0x06084606 plyr_UpdateMisc_113 UNSURE plyr_UpdateMisc_113 if field equals constant, clears it and sets 0x14; purpose unclear
+JJ 0x06084620 plyr_UpdateMisc_114 UNSURE plyr_UpdateMisc_114 mode 5 sub-state 9 setup; purpose unclear
+JJ 0x06084688 plyr_UpdateLarge_34 UNSURE plyr_UpdateLarge_34 priority chain of condition checks each starting a mode-5 handler; role unclear
+JJ 0x060847d2 plyr_UpdateMisc_115 RENAME plyr_ApplyTableXOffset picks per-state pair from table by flags, adds to x (+0x5c) with facing sign
+JJ 0x06084878 plyr_UpdateMisc_116 RENAME plyr_SetDirectionFlagFromInput sets direction flag on self and partner from left/right input bits and facing
+JJ 0x060848e0 plyr_UpdateMisc_117 RENAME plyr_ApplyVelocities calls x and y velocity integrators
+JJ 0x060848f2 plyr_UpdateMisc_118 RENAME plyr_ApplyXVelocity adds velocity to x (+0x5c) then accel to velocity
+JJ 0x06084912 plyr_UpdateMisc_119 RENAME plyr_ApplyYVelocity adds velocity to +0x60 then accel to velocity
+JJ 0x0608518c plyr_UpdateMisc_120 RENAME plyr_TryState15Cmd0 matches command then plyr_SetMoveState_15 with 0
+JJ 0x060851b6 plyr_UpdateMisc_121 RENAME plyr_TryState15Cmd4 matches command, field zero, then SetMoveState_15 with 4
+JJ 0x060851f0 plyr_UpdateMisc_122 RENAME plyr_TryState15Cmd3 matches command, field zero, then SetMoveState_15 with 3
+JJ 0x06085276 plyr_UpdateMisc_123 RENAME plyr_TryState15Cmd0B matches command (flag arg) then SetMoveState_15 with 0, clears timer
+JJ 0x060852a8 plyr_UpdateMisc_124 RENAME plyr_TryState15Cmd6 matches command then SetMoveState_15 with 6, clears timer
+JJ 0x060852da plyr_UpdateMisc_125 RENAME plyr_TryState15Cmd7 matches command then SetMoveState_15 with 7, clears timer
+JJ 0x0608530c plyr_UpdateMisc_126 RENAME plyr_TryState15Cmd1 matches command then SetMoveState_15 with 1, clears timer
+JJ 0x0608533e plyr_UpdateMisc_127 RENAME plyr_TryState15Cmd9 matches command then SetMoveState_15 with 9, clears timer
+JJ 0x060853d8 plyr_SetMoveState_15 CONFIRM plyr_SetMoveState_15 writes move id, state 0x1a, anim reset, direction-dependent sub-mode; 8 callers
+JJ 0x0608711c plyr_UpdateMisc_128 RENAME plyr_TryState16CmdAuto matches command then SetMoveState_16 with bool from mode==2
+JJ 0x06087156 plyr_UpdateMisc_129 RENAME plyr_TryState16Cmd2 matches command, field zero, then SetMoveState_16 with 2
+JJ 0x06087190 plyr_UpdateMisc_130 RENAME plyr_TryState16Cmd3 matches command then SetMoveState_16 with 3
+JJ 0x060871d4 plyr_UpdateMisc_131 RENAME plyr_TryState16Cmd4 matches command, gauge byte nonzero, then SetMoveState_16 with 4
+JJ 0x06087226 plyr_UpdateMisc_132 RENAME plyr_TryState16Cmd5 matches command (flag arg), field zero, then SetMoveState_16 with 5
+JJ 0x06087268 plyr_UpdateMisc_133 RENAME plyr_TryState16Cmd6 matches command (flag arg) then SetMoveState_16 with 6
+JJ 0x0608729a plyr_UpdateMisc_134 RENAME plyr_TryState16Cmd7 matches command (flag arg) then SetMoveState_16 with 7

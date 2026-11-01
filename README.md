@@ -6,9 +6,9 @@ Heritage for the Future** (1999, set `jojoba`, SH-2). Round 1 = one naming pass 
 
 | Program | Functions | Hand-named | Still `provisional` |
 |---|---|---|---|
-| JOJOBA.BIN (simm1 + simm2 at 0x06000000) | 2,662 | 2,662 | 1,727 (review next) |
+| JOJOBA.BIN (simm1 + simm2 at 0x06000000) | 2,662 | 2,662 | 184 (after round 2) |
 
-0 placeholder (`FUN_`) names left.
+0 placeholder (`FUN_`) names left. Round 2 (11-01): all 1,727 provisional names re-read with callers/callees context by Sonnet agents (13 parts, prompt + verdicts in `ghidra/review/`): 992 confirmed, 551 renamed, 184 still unsure.
 
 Subsystems named (prefixes): player and character logic (`plyr_`, `chr_`), stands (`stand_`), hits and collision
 (`hit_`), objects and effects (`obj_`, `fx_`, `efx*_`), sprites and graphics (`spr_`, `gfx_`, `anim_`), HUD / UI
@@ -36,6 +36,7 @@ database. You need your own dump of the board to use any of this.
 | `ghidra/hand_JOJOBA.txt` | hand names: `0x<addr> func <name> hand <comment>` (apply with ApplyNames.java from the Scorcher / AMOK repos, hand mode) |
 | `ghidra/funcinfo_JOJOBA.tsv` | per-function export: `F` address name source size, `C` callees (string rows removed) |
 | `ghidra/naming/prompt_JOJO.txt` | the round-1 naming prompt |
+| `ghidra/review/` | round-2 review prompt + verdict lines (`JJ 0x<addr> <old> CONFIRM/RENAME/UNSURE <new> <reason>`) |
 | `ghidra/scripts/` | `FindSh2FunctionsMem.java` (SH-2 prologue scan), `CreateAt.java`, `CsDumpAll.java` (decompile dump with headers) |
 | `tools/` | `cps3dec.py` (SIMM de-interleave + CPS3 decrypt), `splitdump.py` (cut the dump into slices), `ckprovctx.py`, `srprovapply.py`, `pubfuncinfo.py` |
 

@@ -1,0 +1,64 @@
+JJ 0x060872cc plyr_UpdateMisc_135 RENAME plyr_TryCommandMove8 checks command pattern then SetMoveState(8)
+JJ 0x06087342 plyr_UpdateMisc_136 RENAME plyr_TryCommandMove9 checks command pattern then SetMoveState(9)
+JJ 0x060873a6 plyr_SetMoveState_16 RENAME plyr_SetMoveStateSpecial sets state 0x1a, move id, special setup for moves 6/8/9
+JJ 0x06089398 plyr_UpdateMisc_137 RENAME plyr_TryCommandMove1 command pattern then SetMoveState(1)
+JJ 0x060893c6 plyr_UpdateMisc_138 RENAME plyr_TryCommandMove3 command pattern then SetMoveState(3)
+JJ 0x060893f0 plyr_UpdateMisc_139 RENAME plyr_TryCommandMove5 command pattern then SetMoveState(5)
+JJ 0x06089424 plyr_UpdateMisc_140 RENAME plyr_TryCommandMove2 command pattern then SetMoveState(2)
+JJ 0x0608945a plyr_UpdateMisc_141 RENAME plyr_TryCommandMove4 command pattern plus stand gauge nonzero then SetMoveState(4)
+JJ 0x060894dc plyr_UpdateMisc_142 RENAME plyr_TryCommandMove0 command pattern then SetMoveState(0)
+JJ 0x06089540 plyr_SetMoveState_17 RENAME plyr_SetMoveStateWithStand sets state 0x1a and mirrors state and position to stand object
+JJ 0x0608a414 plyr_UpdateMisc_143 RENAME plyr_SetStandMove sets stand object state 0x14, move params, copies position and facing
+JJ 0x0608a468 plyr_UpdateMisc_144 UNSURE plyr_UpdateMisc_144 conditional move 6 plus effect spawn, called by hit code, purpose unclear
+JJ 0x0608b3c0 plyr_UpdateMisc_145 RENAME plyr_TryCommandMoveA command pattern then SetMoveState(0) with variant field
+JJ 0x0608b420 plyr_UpdateMisc_146 RENAME plyr_TryCommandMoveB command pattern then SetMoveState(1)
+JJ 0x0608b452 plyr_UpdateMisc_147 RENAME plyr_TryCommandMoveC command pattern then SetMoveState(2)
+JJ 0x0608b484 plyr_UpdateMisc_148 RENAME plyr_TryCommandMoveGroundAir command pattern then SetMoveState(3 ground or 4 air)
+JJ 0x0608b4c4 plyr_UpdateMisc_149 RENAME plyr_TryCommandMoveD command pattern then SetMoveState(6)
+JJ 0x0608b4f8 plyr_UpdateMisc_150 RENAME plyr_TryCommandMoveE command pattern then SetMoveState(8)
+JJ 0x0608ca4a plyr_SetMoveState_18 RENAME plyr_SetMoveStateFacing sets state 0x1a, move id, helper calls, facing from field for moves 0-8
+JJ 0x0608cac0 plyr_UpdateMisc_151 UNSURE plyr_UpdateMisc_151 not enough evidence
+JJ 0x0608cb00 plyr_UpdateLarge_35 UNSURE plyr_UpdateLarge_35 large state update, role unclear
+JJ 0x0608cbd4 plyr_ClearTable_8 UNSURE plyr_ClearTable_8 table loop, role unclear
+JJ 0x0608cc8e plyr_ClearTable_9 UNSURE plyr_ClearTable_9 table loop, role unclear
+JJ 0x0608d558 plyr_UpdateMisc_152 UNSURE plyr_UpdateMisc_152 not enough evidence
+JJ 0x0608df48 plyr_UpdateLarge_36 UNSURE plyr_UpdateLarge_36 large reaction state handler, many helpers
+JJ 0x0608e5d4 plyr_UpdateMisc_153 UNSURE plyr_UpdateMisc_153 not enough evidence
+JJ 0x0608e696 plyr_UpdateMisc_154 UNSURE plyr_UpdateMisc_154 not enough evidence
+JJ 0x0608ee1c plyr_UpdateLarge_37 UNSURE plyr_UpdateLarge_37 per-state routine with partner sync, role unclear
+JJ 0x0608ef58 plyr_UpdateMisc_155 UNSURE plyr_UpdateMisc_155 called with offsets -0x30 and 0x40, likely range check, unclear
+JJ 0x0608efb4 plyr_UpdateMisc_156 UNSURE plyr_UpdateMisc_156 not enough evidence
+JJ 0x0608f012 plyr_UpdateMisc_157 UNSURE plyr_UpdateMisc_157 not enough evidence
+JJ 0x0608f050 plyr_UpdateLarge_38 UNSURE plyr_UpdateLarge_38 large state update, role unclear
+JJ 0x0608f210 plyr_UpdateMisc_158 UNSURE plyr_UpdateMisc_158 not enough evidence
+JJ 0x0608f27e plyr_UpdateLarge_39 UNSURE plyr_UpdateLarge_39 large state update, role unclear
+JJ 0x0608f8e2 plyr_UpdateMisc_159 UNSURE plyr_UpdateMisc_159 not enough evidence
+JJ 0x0608faf8 plyr_UpdateMisc_160 UNSURE plyr_UpdateMisc_160 not enough evidence
+JJ 0x0608fc3a plyr_UpdateMisc_161 UNSURE plyr_UpdateMisc_161 not enough evidence
+JJ 0x0608fed6 plyr_UpdateLarge_40 UNSURE plyr_UpdateLarge_40 large state update, role unclear
+JJ 0x06090088 chr_DispatchStateJump UNSURE chr_DispatchStateJump jump-table dispatch on state byte, plausible but unverified
+JJ 0x0609014e chr_Helper RENAME chr_DispatchStateTable14 sets state 0x14, clears flags, calls per-state table, syncs to partner
+JJ 0x060901fa chr_StepState RENAME chr_TryCancelMove reads input pattern, then cancel-list lookup or set move
+JJ 0x06090356 chr_Helper_2 RENAME chr_TryCancelMoveBuffered like TryCancelMove but buffers a pending move
+JJ 0x060904e6 chr_StepState_2 RENAME chr_TryCancelMoveAir like TryCancelMove with airborne check first
+JJ 0x0609061c chr_Helper_3 RENAME chr_SetMoveFromInput picks move id from input bits then maps via follow-up tables
+JJ 0x06090724 chr_Helper_4 RENAME chr_FindCancelEntry scans 8-short cancel entries with used bitmask, sets move
+JJ 0x060908b8 mem_LoopFill RENAME chr_HasCancelEntry scans cancel entries, returns whether one is available, no memory fill
+JJ 0x06090b20 chr_RunStateLogic RENAME chr_SyncStandToOwner state 0x16, copies position and facing from owner, sets anim
+JJ 0x06091482 chr_Helper_5 RENAME chr_FacingMismatch returns 1 when facing differs from owner facing
+JJ 0x06091498 chr_UpdateState RENAME chr_EnterState15 copies facing, sets anim and state 0x15
+JJ 0x06091634 chr_UpdateState_2 RENAME chr_DispatchStateTable26 sets state 0x26, calls per-state table, sync to owner
+JJ 0x060919f0 chr_Helper_6 RENAME chr_AddFacingOffsetX adds table x offset to position, negated by facing
+JJ 0x06091c66 chr_StepState_3 RENAME chr_EnterState13 sets state 0x13, anim, owner mode 0/1/2 handling
+JJ 0x06091d60 chr_DispatchStateJump_2 RENAME chr_EnterState13Ground ground variant of state 0x13 entry with owner mode handling
+JJ 0x0609206c chr_StepState_4 RENAME chr_TryStandActivate checks gauge and conditions then sets owner state 0x21
+JJ 0x060921c4 chr_RunStateLogic_2 RENAME chr_StandLaunchStep per-state velocity from table by facing, timer countdown, helper calls
+JJ 0x060924d2 chr_Helper_7 RENAME chr_PopInputQueue pops 6-byte entry from per-player queue into object fields
+JJ 0x06092676 chr_Helper_8 RENAME chr_IsGroundedReady returns 1 when on ground and flag set and other flag clear
+JJ 0x060926bc chr_DispatchStateJump_3 RENAME chr_JumpStateHandler clears field, jumps through per-state table by byte
+JJ 0x06092e42 chr_TryTransition RENAME chr_TryEnterState1 command pattern then SetState(1) or 0xc
+JJ 0x06092ede chr_TryTransition_2 RENAME chr_TryEnterState2 command pattern then SetState(2)
+JJ 0x06092f4e chr_TryTransition_3 RENAME chr_TryEnterState3 command pattern then SetState(3)
+JJ 0x06092fca chr_TryTransition_4 RENAME chr_TryEnterState0B command pattern then SetState(0xb)
+JJ 0x0609301c chr_TryTransition_5 RENAME chr_TryEnterState5 command pattern then SetState(5)
+JJ 0x0609308a chr_TryTransition_6 RENAME chr_TryEnterState10 command pattern then SetState(0x10)

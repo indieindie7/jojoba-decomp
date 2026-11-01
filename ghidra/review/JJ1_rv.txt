@@ -1,0 +1,192 @@
+JJ 0x0604179c plyr_UpdateFrame CONFIRM plyr_UpdateFrame name fits body
+JJ 0x0604197c anim_StepScriptPhaseA CONFIRM anim_StepScriptPhaseA name fits body
+JJ 0x06041ac6 anim_StepScriptPhaseB CONFIRM anim_StepScriptPhaseB name fits body
+JJ 0x06041b36 anim_StepScriptPhaseC CONFIRM anim_StepScriptPhaseC name fits body
+JJ 0x06041bc0 anim_StepScriptPhaseD CONFIRM anim_StepScriptPhaseD name fits body
+JJ 0x06043ed2 plyr_StepThrowSetup CONFIRM plyr_StepThrowSetup name fits body
+JJ 0x060447f0 plyr_TryStartAttackA CONFIRM plyr_TryStartAttackA name fits body
+JJ 0x060448d0 plyr_TryStartAttackB CONFIRM plyr_TryStartAttackB name fits body
+JJ 0x060489ec plyr_StepThrowPhases CONFIRM plyr_StepThrowPhases name fits body
+JJ 0x06049b98 plyr_StartLandingOrGuardAnim CONFIRM plyr_StartLandingOrGuardAnim name fits body
+JJ 0x0604a734 plyr_UpdateMisc UNSURE plyr_UpdateMisc purpose not clear from body and callers
+JJ 0x0604a7a4 plyr_UpdateMisc_2 UNSURE plyr_UpdateMisc_2 purpose not clear from body and callers
+JJ 0x0604a8d6 plyr_RunMoveScript CONFIRM plyr_RunMoveScript stepped move script with phase counter
+JJ 0x0604a984 plyr_UpdateMisc_3 UNSURE plyr_UpdateMisc_3 purpose not clear from body and callers
+JJ 0x0604aa02 plyr_UpdateMisc_4 UNSURE plyr_UpdateMisc_4 purpose not clear from body and callers
+JJ 0x0604aaa4 plyr_CheckMoveInput UNSURE plyr_CheckMoveInput purpose not clear from body and callers
+JJ 0x0604ab5a plyr_UpdateMisc_5 UNSURE plyr_UpdateMisc_5 tiny air-value sign test, role unclear
+JJ 0x0604ab6c plyr_UpdateMisc_6 UNSURE plyr_UpdateMisc_6 purpose not clear from body and callers
+JJ 0x0604ab8e plyr_UpdateMisc_7 UNSURE plyr_UpdateMisc_7 purpose not clear from body and callers
+JJ 0x0604aba2 plyr_UpdateMisc_8 UNSURE plyr_UpdateMisc_8 purpose not clear from body and callers
+JJ 0x0604abb4 plyr_UpdateMisc_9 UNSURE plyr_UpdateMisc_9 purpose not clear from body and callers
+JJ 0x0604abee plyr_UpdateMisc_10 UNSURE plyr_UpdateMisc_10 purpose not clear from body and callers
+JJ 0x0604ac0e plyr_UpdateMisc_11 UNSURE plyr_UpdateMisc_11 purpose not clear from body and callers
+JJ 0x0604ac20 plyr_UpdateLarge UNSURE plyr_UpdateLarge purpose not clear from body and callers
+JJ 0x0604ad48 plyr_UpdateMisc_12 UNSURE plyr_UpdateMisc_12 purpose not clear from body and callers
+JJ 0x0604ad76 plyr_UpdateMisc_13 RENAME plyr_BuildInputMask merges input words, mirrors left/right by facing
+JJ 0x0604ae32 plyr_UpdateMisc_14 UNSURE plyr_UpdateMisc_14 purpose not clear from body and callers
+JJ 0x0604ae54 plyr_UpdateMisc_15 UNSURE plyr_UpdateMisc_15 purpose not clear from body and callers
+JJ 0x0604ae9e plyr_UpdateMisc_16 UNSURE plyr_UpdateMisc_16 purpose not clear from body and callers
+JJ 0x0604af32 plyr_UpdateMisc_17 UNSURE plyr_UpdateMisc_17 purpose not clear from body and callers
+JJ 0x0604af86 plyr_UpdateMisc_18 RENAME plyr_IsAirborne returns 1 when field +0x60 nonzero
+JJ 0x0604af98 plyr_UpdateMisc_19 UNSURE plyr_UpdateMisc_19 purpose not clear from body and callers
+JJ 0x0604b052 plyr_UpdateLarge_2 UNSURE plyr_UpdateLarge_2 purpose not clear from body and callers
+JJ 0x0604b13c plyr_UpdateLarge_3 UNSURE plyr_UpdateLarge_3 purpose not clear from body and callers
+JJ 0x0604b2cc plyr_UpdateMisc_20 UNSURE plyr_UpdateMisc_20 purpose not clear from body and callers
+JJ 0x0604b35a plyr_UpdateMisc_21 UNSURE plyr_UpdateMisc_21 purpose not clear from body and callers
+JJ 0x0604b368 plyr_UpdateMisc_22 RENAME plyr_ClearMoveStageFlags clears two stage bytes, called by every SetMoveState
+JJ 0x0604b37e plyr_UpdateLarge_4 UNSURE plyr_UpdateLarge_4 purpose not clear from body and callers
+JJ 0x0604b4f4 plyr_UpdateLarge_5 UNSURE plyr_UpdateLarge_5 purpose not clear from body and callers
+JJ 0x0604b5de plyr_UpdateMisc_23 RENAME plyr_IsGroundedAllButtons air value 0 and three attack buttons held
+JJ 0x0604b626 plyr_UpdateMisc_24 UNSURE plyr_UpdateMisc_24 purpose not clear from body and callers
+JJ 0x0604b650 plyr_UpdateMisc_25 UNSURE plyr_UpdateMisc_25 purpose not clear from body and callers
+JJ 0x0604b8f8 plyr_UpdateMisc_26 UNSURE plyr_UpdateMisc_26 purpose not clear from body and callers
+JJ 0x0604b9ba plyr_UpdateMisc_27 RENAME plyr_LatchInputWithFacing copies input to previous slot, swaps left/right by facing
+JJ 0x0604ba1e plyr_UpdateLarge_6 UNSURE plyr_UpdateLarge_6 purpose not clear from body and callers
+JJ 0x0604bbf6 plyr_UpdateLarge_7 UNSURE plyr_UpdateLarge_7 purpose not clear from body and callers
+JJ 0x0604bd0a plyr_UpdateMisc_28 UNSURE plyr_UpdateMisc_28 purpose not clear from body and callers
+JJ 0x0604bda0 plyr_UpdateMisc_29 UNSURE plyr_UpdateMisc_29 purpose not clear from body and callers
+JJ 0x0604bdf6 plyr_UpdateMisc_30 UNSURE plyr_UpdateMisc_30 purpose not clear from body and callers
+JJ 0x0604be8c plyr_UpdateLarge_8 RENAME plyr_CheckBoxOverlap compares extents of two boxes from table lookups
+JJ 0x0604bf66 plyr_UpdateLarge_9 UNSURE plyr_UpdateLarge_9 purpose not clear from body and callers
+JJ 0x0604c0b8 plyr_UpdateMisc_31 UNSURE plyr_UpdateMisc_31 purpose not clear from body and callers
+JJ 0x0604c14e plyr_UpdateMisc_32 UNSURE plyr_UpdateMisc_32 purpose not clear from body and callers
+JJ 0x0604c21e plyr_ClearTable CONFIRM plyr_ClearTable table clear loop
+JJ 0x0604c238 plyr_UpdateMisc_33 UNSURE plyr_UpdateMisc_33 purpose not clear from body and callers
+JJ 0x0604c260 plyr_UpdateMisc_34 UNSURE plyr_UpdateMisc_34 purpose not clear from body and callers
+JJ 0x0604c278 plyr_ClearTable_2 UNSURE plyr_ClearTable_2 purpose not clear from body and callers
+JJ 0x0604c2a4 plyr_UpdateLarge_10 UNSURE plyr_UpdateLarge_10 purpose not clear from body and callers
+JJ 0x0604c47e plyr_UpdateMisc_35 UNSURE plyr_UpdateMisc_35 purpose not clear from body and callers
+JJ 0x0604c534 plyr_UpdateMisc_36 UNSURE plyr_UpdateMisc_36 purpose not clear from body and callers
+JJ 0x0604c7b4 plyr_UpdateMisc_37 UNSURE plyr_UpdateMisc_37 purpose not clear from body and callers
+JJ 0x0604c89c plyr_UpdateMisc_38 UNSURE plyr_UpdateMisc_38 purpose not clear from body and callers
+JJ 0x0604dfc8 plyr_TryMoveCmdF CONFIRM plyr_TryMoveCmdF matches command table then starts move state
+JJ 0x0604e016 plyr_UpdateLarge_11 UNSURE plyr_UpdateLarge_11 purpose not clear from body and callers
+JJ 0x0604e10c plyr_TryMoveCmd0 CONFIRM plyr_TryMoveCmd0 matches command table then starts move state
+JJ 0x0604e136 plyr_TryMoveCmd9 CONFIRM plyr_TryMoveCmd9 matches command table then starts move state
+JJ 0x0604e19e plyr_TryMoveCmd4 CONFIRM plyr_TryMoveCmd4 matches command table then starts move state
+JJ 0x0604e1ec plyr_TryMoveCmd6 CONFIRM plyr_TryMoveCmd6 matches command table then starts move state
+JJ 0x0604e21e plyr_TryMoveCmd10 CONFIRM plyr_TryMoveCmd10 matches command table then starts move state
+JJ 0x0604e248 plyr_ClearTable_3 UNSURE plyr_ClearTable_3 purpose not clear from body and callers
+JJ 0x0604e278 stub_0604e278 CONFIRM stub_0604e278 tiny stub only returns
+JJ 0x0604e2a4 plyr_SetMoveState CONFIRM plyr_SetMoveState writes move id, state 0x1a, resets anim fields
+JJ 0x0604f4a4 plyr_UpdateLarge_12 RENAME plyr_MatchMotionSeqA command-sequence matcher stepper: init/step/final, direction nibble vs table
+JJ 0x0604f626 plyr_UpdateLarge_13 RENAME plyr_MatchMotionSeqB command-sequence matcher stepper, direction nibble variant
+JJ 0x0604f7dc plyr_UpdateLarge_14 RENAME plyr_MatchMotionSeqC command-sequence matcher stepper with button mask 0xf0
+JJ 0x0604f954 plyr_UpdateLarge_15 RENAME plyr_MatchMotionSeqD command-sequence matcher comparing whole input word
+JJ 0x0604facc plyr_UpdateLarge_16 RENAME plyr_MatchButtonHoldRelease arms on multi-button combo, then waits for release in window
+JJ 0x0604fbb4 plyr_UpdateMisc_39 RENAME plyr_IsMultiButtonCombo true for button masks 0x70,0x30,0x60,0x50
+JJ 0x0604fbf4 plyr_UpdateLarge_17 RENAME plyr_MatchMotionSeqE command-sequence matcher stepper, optional input remap
+JJ 0x0604fd76 plyr_UpdateMisc_40 UNSURE plyr_UpdateMisc_40 purpose not clear from body and callers
+JJ 0x0604fe0c plyr_UpdateMisc_41 UNSURE plyr_UpdateMisc_41 purpose not clear from body and callers
+JJ 0x0604fea4 plyr_UpdateLarge_18 RENAME plyr_MatchDirectionHoldCmd matcher: direction mask hold counted per frame
+JJ 0x06050062 plyr_UpdateLarge_19 RENAME plyr_MatchButtonPressCmd matcher: button mask press then count then start check
+JJ 0x06050156 plyr_UpdateLarge_20 RENAME plyr_MatchDirectionPressCmd matcher: single direction bit to index via lookup
+JJ 0x0605039c plyr_UpdateMisc_42 RENAME plyr_DirBitToIndex direction bit 1,2,4,8 to index 0,2,3,1
+JJ 0x060503dc plyr_UpdateLarge_21 RENAME plyr_MatchMotionSeqF command-sequence matcher stepper, latch input variant
+JJ 0x06050536 plyr_UpdateLarge_22 RENAME plyr_MatchMotionSeqG command-sequence matcher stepper plus button combo
+JJ 0x060506a4 plyr_UpdateLarge_23 RENAME plyr_MatchMotionSeqH command-sequence matcher stepper plus combo, variant
+JJ 0x060507fe plyr_UpdateMisc_43 RENAME plyr_IsMultiButtonComboB same combo test as other copy
+JJ 0x0605082e plyr_UpdateMisc_44 RENAME plyr_ResetMatcherState zeroes four bytes of matcher record
+JJ 0x06050842 plyr_UpdateMisc_45 RENAME plyr_CanSpendMeter stock field >= cost then action-allowed check
+JJ 0x06050876 plyr_UpdateLarge_24 UNSURE plyr_UpdateLarge_24 purpose not clear from body and callers
+JJ 0x06050bc0 plyr_UpdateMisc_46 RENAME plyr_MirrorDirByFacing swaps left/right bits by facing
+JJ 0x06050bfc plyr_UpdateMisc_47 RENAME plyr_CheckAirGroundRequirement record 0 needs grounded, 1 needs airborne
+JJ 0x06050c28 plyr_UpdateMisc_48 RENAME plyr_SetButtonStrength clears fields, button 0x10/0x20/0x40 to strength 0/1/2
+JJ 0x06050c8a plyr_UpdateMisc_49 RENAME plyr_SetButtonStrengthFromCombo combo mask to strength value
+JJ 0x06050ce2 plyr_UpdateLarge_25 UNSURE plyr_UpdateLarge_25 purpose not clear from body and callers
+JJ 0x060512ae plyr_UpdateMisc_50 RENAME plyr_InitPartnerAttackState sets partner object state 0x14, copies pos
+JJ 0x060522a6 plyr_RunMoveScript_2 CONFIRM plyr_RunMoveScript_2 stepped move script with phase counter
+JJ 0x06052662 plyr_TryMoveCmd4_2 RENAME plyr_TryMoveCmd4VB same move start via other start routine variant, numeric suffix dropped
+JJ 0x060526c4 plyr_TryMoveCmd5 CONFIRM plyr_TryMoveCmd5 matches command table then starts move state
+JJ 0x060526ee plyr_TryMoveCmd7 CONFIRM plyr_TryMoveCmd7 matches command table then starts move state
+JJ 0x06052720 plyr_TryMoveCmdB CONFIRM plyr_TryMoveCmdB matches command table then starts move state
+JJ 0x060527c4 plyr_TryMoveCmd3 CONFIRM plyr_TryMoveCmd3 matches command table then starts move state
+JJ 0x06052804 plyr_TryMoveCmdF_2 RENAME plyr_TryMoveCmdFVB same move start via other start routine variant, numeric suffix dropped
+JJ 0x06052834 plyr_TryMoveCmd16 CONFIRM plyr_TryMoveCmd16 matches command table then starts move state
+JJ 0x06052866 plyr_TryMoveCmdC CONFIRM plyr_TryMoveCmdC matches command table then starts move state
+JJ 0x0605291e plyr_SetMoveState_2 CONFIRM plyr_SetMoveState_2 writes move id, state 0x1a, resets anim fields
+JJ 0x060537b6 plyr_UpdateMisc_51 UNSURE plyr_UpdateMisc_51 purpose not clear from body and callers
+JJ 0x06053a6a plyr_UpdateLarge_26 RENAME plyr_SpawnPartnerThrowA partner state 0x14 with copied pos, anim 0xb
+JJ 0x06053b76 plyr_UpdateLarge_27 RENAME plyr_SpawnPartnerThrowB same as other, anim 0x4a
+JJ 0x06053daa plyr_UpdateMisc_52 UNSURE plyr_UpdateMisc_52 purpose not clear from body and callers
+JJ 0x06054f54 plyr_CheckMoveInput_2 RENAME plyr_TryMatchStartPartnerMove matcher then init both objects state 0x1a, partner offset by facing
+JJ 0x0605502c plyr_TryMoveCmd0_2 RENAME plyr_TryMoveCmd0VC same move start via other start routine variant, numeric suffix dropped
+JJ 0x06055056 plyr_TryMoveCmd2 CONFIRM plyr_TryMoveCmd2 matches command table then starts move state
+JJ 0x06055082 plyr_TryMoveCmd5_2 RENAME plyr_TryMoveCmd5VC same move start via other start routine variant, numeric suffix dropped
+JJ 0x060550ac plyr_TryMoveCmd3_2 RENAME plyr_TryMoveCmd3VC same move start via other start routine variant, numeric suffix dropped
+JJ 0x060550d8 plyr_TryMoveCmd4_3 RENAME plyr_TryMoveCmd4VC same move start via other start routine variant, numeric suffix dropped
+JJ 0x06055150 plyr_TryMoveCmd6_2 RENAME plyr_TryMoveCmd6VC same move start via other start routine variant, numeric suffix dropped
+JJ 0x0605517a plyr_TryMoveCmd1 CONFIRM plyr_TryMoveCmd1 matches command table then starts move state
+JJ 0x060551b4 plyr_TryMoveCmd8 CONFIRM plyr_TryMoveCmd8 matches command table then starts move state
+JJ 0x060551de plyr_TryMoveCmd9_2 RENAME plyr_TryMoveCmd9VC same move start via other start routine variant, numeric suffix dropped
+JJ 0x0605520a plyr_SetMoveState_3 UNSURE plyr_SetMoveState_3 purpose not clear from body and callers
+JJ 0x060559d6 plyr_UpdateMisc_53 UNSURE plyr_UpdateMisc_53 purpose not clear from body and callers
+JJ 0x06055a44 plyr_CheckMoveInput_3 RENAME plyr_RunStateFromTable table index, skips -1, else calls state starter
+JJ 0x06055d4a plyr_UpdateMisc_54 RENAME plyr_InitPartnerAttackStateB same partner init as other copy
+JJ 0x060564a2 plyr_RunStateHandler CONFIRM plyr_RunStateHandler resets frame fields and calls handler from jump table
+JJ 0x060564e6 plyr_CheckMoveInput_4 RENAME plyr_TryCmdRunStateByMode matcher then RunStateHandler 0x15 or 0x16 by flag
+JJ 0x060565fc plyr_UpdateMisc_55 RENAME plyr_PlacePartnerBeside both objects state 0x1a, partner x by facing
+JJ 0x0605666c plyr_TryMoveCmd17 CONFIRM plyr_TryMoveCmd17 matches command table then starts move state
+JJ 0x06056770 plyr_TryMoveCmd18 CONFIRM plyr_TryMoveCmd18 matches command table then starts move state
+JJ 0x0605685a plyr_TryMoveCmdC_2 RENAME plyr_TryMoveCmdCVR same move start via other start routine variant, numeric suffix dropped
+JJ 0x06056950 plyr_TryMoveCmd0_3 RENAME plyr_TryMoveCmd0VR same move start via other start routine variant, numeric suffix dropped
+JJ 0x06056a1e plyr_TryMoveCmd10_2 RENAME plyr_TryMoveCmd10VR same move start via other start routine variant, numeric suffix dropped
+JJ 0x06056b3e plyr_TryMoveCmd4_4 RENAME plyr_TryMoveCmd4VR same move start via other start routine variant, numeric suffix dropped
+JJ 0x06056c2c plyr_TryMoveCmd8_2 RENAME plyr_TryMoveCmd8VR same move start via other start routine variant, numeric suffix dropped
+JJ 0x06056d44 plyr_TryMoveCmd11 CONFIRM plyr_TryMoveCmd11 matches command table then starts move state
+JJ 0x06056eb8 plyr_TryMoveCmd1C CONFIRM plyr_TryMoveCmd1C matches command table then starts move state
+JJ 0x0605874a plyr_NegateDistance CONFIRM plyr_NegateDistance stores negated helper result
+JJ 0x06058e9c plyr_UpdateMisc_56 UNSURE plyr_UpdateMisc_56 purpose not clear from body and callers
+JJ 0x0605a628 plyr_ClearTable_4 CONFIRM plyr_ClearTable_4 clears byte pairs over table entries
+JJ 0x0605a642 plyr_TryMoveCmd3_3 RENAME plyr_TryMoveCmd3VD same move start via other start routine variant, numeric suffix dropped
+JJ 0x0605a684 plyr_TryMoveCmd5_3 RENAME plyr_TryMoveCmd5VD same move start via other start routine variant, numeric suffix dropped
+JJ 0x0605a6ba plyr_TryMoveCmd10_3 RENAME plyr_TryMoveCmd10VD same move start via other start routine variant, numeric suffix dropped
+JJ 0x0605a6f0 plyr_TryMoveCmd7_2 RENAME plyr_TryMoveCmd7VD same move start via other start routine variant, numeric suffix dropped
+JJ 0x0605a728 plyr_TryMoveCmd10_4 RENAME plyr_TryMoveCmd10VDx same move start via other start routine variant, numeric suffix dropped
+JJ 0x0605a788 plyr_TryMoveCmdC_3 RENAME plyr_TryMoveCmdCVD same move start via other start routine variant, numeric suffix dropped
+JJ 0x0605a7c8 plyr_TryMoveCmdD CONFIRM plyr_TryMoveCmdD matches command table then starts move state
+JJ 0x0605a824 plyr_SetMoveState_4 CONFIRM plyr_SetMoveState_4 writes move id on both objects, state 0x1a
+JJ 0x0605b334 plyr_UpdateLarge_28 UNSURE plyr_UpdateLarge_28 purpose not clear from body and callers
+JJ 0x0605b5ea plyr_UpdateMisc_57 UNSURE plyr_UpdateMisc_57 purpose not clear from body and callers
+JJ 0x0605b746 plyr_UpdateLarge_29 UNSURE plyr_UpdateLarge_29 purpose not clear from body and callers
+JJ 0x0605b83a plyr_UpdateLarge_30 UNSURE plyr_UpdateLarge_30 purpose not clear from body and callers
+JJ 0x0605b93a plyr_UpdateLarge_31 UNSURE plyr_UpdateLarge_31 purpose not clear from body and callers
+JJ 0x0605c496 plyr_UpdateMisc_58 UNSURE plyr_UpdateMisc_58 purpose not clear from body and callers
+JJ 0x0605c570 plyr_UpdateMisc_59 RENAME plyr_CallStateTableEntry calls function pointer indexed by state byte
+JJ 0x0605c914 plyr_UpdateMisc_60 RENAME plyr_InitPartnerAttackStateC same partner init as other copies
+JJ 0x0605e0ca plyr_TryMoveCmd3_4 RENAME plyr_TryMoveCmd3VE same move start via other start routine variant, numeric suffix dropped
+JJ 0x0605e116 plyr_TryMoveCmd2_2 RENAME plyr_TryMoveCmd2VE same move start via other start routine variant, numeric suffix dropped
+JJ 0x0605e180 plyr_TryMoveCmd4_5 RENAME plyr_TryMoveCmd4VE same move start via other start routine variant, numeric suffix dropped
+JJ 0x0605e1ee plyr_TryMoveCmd6_3 RENAME plyr_TryMoveCmd6VE same move start via other start routine variant, numeric suffix dropped
+JJ 0x0605e228 plyr_TryMoveCmd7_3 RENAME plyr_TryMoveCmd7VE same move start via other start routine variant, numeric suffix dropped
+JJ 0x0605e262 plyr_TryMoveCmdB_2 RENAME plyr_TryMoveCmdBVE same move start via other start routine variant, numeric suffix dropped
+JJ 0x0605e2de plyr_TryMoveCmdD_2 RENAME plyr_TryMoveCmdDVE same move start via other start routine variant, numeric suffix dropped
+JJ 0x0605e31a plyr_TryMoveCmd11_2 RENAME plyr_TryMoveCmd11VE same move start via other start routine variant, numeric suffix dropped
+JJ 0x0605e364 plyr_SetMoveState_5 CONFIRM plyr_SetMoveState_5 writes move id, state 0x1a, resets anim
+JJ 0x0605fae6 plyr_UpdateMisc_61 UNSURE plyr_UpdateMisc_61 purpose not clear from body and callers
+JJ 0x0605fb08 plyr_UpdateMisc_62 UNSURE plyr_UpdateMisc_62 purpose not clear from body and callers
+JJ 0x0605fc78 plyr_UpdateMisc_63 UNSURE plyr_UpdateMisc_63 purpose not clear from body and callers
+JJ 0x06060d80 plyr_UpdateMisc_64 UNSURE plyr_UpdateMisc_64 purpose not clear from body and callers
+JJ 0x06060fec plyr_ClearTable_5 CONFIRM plyr_ClearTable_5 clears byte fields over table with skip index
+JJ 0x0606102e plyr_SetMoveState_6 CONFIRM plyr_SetMoveState_6 writes move id, state 0x1a, resets anim
+JJ 0x06061132 plyr_CheckMoveInput_5 RENAME plyr_TryCmdSetState0 matcher and flag clear then state 0 with 0x1a
+JJ 0x0606117c plyr_TryMoveCmd0_4 RENAME plyr_TryMoveCmd0VF same move start via other start routine variant, numeric suffix dropped
+JJ 0x060611ba plyr_TryMoveCmd2_3 RENAME plyr_TryMoveCmd2VF same move start via other start routine variant, numeric suffix dropped
+JJ 0x06061230 plyr_TryMoveCmd7_4 RENAME plyr_TryMoveCmd7VF same move start via other start routine variant, numeric suffix dropped
+JJ 0x0606127a plyr_TryMoveCmdB_3 RENAME plyr_TryMoveCmdBVF same move start via other start routine variant, numeric suffix dropped
+JJ 0x060612ce plyr_TryMoveCmd5_4 RENAME plyr_TryMoveCmd5VF same move start via other start routine variant, numeric suffix dropped
+JJ 0x0606178c plyr_UpdateMisc_65 UNSURE plyr_UpdateMisc_65 purpose not clear from body and callers
+JJ 0x06061b2c plyr_UpdateMisc_66 UNSURE plyr_UpdateMisc_66 purpose not clear from body and callers
+JJ 0x0606260e plyr_UpdateMisc_67 UNSURE plyr_UpdateMisc_67 purpose not clear from body and callers
+JJ 0x060627b6 plyr_UpdateMisc_68 UNSURE plyr_UpdateMisc_68 purpose not clear from body and callers
+JJ 0x060628f8 plyr_UpdateMisc_69 UNSURE plyr_UpdateMisc_69 purpose not clear from body and callers
+JJ 0x0606292e plyr_UpdateMisc_70 UNSURE plyr_UpdateMisc_70 purpose not clear from body and callers
+JJ 0x060629e0 plyr_UpdateMisc_71 UNSURE plyr_UpdateMisc_71 purpose not clear from body and callers
+JJ 0x060636e8 plyr_TryMoveCmd2_4 RENAME plyr_TryMoveCmd2VG same move start via other start routine variant, numeric suffix dropped
+JJ 0x06063740 plyr_SetMoveState_7 UNSURE plyr_SetMoveState_7 purpose not clear from body and callers
+JJ 0x06063c84 plyr_CheckMoveInput_6 UNSURE plyr_CheckMoveInput_6 purpose not clear from body and callers
+JJ 0x0606461e plyr_UpdateMisc_72 UNSURE plyr_UpdateMisc_72 purpose not clear from body and callers
+JJ 0x060647b4 plyr_RunStateHandler_2 UNSURE plyr_RunStateHandler_2 purpose not clear from body and callers
+JJ 0x060647f8 plyr_TryMoveCmd1_2 RENAME plyr_TryMoveCmd1VS same move start via other start routine variant, numeric suffix dropped
+JJ 0x060648ac plyr_TryMoveCmd4_6 RENAME plyr_TryMoveCmd4VS same move start via other start routine variant, numeric suffix dropped

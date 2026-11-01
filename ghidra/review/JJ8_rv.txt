@@ -1,0 +1,192 @@
+JJ 0x061877ee hit_DispatchMoveType CONFIRM hit_DispatchMoveType dispatches on move byte 0x18
+JJ 0x06187830 meter_Advance CONFIRM meter_Advance advances gauge value
+JJ 0x06187954 hit_CheckCanLink RENAME hit_CheckTargetHittable state checks on target return 1 or 0
+JJ 0x06187b20 round_EndKO CONFIRM round_EndKO ko end handling
+JJ 0x06187c56 round_EndKOStand CONFIRM round_EndKOStand ko end stand variant
+JJ 0x06187d38 round_SetWinner CONFIRM round_SetWinner sets winner side
+JJ 0x06187dfc round_StartEnd CONFIRM round_StartEnd starts end sequence
+JJ 0x06187e78 round_CheckEnd CONFIRM round_CheckEnd tests end conditions
+JJ 0x06187f70 round_StartTimeOver CONFIRM round_StartTimeOver time over start
+JJ 0x06187ff0 round_FinishTimeOver CONFIRM round_FinishTimeOver time over finish
+JJ 0x061880c8 round_ClearEndFlags CONFIRM round_ClearEndFlags clears end flags
+JJ 0x061882fa stand_SetHit CONFIRM stand_SetHit sets stand hit state
+JJ 0x061884c2 input_CheckButtonBit RENAME hit_CheckBoxEnable callers are hitbox checks
+JJ 0x061886e4 hit_CheckThrowStart CONFIRM hit_CheckThrowStart throw start test
+JJ 0x06188884 hit_SetStandStunState CONFIRM hit_SetStandStunState sets stand stun
+JJ 0x061888cc plyr_UpdateGuardCounter CONFIRM plyr_UpdateGuardCounter guard counter tick
+JJ 0x061889b0 plyr_DoActionA UNSURE plyr_DoActionA two indirect calls 16 hit callers
+JJ 0x061889c6 plyr_DoActionB UNSURE plyr_DoActionB sets state 3 then calls handlers
+JJ 0x06189438 hud_UpdateGauges CONFIRM hud_UpdateGauges gauge update
+JJ 0x06189622 hud_CalcGaugeSide CONFIRM hud_CalcGaugeSide side calc
+JJ 0x061896c4 hud_CalcGaugeStateCol CONFIRM hud_CalcGaugeStateCol state column calc
+JJ 0x0618a248 hit_ApplyCounterDamage CONFIRM hit_ApplyCounterDamage counter damage
+JJ 0x0618a3c0 round_SetWinPoseState CONFIRM round_SetWinPoseState win pose state
+JJ 0x0618a6cc round_StartKOSequence CONFIRM round_StartKOSequence ko sequence start
+JJ 0x0618e40a phys_StepOffsetTable CONFIRM phys_StepOffsetTable steps offset from table
+JJ 0x0618e8b0 plyr_StartAirRecover CONFIRM plyr_StartAirRecover air recover start
+JJ 0x0618e9a4 plyr_StartAirHitState CONFIRM plyr_StartAirHitState air hit start
+JJ 0x0618ea54 plyr_ResetHitFx CONFIRM plyr_ResetHitFx resets hit fx
+JJ 0x0618ead8 plyr_SetHitFields CONFIRM plyr_SetHitFields sets hit fields
+JJ 0x0618eb42 plyr_InitKnockdownSpeed CONFIRM plyr_InitKnockdownSpeed knockdown speed init
+JJ 0x0618edc6 plyr_SetBounceBack CONFIRM plyr_SetBounceBack bounce back set
+JJ 0x0618ee20 plyr_SetLandState CONFIRM plyr_SetLandState land state set
+JJ 0x0618ee5a plyr_SpawnDebris CONFIRM plyr_SpawnDebris spawns debris object
+JJ 0x0618ef3c plyr_ShakeOffset CONFIRM plyr_ShakeOffset alternates obj+0x48 from table per frame
+JJ 0x06191662 phys_StepOffsetTable_2 RENAME phys_StepScriptedPush table step moves both fighters with wall clamp
+JJ 0x06191a38 plyr_StartGrabHold CONFIRM plyr_StartGrabHold sets grab hold on owner and target
+JJ 0x06191c04 plyr_StartGrabHold_2 RENAME plyr_StartGrabHoldAlt grab hold variant state 0x10 and 0x15
+JJ 0x06191dbc plyr_StartThrowA CONFIRM plyr_StartThrowA throw setup both objects
+JJ 0x06191f58 plyr_StartThrowB CONFIRM plyr_StartThrowB throw setup variant
+JJ 0x06192228 plyr_UpdateThrowState CONFIRM plyr_UpdateThrowState per frame throw owner update
+JJ 0x0619243c plyr_UpdateThrowTarget CONFIRM plyr_UpdateThrowTarget per frame throw target update
+JJ 0x061924fc plyr_ThrowStateSwitch RENAME plyr_LinkThrowPair switch on state then links pair and clears flags
+JJ 0x06192868 ai_GetDifficultyIndex RENAME ai_UpdateDifficultyLevel threshold tables set level byte returns changed
+JJ 0x0619290c ai_PickActionBasic CONFIRM ai_PickActionBasic picks CPU action from state table via random
+JJ 0x0619299a ai_PickActionByMode CONFIRM ai_PickActionByMode picks CPU action table depending on mode
+JJ 0x06192aa4 ai_PickActionByState CONFIRM ai_PickActionByState picks CPU action with random for state 0xb
+JJ 0x06192b90 ai_PickActionSwitch CONFIRM ai_PickActionSwitch picks CPU action via switch on opponent state
+JJ 0x06192cb6 ai_PickActionWeighted CONFIRM ai_PickActionWeighted picks CPU action with weighted offset
+JJ 0x06192db8 ai_PickActionDefault CONFIRM ai_PickActionDefault loads default CPU action by state
+JJ 0x06192dd0 ai_PickMoveByDistance CONFIRM ai_PickMoveByDistance chooses CPU move by distance to wall and opponent
+JJ 0x06192ee8 plyr_ResetRoundState CONFIRM plyr_ResetRoundState clears per-player round fields and flags at object offsets, sets state byte 0 or 4
+JJ 0x06193632 round_UpdateEndSequence CONFIRM round_UpdateEndSequence round end countdown, sets KO or timeout state values, winner and loser object fields
+JJ 0x0619378a stand_UpdateToggleState CONFIRM stand_UpdateToggleState stand on/off state machine from stand button mask, sets object fields
+JJ 0x06193b24 game_NextRoundInit CONFIRM game_NextRoundInit calls two init functions and bumps round counters, clears flags
+JJ 0x06193ba8 meter_AddGauge CONFIRM meter_AddGauge adds super meter amount by event type 0-3, clamps and updates level via callee
+JJ 0x06193ce2 meter_SetInitial CONFIRM meter_SetInitial sets meter byte by mode value, max for modes 6 and 7
+JJ 0x061952f0 menu_DrawBgLayers CONFIRM menu_DrawBgLayers draws two background layers via tile blit call with page offset
+JJ 0x06195540 menu_InitScreen CONFIRM menu_InitScreen initial menu screen setup, draws layers, sets scroll, plays sound commands
+JJ 0x06196766 menu_SetupLoop CONFIRM menu_SetupLoop menu page setup, clears state, calls draw helpers in sequence
+JJ 0x0619d568 gfx_LoadTableEntry CONFIRM gfx_LoadTableEntry dispatcher loading table entry by index through indirect callee, index 0 maps to 1
+JJ 0x0619dbb0 menu_ListSelectLoop CONFIRM menu_ListSelectLoop menu cursor loop: reads pad edges, moves cursor with repeat, calls item handlers, handles exit and redraw
+JJ 0x0619e90c game_ModeFrameUpdate CONFIRM game_ModeFrameUpdate per-frame mode update calling many callbacks, timer counters and flags, returns mode result
+JJ 0x0619eb14 hud_DrawBonusCells CONFIRM hud_DrawBonusCells draws row of tile cells for side param via text put callee, pads to 7 cells with blanks
+JJ 0x0619ee0a hud_UpdateMeterMessages CONFIRM hud_UpdateMeterMessages maps both players meter value to thresholds 5..90, tracks level changes, draws sliding message text per side
+JJ 0x061a08b8 hud_DrawRoundCountSwitch RENAME hud_DrawComboDigit clearer name: draws digit glyph tiles by switch on nibble value for count display, updates cached value
+JJ 0x061a0d28 hud_AnimateTimerPalette CONFIRM hud_AnimateTimerPalette sets timer sprite palette words by state, updates when timer value changes
+JJ 0x061a2d5c hud_LoadPortraitGfx CONFIRM hud_LoadPortraitGfx loads portrait gfx tables via callee by player state byte 0..2 and object state 0xe,0xf,0x12
+JJ 0x061a6ea0 snd_LoadAllBanksRetry CONFIRM snd_LoadAllBanksRetry retries 16 sound bank loads until callee returns not minus one, waiting one frame
+JJ 0x061a7884 snd_CharVoice_stByState RENAME snd_CharVoiceByStatePose clearer name: picks pose id by obj+0x13 state (0x11,0x0c,0x05) then calls FUN_061a7630 set-voice
+JJ 0x061a78ca snd_CharVoice_stSimple RENAME snd_CharVoiceStateSimple clearer name: chooses voice id if state==5 else other, calls FUN_061a7630
+JJ 0x061a78e0 snd_CharVoice_stStateIndexed RENAME snd_CharVoicePoseStateIndexed clearer name: sets pose then state-indexed voice (state*0x20+base) except state 0x11
+JJ 0x061a7938 snd_CharVoiceConst_a CONFIRM snd_CharVoiceConst_a wrapper calling FUN_061a7630 with constant voice id
+JJ 0x061a793e snd_CharVoiceConst_b CONFIRM snd_CharVoiceConst_b wrapper calling FUN_061a7630 with constant voice id
+JJ 0x061a7944 snd_CharVoiceTableA CONFIRM snd_CharVoiceTableA voice id looked up by obj+0x13 state in short table, FUN_061a7630
+JJ 0x061a7958 snd_CharVoiceTableB CONFIRM snd_CharVoiceTableB voice id looked up by obj+0x13 state in short table, FUN_061a7630
+JJ 0x061a7980 snd_CharVoiceTableC CONFIRM snd_CharVoiceTableC voice id looked up by obj+0x13 state in short table, FUN_061a7630
+JJ 0x061a7994 snd_CharVoiceTableD CONFIRM snd_CharVoiceTableD voice id looked up by obj+0x13 state in short table, FUN_061a7630
+JJ 0x061a79a8 snd_CharVoiceTableE CONFIRM snd_CharVoiceTableE voice id looked up by obj+0x13 state in short table, FUN_061a7630
+JJ 0x061a79bc snd_CharVoiceStateIndexed CONFIRM snd_CharVoiceStateIndexed state 8 or 0x11 special voice, else state*0x20+base, FUN_061a7630
+JJ 0x061a79f8 snd_CharVoiceUnlessState0e CONFIRM snd_CharVoiceUnlessState0e skips state 0x0e, otherwise state*0x20+base voice via FUN_061a7630
+JJ 0x061a7a48 snd_CharVoiceByFacingGuard CONFIRM snd_CharVoiceByFacingGuard voice table select with +4 side offset, +0x20/+0x10 variants for guard states
+JJ 0x061a7b2c snd_CharVoiceConst_c CONFIRM snd_CharVoiceConst_c wrapper calling FUN_061a7630 with constant voice id
+JJ 0x061a7b32 snd_CharVoiceConst_d CONFIRM snd_CharVoiceConst_d wrapper calling FUN_061a7630 with constant voice id
+JJ 0x061a7b38 snd_CharVoiceConst_e CONFIRM snd_CharVoiceConst_e wrapper calling FUN_061a7630 with constant voice id
+JJ 0x061a7b3e snd_CharVoiceConst_f CONFIRM snd_CharVoiceConst_f wrapper calling FUN_061a7630 with constant voice id
+JJ 0x061a7b44 snd_PlaySideVoice CONFIRM snd_PlaySideVoice sets channel via FUN_061a75dc by obj+0x12 side, sends sound command type 7
+JJ 0x061a7b6c snd_PlayVoiceBySlot CONFIRM snd_PlayVoiceBySlot FUN_061a75dc(obj+0x5c) then sound command type 7 id depends on side obj+0x12
+JJ 0x061a7b9c snd_CharVoiceConst_g CONFIRM snd_CharVoiceConst_g wrapper calling FUN_061a7630 with constant voice id
+JJ 0x061a7ba2 snd_CharVoiceConst_h CONFIRM snd_CharVoiceConst_h wrapper calling FUN_061a7630 with constant voice id
+JJ 0x061a7ba8 snd_CharVoiceRandomVariant CONFIRM snd_CharVoiceRandomVariant every 8 frames picks voice table entry +0 or +1 by random call
+JJ 0x061a7c40 snd_CharVoiceEvery8Frames CONFIRM snd_CharVoiceEvery8Frames voice by state table when frame counter low 3 bits are zero
+JJ 0x061a7c6a snd_CharVoiceStateStride CONFIRM snd_CharVoiceStateStride voice id state*0x20+base via FUN_061a7630
+JJ 0x061a7c9a snd_CharVoiceTableF CONFIRM snd_CharVoiceTableF voice id looked up by obj+0x13 state in short table
+JJ 0x061a7cae snd_PlayVoiceByFlags CONFIRM snd_PlayVoiceByFlags voice variant 0-2 from obj flag bits 0x10/0x20/0x40, sound command type 7
+JJ 0x061a7d18 snd_CharVoiceTableByFlag CONFIRM snd_CharVoiceTableByFlag selects one of two voice tables by obj flag then FUN_061a7630
+JJ 0x061a7d70 snd_CharVoiceTableG CONFIRM snd_CharVoiceTableG voice id looked up by obj+0x13 state in short table
+JJ 0x061a7d84 snd_PlaySideVoiceGated CONFIRM snd_PlaySideVoiceGated skipped in mode 8 or 2, sound command type 7 with side*0x10 offset
+JJ 0x061a7de0 snd_PlaySideCue CONFIRM snd_PlaySideCue sound command type 0 id chosen by obj+0x12 side
+JJ 0x061a7e08 snd_CharVoiceGlobalConst CONFIRM snd_CharVoiceGlobalConst calls FUN_061a7796 with constant id
+JJ 0x061a7e0e snd_PlayDoubleVoice CONFIRM snd_PlayDoubleVoice two sound type 7 commands on channel 0 and channel DAT
+JJ 0x061a7eb4 snd_PlayQuadSequence CONFIRM snd_PlayQuadSequence four sound commands: type0 id3 then three type7 with channel switches
+JJ 0x061a7f6e snd_PlayStateCue CONFIRM snd_PlayStateCue sound type 0 cue chosen from fighter state byte+0x13 and round flags, sends via snd call
+JJ 0x061a80a0 mode_DispatchByState CONFIRM mode_DispatchByState indirect jump through table indexed by state byte unless flag set
+JJ 0x061a82e8 task_AllocType0b CONFIRM task_AllocType0b allocates object type 0xb, clears fields, sets position field from global
+JJ 0x061a8354 dbg_MenuMain CONFIRM dbg_MenuMain debug menu loop: pad up/down cursor, button 0x10 select, calls item via jump table
+JJ 0x061a8526 dbg_EraseCursor CONFIRM dbg_EraseCursor draws space char at menu cursor position via text print call
+JJ 0x061a853e dbg_DrawCursor_a853e RENAME dbg_DrawCursor clearer name: draws '>' char at current menu cursor position via text print call
+JJ 0x061a8556 dbg_DrawMenuItemText CONFIRM dbg_DrawMenuItemText prints menu item string for current cursor index
+JJ 0x061a8680 dbg_ListBuiltinStrings CONFIRM dbg_ListBuiltinStrings prints what is builtin header then lists strings iteratively then done
+JJ 0x061a8b08 gfx_FillTileGrid16 CONFIRM gfx_FillTileGrid16 fills 16 rows of tile map with incrementing tile ids, two layouts by flag
+JJ 0x061a8bba gfx_FillTileGrid32 CONFIRM gfx_FillTileGrid32 fills 16 rows by 32 columns tile map starting at row offset param_1
+JJ 0x061a93bc dbg_AdjustLayerOffsets CONFIRM dbg_AdjustLayerOffsets pad bits shift six layer objects +0xc/+0x14 scroll offsets, buttons toggle +5 flags
+JJ 0x061a9886 task_InitViewerObjA CONFIRM task_InitViewerObjA init task object fields, picks routine via jump table, game object 0x7c data
+JJ 0x061a9aa8 task_InitViewerObjB CONFIRM task_InitViewerObjB allocates object, sets draw fields, side param to +0x12, jumps into task routine
+JJ 0x061aa348 task_InitViewerObjPair CONFIRM task_InitViewerObjPair initialises two objects (side param) with sprite data pointers then task routine
+JJ 0x061aaf04 task_InitTextObj CONFIRM task_InitTextObj allocates type 7 object, sets text routine pointer and fields
+JJ 0x061ab1ea task_InitPatternView1 RENAME task_InitPatternViewParam clearer name: allocates object, setup fields, calls FUN_061ab358 with param
+JJ 0x061ab2b4 task_InitPatternView2 RENAME task_InitPatternViewDefault clearer name: allocates object variant with side 0, calls FUN_061ab358
+JJ 0x061ab358 dbg_PatternViewSetup CONFIRM dbg_PatternViewSetup sets routine, pattern pointers, prints PATTERN_MAX, calls helpers abf08 ac114 ac19c
+JJ 0x061ab4fc task_InitScrollTest CONFIRM task_InitScrollTest init task object and scroll layers 0xc/0x14, calls routine
+JJ 0x061ab634 dbg_PatEdit_InputPatternSelect CONFIRM dbg_PatEdit_InputPatternSelect pad repeat nudges pattern index +1/-1/+10/-10 with wrap, redraws fields via abf08
+JJ 0x061ab840 dbg_PatEdit_InputCharSelect CONFIRM dbg_PatEdit_InputCharSelect pad left/right cycles character index 0-0x20 and reloads via FUN_061ab358
+JJ 0x061ab8f8 dbg_PatEdit_InputButtons CONFIRM dbg_PatEdit_InputButtons button 0x10/0x80/0x20/0x40 step or play pattern, toggles flip at +0xd, repeat counters
+JJ 0x061aba3c dbg_PatEdit_InputZoom CONFIRM dbg_PatEdit_InputZoom pad direction adjusts zoom bytes +0x5a/+0x5b clamped 0-0x7f, reset to 0x3f
+JJ 0x061abb14 dbg_PatEdit_InputPosition CONFIRM dbg_PatEdit_InputPosition pad moves object position +0x5c/+0x60 (x3 fast), toggles global flag, redraws POS
+JJ 0x061abba4 dbg_PatEdit_SwapPlayerSlot CONFIRM dbg_PatEdit_SwapPlayerSlot button swaps which of two player objects is active and updates display flags
+JJ 0x061abc58 dbg_PatEdit_RecordPoseSnapshot CONFIRM dbg_PatEdit_RecordPoseSnapshot saves both player objects pose/pos/offset to 0x1c-byte record array, max 0x28 entries
+JJ 0x061abd30 dbg_PatEdit_PlaybackSnapshot CONFIRM dbg_PatEdit_PlaybackSnapshot steps record array, restores both player objects, can overwrite snapshot, returns pad state
+JJ 0x061abf08 dbg_PatEdit_DrawFields CONFIRM dbg_PatEdit_DrawFields prints STEPS CG_TYPE COUNTER CANCEL TK_SD FLIP ADDRESS labels and values
+JJ 0x061ac0f4 dbg_PatEdit_DrawStepCount CONFIRM dbg_PatEdit_DrawStepCount formats step count of object and prints at column 9 row 8
+JJ 0x061ac114 dbg_PatEdit_DrawZoom CONFIRM dbg_PatEdit_DrawZoom prints ZOOM H/V with zoom bytes +0x5a +0x5b uppercased
+JJ 0x061ac19c dbg_PatEdit_DrawPos CONFIRM dbg_PatEdit_DrawPos prints POS with x,y shorts at +0x5c/+0x60 then calls REL draw
+JJ 0x061ac1ee dbg_PatEdit_DrawRelPos CONFIRM dbg_PatEdit_DrawRelPos prints REL signed x/y difference between two player objects
+JJ 0x061ac31e dbg_PatEdit_RedrawAll CONFIRM dbg_PatEdit_RedrawAll reprints header, pattern counts, fields, zoom, pos for active object
+JJ 0x061ac3ac dbg_PatEdit_DrawRecordCounts CONFIRM dbg_PatEdit_DrawRecordCounts prints two counter values at rows 0x16 and 0x17
+JJ 0x061ac5ce task_InitCursorObj CONFIRM task_InitCursorObj initialises cursor task object fields, spawns child via FUN_061ac9d8 and sets child position
+JJ 0x061ac71c dbg_CursorMoveAndDrop CONFIRM dbg_CursorMoveAndDrop pad moves cursor object, button 0x10 spawns marker object copy via FUN_061ac7ae and logs coords
+JJ 0x061ac7ae task_InitMarkerObj CONFIRM task_InitMarkerObj initialises marker object fields, routine pointer, priority 2, jumps into table-selected routine
+JJ 0x061ac9d8 task_InitCursorChild CONFIRM task_InitCursorChild initialises child sprite object priority 3 with zero position and routine pointer
+JJ 0x061acd6c gfx_FillTileIndexRamp CONFIRM gfx_FillTileIndexRamp fills buffer with incrementing byte tile indices pairwise in rows after FUN setup call
+JJ 0x061acdc0 gfx_MergeTileRows64 CONFIRM gfx_MergeTileRows64 ORs adjacent halfwords of a 64-halfword-wide map into packed 32-entry rows, 4 rows per pass
+JJ 0x061ad44e gfx_RotoZoomFillTiles CONFIRM gfx_RotoZoomFillTiles affine rotate/scale fill of tile buffer using sine/cosine lookups of angle, param_2 selects slot
+JJ 0x061ad720 dbg_InitBoxEditor CONFIRM dbg_InitBoxEditor resets video and sound state, sets display regs, creates two task objects, sets layer scroll offsets
+JJ 0x061ad8c4 task_InitEditorTextA CONFIRM task_InitEditorTextA allocates type 7 object, sets text routine and priority fields
+JJ 0x061ad940 task_InitEditorTextB CONFIRM task_InitEditorTextB allocates type 7 object, sets alternate routine pointer and priority fields
+JJ 0x061ad9ec dbg_SetEditorBufferPtrs CONFIRM dbg_SetEditorBufferPtrs stores two global pointers from base address plus offset
+JJ 0x061ad9fe dbg_ClearEditorState CONFIRM dbg_ClearEditorState zeroes editor globals and sets one flag to 1
+JJ 0x061ade4e plyr_SetObjPointersByActive RENAME dbg_SetObjPointersByActive clearer name: sets global pointers to player objects (0x420 stride) and stand objects by active index and its 
+JJ 0x061adf1c dbg_CycleCounter3or4 CONFIRM dbg_CycleCounter3or4 increments global counter and wraps to 0 at 3 or 4 depending on a flag
+JJ 0x061adf46 dbg_NextScriptTriple CONFIRM dbg_NextScriptTriple advances index in 3-byte records until 0xff terminator then wraps, stores three fields and calls FUN_061ade4e
+JJ 0x061adf92 dbg_EditorStepCharacter CONFIRM dbg_EditorStepCharacter changes character index (0-0x65 wrap), reloads pattern pointers, sprite data and calls FUN_061aef22 and 061ae9
+JJ 0x061ae0ce dbg_EditorStepPattern CONFIRM dbg_EditorStepPattern changes pattern index within character, wraps against count, refreshes via FUN_061aef22 and 061ae95c
+JJ 0x061ae160 dbg_EditorRefreshA CONFIRM dbg_EditorRefreshA calls helper then redraws editor fields via FUN_061aef22 and 061aea2c
+JJ 0x061ae17c dbg_EditorRefreshB CONFIRM dbg_EditorRefreshB calls helper then redraws editor fields via FUN_061aef22 and 061aea2c
+JJ 0x061ae198 dbg_EditorToggleFlip CONFIRM dbg_EditorToggleFlip inverts flip byte at object+0xd
+JJ 0x061ae1a6 dbg_EditorStepAnimTable CONFIRM dbg_EditorStepAnimTable steps index 0-0x54 skipping null entries in anim pointer table, sets object anim pointer
+JJ 0x061ae22c dbg_FindTimelineEntry CONFIRM dbg_FindTimelineEntry scans ushort list for first entry greater than value, returns signed entry or 0
+JJ 0x061ae282 dbg_LocateTimelineSlot CONFIRM dbg_LocateTimelineSlot scans ushort list counting entries below value, stores pointer and remainder into struct
+JJ 0x061ae2d8 dbg_EditorStepSelection CONFIRM dbg_EditorStepSelection changes selection index in range -1..5 with wrap
+JJ 0x061ae2fe dbg_EditorMoveBoxByPad CONFIRM dbg_EditorMoveBoxByPad pad bits move selected box rect fields or object position by 1 or 16/4 units
+JJ 0x061ae498 dbg_EditorCommitBoxes CONFIRM dbg_EditorCommitBoxes copies four edited 4-short boxes back to box tables per slot, sets timers 0x1e and 8
+JJ 0x061ae6ae dbg_EditorAddBoxSlot CONFIRM dbg_EditorAddBoxSlot allocates next box slot in editor struct, copies rect and bumps count, error timers 0x1e on failure
+JJ 0x061ae72a dbg_EditorCopyBoxesToOther CONFIRM dbg_EditorCopyBoxesToOther copies box rects from active editor object to other where both slots nonzero
+JJ 0x061ae95c dbg_EditorLoadPattern CONFIRM dbg_EditorLoadPattern loads pattern ptr, calls FUN_061aea2c and 061aeca4, resets flags, finds timeline via 061ae9e2
+JJ 0x061ae9e2 dbg_LookupAnimDataPtr CONFIRM dbg_LookupAnimDataPtr maps character/pattern index to table pointer plus byte offset entry*8, clamps at 0x1c
+JJ 0x061aea2c dbg_EditorLoadBoxSlots CONFIRM dbg_EditorLoadBoxSlots reads six box indices from pattern and caches box ptrs and rects into editor struct
+JJ 0x061aeca4 dbg_EditorBuildTimeline CONFIRM dbg_EditorBuildTimeline steps frames up to 0x3f copying object fields into per-frame arrays until anim ends
+JJ 0x061aee7e dbg_EditorTrackBoxExtents CONFIRM dbg_EditorTrackBoxExtents updates min box extents and frame index from current pattern boxes
+JJ 0x061aeece dbg_EditorBoxChanged CONFIRM dbg_EditorBoxChanged compares edited box rect against original returns true if any of four shorts differ
+JJ 0x061aef22 dbg_EditorBackupBoxes CONFIRM dbg_EditorBackupBoxes copies six 8-byte box rects into backup area
+JJ 0x061aef5e dbg_FindFrameIndexByPtr CONFIRM dbg_FindFrameIndexByPtr searches anim table for entry matching object+0x68 pointer, returns index or -1
+JJ 0x061aeff0 dbg_EditorResetLayers CONFIRM dbg_EditorResetLayers sets layer enable and scroll regs for four layer objects then calls display update
+JJ 0x061af03e dbg_CycleDisplayMode4 CONFIRM dbg_CycleDisplayMode4 adds delta to mode counter mod 4 and loads halfword from table
+JJ 0x061af058 dbg_SpawnEditorObjPair CONFIRM dbg_SpawnEditorObjPair allocates two objects and inits via FUN_061af0e4 with offset position
+JJ 0x061af0e4 dbg_InitEditorPlayerObj CONFIRM dbg_InitEditorPlayerObj initialises editor fighter object fields from template, loads pattern, spawns marker child object type 9
+JJ 0x061b0758 hit_WriteHitRowHeader CONFIRM hit_WriteHitRowHeader writes 8-halfword record: id, flags OR of three args, masked two values, constants, returns next ptr
+JJ 0x061b0794 dbg_ClearHitFields CONFIRM dbg_ClearHitFields zeroes hit-related shorts/bytes at object offsets
+JJ 0x061b07bc dbg_HitEditor_DrawFrame CONFIRM dbg_HitEditor_DrawFrame prints HIT_EDITOR title, CHR_TBL, CT, a no-address debug line header and row labels
+JJ 0x061b08dc dbg_HitEditor_DrawMain CONFIRM dbg_HitEditor_DrawMain draws title WORLD/blank, both player status blocks, relative pos, boxes depending on mode
+JJ 0x061b0a32 dbg_HitEditor_DrawNames CONFIRM dbg_HitEditor_DrawNames prints two fighter name strings and ids at header
+JJ 0x061b0a76 dbg_HitEditor_DrawRelPos CONFIRM dbg_HitEditor_DrawRelPos prints x,y difference between two objects' positions
+JJ 0x061b0ae8 dbg_HitEditor_DrawPlayerStatus CONFIRM dbg_HitEditor_DrawPlayerStatus prints POS and status fields for a fighter, highlights active, then flag fields
+JJ 0x061b0ca2 dbg_HitEditor_DrawPlayerStatusShort CONFIRM dbg_HitEditor_DrawPlayerStatusShort shorter status print: name, ids, numbers for fighter block
+JJ 0x061b0d6e dbg_HitEditor_DrawBoxList CONFIRM dbg_HitEditor_DrawBoxList lists box rows with index, ptr, x,y,w,h and '*' mark, highlights selection
+JJ 0x061b1262 dbg_PrintMenuCursorLine CONFIRM dbg_PrintMenuCursorLine prints selected table entry text at position by side flag, decrements blink counter, clears marker
+JJ 0x061b12d4 dbg_DrawScrollList CONFIRM dbg_DrawScrollList draws MAX header, current/total counts and visible scrolling rows of pattern list with cursor
+JJ 0x061b1546 dbg_DrawListRowBasic CONFIRM dbg_DrawListRowBasic prints index and per-row halfword/byte values in columns, dim colour when disabled
+JJ 0x061b15f8 dbg_DrawMoveParamRow CONFIRM dbg_DrawMoveParamRow prints one move parameter row: halfwords, bytes, NORM flag text, X/V flag chars, highlights nonzero
+JJ 0x061b18c4 dbg_DrawMoveParamRowShort CONFIRM dbg_DrawMoveParamRowShort shorter move parameter row with numeric columns and 3-char text from table
+JJ 0x061b1ab2 dbg_DrawControlsHelp1 CONFIRM dbg_DrawControlsHelp1 prints 1P/2P button help lines (CHR_ID, MOTION, HIT_MOVE, DATA_ANALYZE) then calls 061b1d1c
+JJ 0x061b1b80 dbg_DrawColorPaletteGrid CONFIRM dbg_DrawColorPaletteGrid clears screen, prints palette index and 16x16 hex grid with marked entries from table range
+JJ 0x061b1d1c dbg_DrawEffectSizeLabels CONFIRM dbg_DrawEffectSizeLabels prints EFF_MAX, EFF_SIZE, HE_SIZE labels and numeric values

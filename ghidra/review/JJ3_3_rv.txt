@@ -1,0 +1,64 @@
+JJ 0x060a66e4 chr_Helper_19 RENAME chr_CalcEdgeBoundX clamped-index table base +/- offset by side flag; callers compare it to object x (0x5c)
+JJ 0x060a6720 chr_Helper_20 UNSURE chr_Helper_20 same clamped table lookup plus constant, no params, no callers
+JJ 0x060a6748 chr_CallWithField CONFIRM chr_CallWithField calls fn with object and one of its fields
+JJ 0x060a6774 chr_Helper_21 RENAME chr_SetPairFlagsOn writes 1 to two global bytes; used by state dispatch
+JJ 0x060a6780 chr_Helper_22 RENAME chr_SetPairFlagsOff writes 0 to the same two global bytes
+JJ 0x060a678c chr_DispatchStateJump_15 RENAME chr_JumpThunk 8-byte thunk that tail-calls one function pointer, no state byte used
+JJ 0x060a6794 chr_Helper_23 RENAME chr_SetObjFlagByte stores param byte into one object field
+JJ 0x060a7ad0 chr_SetState_4 CONFIRM chr_SetState_4 writes state byte to both players and clears sub-step bytes
+JJ 0x060a7c90 mem_LoopFill_2 RENAME chr_ClearCmdSlotPairs zeroes two bytes per 0x14-byte slot over 5 slots; called after every state entry
+JJ 0x060a7cac chr_TryTransition_35 CONFIRM chr_TryTransition_35 command match then SetState, clear slots
+JJ 0x060a7cf2 chr_TryTransition_36 CONFIRM chr_TryTransition_36 command match then SetState 2
+JJ 0x060a7d28 chr_TryTransition_37 RENAME chr_CheckButtonComboCommand pure check: guard flags, button mask combo, command match; sets no state
+JJ 0x060a7dc4 chr_Helper_24 RENAME chr_TryComboTransition check then enter state 9 and clear slots, returns 1
+JJ 0x060a7e00 chr_TryTransition_38 CONFIRM chr_TryTransition_38 command match then state 4
+JJ 0x060a7e36 chr_TryTransition_39 CONFIRM chr_TryTransition_39 command match then state 6
+JJ 0x060a7e6e chr_TryTransition_40 CONFIRM chr_TryTransition_40 guarded command match then state 8
+JJ 0x060a7ed8 chr_TryTransition_41 CONFIRM chr_TryTransition_41 command match and conditions then state 0xb
+JJ 0x060ab9c2 chr_Helper_25 RENAME chr_InitStateMotion sets timers and facing-dependent velocity fields; called at state entry
+JJ 0x060ab9fc chr_UpdateState_10 CONFIRM chr_UpdateState_10 bumps sub-step, init, sets anim
+JJ 0x060aba3a chr_DispatchStateJump_16 CONFIRM chr_DispatchStateJump_16 branches then tail-jumps via unrecovered jumptable
+JJ 0x060abcec chr_DispatchStateJump_17 CONFIRM chr_DispatchStateJump_17 indexes handler table by state byte
+JJ 0x060ac0fa chr_DispatchStateJump_18 CONFIRM chr_DispatchStateJump_18 checks partner state then tail-jumps via jumptable
+JJ 0x060ac152 chr_DispatchStateJump_19 CONFIRM chr_DispatchStateJump_19 tail-jumps via jumptable on field value
+JJ 0x060ac548 chr_TryTransition_42 CONFIRM chr_TryTransition_42 command match then SetState_5 0
+JJ 0x060ac58c chr_TryTransition_43 CONFIRM chr_TryTransition_43 command match then SetState_5 1
+JJ 0x060ac5d4 chr_TryTransition_44 CONFIRM chr_TryTransition_44 command match then SetState_5 5
+JJ 0x060ac644 chr_TryTransition_45 CONFIRM chr_TryTransition_45 command match then SetState_5 8
+JJ 0x060ac68e chr_TryTransition_46 CONFIRM chr_TryTransition_46 command match then SetState_5 9
+JJ 0x060ac6d8 chr_TryTransition_47 CONFIRM chr_TryTransition_47 command match then SetState_5 10
+JJ 0x060ac720 chr_TryTransition_48 CONFIRM chr_TryTransition_48 command match plus partner check then SetState_5 0xc
+JJ 0x060ac7d2 chr_SetState_5 CONFIRM chr_SetState_5 writes state, resets sub-step, mirrors to partner
+JJ 0x060aec9a chr_RunStateLogic_3 CONFIRM chr_RunStateLogic_3 large sub-step state with input reads and many helper calls
+JJ 0x060afa30 chr_UpdateState_11 CONFIRM chr_UpdateState_11 bumps sub-step, helper, sets anim
+JJ 0x060afa52 chr_UpdateState_12 CONFIRM chr_UpdateState_12 per-frame update with periodic table-driven call
+JJ 0x060afa8e chr_DispatchStateJump_20 RENAME chr_RunSubStepSeq switch on sub-step 0/1/2: init velocity, integrate, then tail-jump; not a state dispatch
+JJ 0x060b093c mem_LoopFill_3 RENAME chr_ClearCmdSlotBytes zeroes one byte per 10-byte slot over 7 slots; called after state entry
+JJ 0x060b09c4 chr_SetState_6 CONFIRM chr_SetState_6 writes state to both players, clears sub-step
+JJ 0x060b0a8e chr_TryTransition_49 CONFIRM chr_TryTransition_49 command match then SetState_6 1
+JJ 0x060b0ae0 chr_TryTransition_50 CONFIRM chr_TryTransition_50 command match then SetState_6 3
+JJ 0x060b0b30 chr_TryTransition_51 CONFIRM chr_TryTransition_51 command match then SetState_6 4
+JJ 0x060b0b66 chr_TryTransition_52 CONFIRM chr_TryTransition_52 guarded command match then SetState_6 8
+JJ 0x060b0bf4 chr_TryTransition_53 CONFIRM chr_TryTransition_53 guarded command match then SetState_6 6
+JJ 0x060b0fb4 chr_Helper_26 RENAME chr_SetPoseByOpponentDist sets a field from scaled x distance to partner, clamped by threshold
+JJ 0x060b242a chr_Helper_27 RENAME chr_ResetCombatFlags clears many state fields on both players and a per-player table byte
+JJ 0x060b5100 chr_TryTransition_54 CONFIRM chr_TryTransition_54 command match then SetState_7 0
+JJ 0x060b5130 chr_TryTransition_55 CONFIRM chr_TryTransition_55 guarded command match then SetState_7 3
+JJ 0x060b5182 chr_TryTransition_56 CONFIRM chr_TryTransition_56 command match then SetState_7 4
+JJ 0x060b51ac chr_TryTransition_57 CONFIRM chr_TryTransition_57 command match then SetState_7 10
+JJ 0x060b5200 chr_TryTransition_58 CONFIRM chr_TryTransition_58 table guard and command match then SetState_7 0x13
+JJ 0x060b5256 chr_SetState_7 CONFIRM chr_SetState_7 writes state, resets timers, special sub-states for 0xd-0x10
+JJ 0x060b53b4 chr_StepState_6 UNSURE chr_StepState_6 conditional trigger of stun/anim helpers using partner position; unclear job
+JJ 0x060b5480 chr_Helper_28 UNSURE chr_Helper_28 checks state 0x16 and table match then copies fields; returns bool; purpose unclear
+JJ 0x060b5574 chr_RunStateLogic_4 RENAME chr_TryButtonStartTransition button edge detect picks direction variant, enters state 9, returns 1
+JJ 0x060b56ee chr_StepState_7 UNSURE chr_StepState_7 state 0x16 table check then enter state 9; near twin of Helper_28
+JJ 0x060b5826 chr_Helper_29 RENAME chr_ResetPlayerTableIfUnset if per-player entry is -1 clears three table bytes; returns it
+JJ 0x060b5a30 mem_LoopFill_4 RENAME game_ClearTables zeroes two 0x80-byte tables in pairs; called from game reset
+JJ 0x060b5a90 chr_CallTableEntry_2 CONFIRM chr_CallTableEntry_2 calls handler with table entry unless -1
+JJ 0x060b5c5a chr_Helper_30 RENAME chr_RemapStateOnRelease maps state 8 to 10 or 9 to 6 when bit 4 of input clear
+JJ 0x060b5c94 chr_Helper_31 RENAME chr_RemapStateOnInput maps states 7 and 0x15 to new states from input bits and flags
+JJ 0x060b6814 chr_DispatchStateJump_21 CONFIRM chr_DispatchStateJump_21 jumps through table indexed by state param
+JJ 0x060b68b6 chr_TryTransition_59 CONFIRM chr_TryTransition_59 command match then dispatch state 2
+JJ 0x060b69a8 chr_TryTransition_60 CONFIRM chr_TryTransition_60 command match then dispatch state 5
+JJ 0x060b6a38 chr_TryTransition_61 CONFIRM chr_TryTransition_61 either of two commands then dispatch state 8
+JJ 0x060b6b28 chr_TryTransition_62 CONFIRM chr_TryTransition_62 command match then sets flag byte

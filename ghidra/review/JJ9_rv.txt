@@ -1,0 +1,191 @@
+JJ 0x061b2166 dbg_CycleIndex12 CONFIRM dbg_CycleIndex12 adds delta, wraps 0..0xb, loads table pointer
+JJ 0x061b21d8 dbg_WriteByteViaHalfword CONFIRM dbg_WriteByteViaHalfword byte write within aligned halfword by parity; caller adjusts player field
+JJ 0x061b2232 dbg_ReadByteViaHalfword CONFIRM dbg_ReadByteViaHalfword byte read from halfword by parity, logged
+JJ 0x061b2276 dbg_PlayersShareValue CONFIRM dbg_PlayersShareValue compares same field of two player objects
+JJ 0x061b2292 dbg_EditorCommitAndDispatch CONFIRM dbg_EditorCommitAndDispatch validates, sets timer and mode, jump-table dispatch
+JJ 0x061b2936 dbg_MoveObjectByPad CONFIRM dbg_MoveObjectByPad pad bits add/sub 4 on position fields
+JJ 0x061b29c4 dbg_CycleEditMode045 CONFIRM dbg_CycleEditMode045 cycles 0,4,5
+JJ 0x061b2a82 dbg_DrawWorldScreen CONFIRM dbg_DrawWorldScreen title plus panels and frame
+JJ 0x061b2b34 dbg_DrawControlsHelp2 CONFIRM dbg_DrawControlsHelp2 prints 1P/2P control help lines
+JJ 0x061b2f94 txt_FillStarsAndSpaces CONFIRM txt_FillStarsAndSpaces n stars then blanks to 32 cells
+JJ 0x061b2fd6 gfx_PackColorPermute RENAME gfx_HsvToRgb555 sextant index 0..5 permutes components, sat 0 gives grey; callers rotate palette hue
+JJ 0x061b30ce gfx_ComputeMinMaxEntry RENAME gfx_RgbToHsv min/max of three comps, hue offset 0/0x40 by max channel, stores hue,sat,val record; paired with hsv-to-rgb in hue-shift callers
+JJ 0x061b31be txt_PutHexByte CONFIRM txt_PutHexByte two hex digit cells
+JJ 0x061b320a txt_PutSignedByte CONFIRM txt_PutSignedByte sign cell then hex byte
+JJ 0x061b332e txt_PutSignedWord CONFIRM txt_PutSignedWord sign cell then hex word
+JJ 0x061b3368 txt_PutHexByte2 RENAME txt_PutHex12 writes three hex digits (12-bit value); avoid numeric suffix
+JJ 0x061b33d2 txt_PutSignedHex12 CONFIRM txt_PutSignedHex12 sign then three hex digits
+JJ 0x061b34a2 inp_InitRepeatState CONFIRM inp_InitRepeatState inits two repeat records delay 0xc rate 10
+JJ 0x061b34e4 inp_UpdateRepeatBoth CONFIRM inp_UpdateRepeatBoth updates both pad records
+JJ 0x061b34f8 inp_UpdateRepeat CONFIRM inp_UpdateRepeat edge mask plus auto-repeat counter
+JJ 0x061b3688 dbg_DrawPaletteDump CONFIRM dbg_DrawPaletteDump 8 rows of 16 palette cells
+JJ 0x061b3f68 dbg_CombiEditorInit CONFIRM dbg_CombiEditorInit zeroes state, allocates, failure message
+JJ 0x061b4210 dbg_CombiSelectChar CONFIRM dbg_CombiSelectChar steps char index 0..0xb, loads tables
+JJ 0x061b4338 dbg_CombiSelectCharStand CONFIRM dbg_CombiSelectCharStand steps 0..0x16 stand table
+JJ 0x061b4424 dbg_CombiStepPattern CONFIRM dbg_CombiStepPattern steps pattern, reloads pattern data
+JJ 0x061b4458 dbg_CombiStepPatternJump RENAME dbg_CombiStepPatternSetAnim steps pattern then sets anim pointer from table (no jump semantics)
+JJ 0x061b44d4 dbg_CombiResetA CONFIRM dbg_CombiResetA reset helper, backup and reload boxes
+JJ 0x061b44f2 dbg_CombiResetB CONFIRM dbg_CombiResetB variant reset helper, backup and reload boxes
+JJ 0x061b4510 dbg_CombiCycleFlipFlags CONFIRM dbg_CombiCycleFlipFlags flip mode mod 4 to +0x58/+0x59
+JJ 0x061b4540 dbg_CombiNextValidAnim CONFIRM dbg_CombiNextValidAnim steps anim index skipping null entries
+JJ 0x061b4838 dbg_CombiLoadPatternData CONFIRM dbg_CombiLoadPatternData sets char/anim for pattern, records frames, loads box set; called by select-char and step-pattern
+JJ 0x061b48d2 dbg_CombiLookupBoxTable CONFIRM dbg_CombiLookupBoxTable char/pattern to box table entry*8
+JJ 0x061b491c dbg_CombiLoadBoxSlots CONFIRM dbg_CombiLoadBoxSlots caches six box ptrs and rects
+JJ 0x061b4b90 dbg_CombiRecordFrames CONFIRM dbg_CombiRecordFrames records up to 0x20 frames of object fields
+JJ 0x061b4daa dbg_CombiBackupBoxes CONFIRM dbg_CombiBackupBoxes copies six 8-byte rects to backup
+JJ 0x061b4ddc dbg_CombiFindAnimIndex CONFIRM dbg_CombiFindAnimIndex searches anim table for object anim ptr
+JJ 0x061b4e72 dbg_CombiSetupLayerRegs CONFIRM dbg_CombiSetupLayerRegs sets scroll fields on layer objects
+JJ 0x061b4ec0 dbg_CombiCyclePalette4 CONFIRM dbg_CombiCyclePalette4 selector mod 4 plus table load
+JJ 0x061b4eda dbg_CombiSpawnPair CONFIRM dbg_CombiSpawnPair allocs two fighter objs sides 0/1, places victim
+JJ 0x061b4fa4 dbg_CombiInitFighterObj CONFIRM dbg_CombiInitFighterObj inits editor fighter object
+JJ 0x061b54c2 dbg_CombiClearHitFlags CONFIRM dbg_CombiClearHitFlags zeroes hit bytes; used on char select/refresh
+JJ 0x061b5508 dbg_TsukamiEditor_DrawFrame CONFIRM dbg_TsukamiEditor_DrawFrame title and column header
+JJ 0x061b553c dbg_TsukamiEditor_Draw CONFIRM dbg_TsukamiEditor_Draw calls mode, panels, offset, params, memory draws
+JJ 0x061b558c dbg_TsukamiEditor_DrawMode CONFIRM dbg_TsukamiEditor_DrawMode mode line
+JJ 0x061b568c dbg_TsukamiEditor_DrawOffset CONFIRM dbg_TsukamiEditor_DrawOffset OFFSET x/y diff of two objects
+JJ 0x061b56e2 dbg_TsukamiEditor_DrawPanelA CONFIRM dbg_TsukamiEditor_DrawPanelA fighter A info and POS
+JJ 0x061b57b4 dbg_TsukamiEditor_DrawPanelB CONFIRM dbg_TsukamiEditor_DrawPanelB fighter B info and POS
+JJ 0x061b5872 dbg_TsukamiEditor_DrawParams CONFIRM dbg_TsukamiEditor_DrawParams param row 0x16
+JJ 0x061b58e4 dbg_TsukamiEditor_DrawMemory CONFIRM dbg_TsukamiEditor_DrawMemory MEMORY row 0x18
+JJ 0x061b5a40 dbg_TsukamiLoadRowFields CONFIRM dbg_TsukamiLoadRowFields copies grab-table row fields to editor
+JJ 0x061b5adc dbg_NudgeObjByPad CONFIRM dbg_NudgeObjByPad +-1 on x/y by pad bits
+JJ 0x061b5b24 dbg_TsukamiToggleBit CONFIRM dbg_TsukamiToggleBit increments and masks to 0/1
+JJ 0x061b5b3a dbg_TsukamiSwapActiveSide CONFIRM dbg_TsukamiSwapActiveSide toggles active side flags
+JJ 0x061b5b80 dbg_TsukamiPlaceVictim CONFIRM dbg_TsukamiPlaceVictim positions second obj by grab row offsets and flip; called from spawn pair
+JJ 0x061b5c46 dbg_RecordStepForward CONFIRM dbg_RecordStepForward advances record index to 0x28 saving snapshot, saved-index handling
+JJ 0x061b5cbc dbg_RecordStepSimple CONFIRM dbg_RecordStepSimple simple variant saving snapshot
+JJ 0x061b5d28 dbg_RecordSnapshotTick RENAME dbg_RecordPlaybackTick calls restore-snapshot at index, advances and wraps; it plays back not saves
+JJ 0x061b5d68 dbg_SaveSnapshot CONFIRM dbg_SaveSnapshot stores both fighters into 0x70-byte record
+JJ 0x061b5e64 dbg_RestoreSnapshot CONFIRM dbg_RestoreSnapshot restores both fighters from record
+JJ 0x061b5f20 dbg_RefreshFighterFromEditor CONFIRM dbg_RefreshFighterFromEditor reloads char id, anim, palette, flags from editor struct; called by restore
+JJ 0x061b6056 dbg_ClearFiveGlobals CONFIRM dbg_ClearFiveGlobals zeroes five globals
+JJ 0x061b614a dbg_DrawComboTable CONFIRM dbg_DrawComboTable 10x10 capped counts with row/col totals
+JJ 0x061b65d8 dbg_BumpCellCount CONFIRM dbg_BumpCellCount saturating cell counter row*10+col
+JJ 0x061b6662 dbg_BumpRowCount CONFIRM dbg_BumpRowCount raises max at index+100
+JJ 0x061b66b0 dbg_BumpCounter6e CONFIRM dbg_BumpCounter6e saturating counter 0x6e
+JJ 0x061b66e8 dbg_BumpCounter6f CONFIRM dbg_BumpCounter6f saturating counter 0x6f
+JJ 0x061b6730 dbg_UpdateMinMaxAvg CONFIRM dbg_UpdateMinMaxAvg max 0x70, min 0x74, avg 0x78
+JJ 0x061b67b0 dbg_BumpCounter7c CONFIRM dbg_BumpCounter7c saturating counter index+0x7c
+JJ 0x061b6818 dbg_DrawCompareStats CONFIRM dbg_DrawCompareStats two-column numeric stats; called by overlay
+JJ 0x061b6958 dbg_DrawStatsOverlay CONFIRM dbg_DrawStatsOverlay compare stats plus three lines; called per fight frame
+JJ 0x061b69ce dbg_DrawSelectedMoveInfo CONFIRM dbg_DrawSelectedMoveInfo prints 0x30-byte move entry fields; called from frame-field setter
+JJ 0x061b6ab8 dbg_DrawAttackAnalysis CONFIRM dbg_DrawAttackAnalysis labelled attack data for two fighters; called per anim opcode
+JJ 0x061b6d38 dbg_ClearInputHistory CONFIRM dbg_ClearInputHistory zeroes indexes and 16-word buffer; called from global clear
+JJ 0x061b6d7c dbg_DrawInputHistory CONFIRM dbg_DrawInputHistory draws pad bit glyphs from ring buffer
+JJ 0x061b70ac dbg_InputHistoryPush CONFIRM dbg_InputHistoryPush stores changed pad word into ring, redraws
+JJ 0x061b7118 math_SinQuarterTable CONFIRM math_SinQuarterTable quadrant-folded table lookup; used by rotozoom
+JJ 0x061b716c math_CosQuarterTable CONFIRM math_CosQuarterTable same with quadrant offset; used by rotozoom
+JJ 0x061b71c0 math_AngleBetweenObjects CONFIRM math_AngleBetweenObjects atan2 from object x/y diff via table
+JJ 0x061b7238 math_AngleBetweenPoints CONFIRM math_AngleBetweenPoints atan2 from two points; used for aiming
+JJ 0x061b72b0 test_ResetScreenState CONFIRM test_ResetScreenState resets display, allocs two objs, timer; called by select advance
+JJ 0x061b7378 test_StartPlayerSelect CONFIRM test_StartPlayerSelect picks char by side, sets cursor; arg 0/1 player
+JJ 0x061b7492 test_AdvanceP1Select CONFIRM test_AdvanceP1Select state 1, countdown, then start select side 0
+JJ 0x061b74f0 test_AdvanceP2Select CONFIRM test_AdvanceP2Select state 2, same for side 1
+JJ 0x061b75ae test_ReadSelectInput CONFIRM test_ReadSelectInput pad press starts P1/P2 select, returns active
+JJ 0x061b76a8 test_MenuMain CONFIRM test_MenuMain inits screen then loops dispatching menu item fns
+JJ 0x061b7ac4 test_FormatVersionString CONFIRM test_FormatVersionString builds region/date text, month lookup via strcmp
+JJ 0x061b7cc0 eeprom_BuildSettingsImage CONFIRM eeprom_BuildSettingsImage copies setting blocks for two players into 0x60 image
+JJ 0x061b7d1a eeprom_SaveSettings CONFIRM eeprom_SaveSettings build image then write 0x60 at addr 0
+JJ 0x061b7d2c eeprom_CompareSettingBlock CONFIRM eeprom_CompareSettingBlock memcmp of two 0x16 blocks, 0 equal else -1
+JJ 0x061b7d6c eeprom_SaveDefaults CONFIRM eeprom_SaveDefaults default block into both images, write
+JJ 0x061b7d96 eeprom_LoadDefaultsToRam CONFIRM eeprom_LoadDefaultsToRam copies 0x30 bytes image to defaults
+JJ 0x061b7da0 eeprom_CopySettingBlock CONFIRM eeprom_CopySettingBlock copies setting parts to dest
+JJ 0x061b7dd2 eeprom_ClearCounter CONFIRM eeprom_ClearCounter zero 16-bit counter, write addr 0x70
+JJ 0x061b7e14 eeprom_IncCounter CONFIRM eeprom_IncCounter inc capped counter, write addr 0x70
+JJ 0x061b8854 test_DrawColorBars CONFIRM test_DrawColorBars 16 palette gradient entries plus cell grid
+JJ 0x061b8d14 test_DrawFrameBorder CONFIRM test_DrawFrameBorder border grid edge palette 6, inner 4
+JJ 0x061b9034 test_ClearCounters RENAME eeprom_ClearCounterBlock zeroes counters and writes 16-byte block to EEPROM 0x60; not a test screen fn
+JJ 0x061b908c test_IncCounter68 RENAME eeprom_IncCounter68 increments 32-bit counter, writes EEPROM 0x68; callers are continue/join screens
+JJ 0x061b94c8 test_MenuLoop CONFIRM test_MenuLoop cursor up/down, runs selected item fn, returns selection
+JJ 0x061b99be test_DrawOptionValueA CONFIRM test_DrawOptionValueA option row value, highlighted when selected
+JJ 0x061b9a3a test_ToggleOptionB CONFIRM test_ToggleOptionB toggles 0/1, redraws
+JJ 0x061b9a5a test_DrawOptionValueB CONFIRM test_DrawOptionValueB second option row value
+JJ 0x061b9f0c test_RunMenuItemInits CONFIRM test_RunMenuItemInits calls init fn per item in menu table
+JJ 0x061b9f4c test_ResetMenuState CONFIRM test_ResetMenuState clears flag, copies default block, optional hook; no callers so weak evidence
+JJ 0x061ba100 test_SelfCheck CONFIRM test_SelfCheck boot self-test prints per-area result, id compare, halts on fail
+JJ 0x061ba550 test_PrintOkNg CONFIRM test_PrintOkNg prints OK/NG plus error kind; called only by self-check
+JJ 0x061ba5d4 test_CheckFlashChips CONFIRM test_CheckFlashChips table loop of chip checks, prints OK/NG/SKIP
+JJ 0x061bab80 test_WaitForDisc CONFIRM test_WaitForDisc polls drive, compares disc id string, retries until ready
+JJ 0x061bac98 test_CountCoinCost UNSURE test_CountCoinCost sums weights from two setting tables; no callers, meaning of weights unclear
+JJ 0x061bad1c spr_AllocUiSprites CONFIRM spr_AllocUiSprites builds sprite entries from static table; called by menu main
+JJ 0x061bad76 spr_AllocCursorSprite CONFIRM spr_AllocCursorSprite one cursor sprite entry; called by three menus
+JJ 0x061badd0 test_DrawCursorOnly CONFIRM test_DrawCursorOnly blanks old pos, draws arrow new pos; menu cursor style
+JJ 0x061bae06 test_DrawCursorBrackets CONFIRM test_DrawCursorBrackets bracket glyphs at old/new pos; alternate cursor style
+JJ 0x061baeaa lib_Sprintf CONFIRM lib_Sprintf vformat into buffer, zero terminate, return length
+JJ 0x061baef8 lib_Qsort CONFIRM lib_Qsort recursive quicksort size+compare callback; called by menu setup
+JJ 0x061bb0b0 lib_Free CONFIRM lib_Free address-ordered free list with coalescing; callers are object allocs
+JJ 0x061bb138 lib_FindFreeBlock CONFIRM lib_FindFreeBlock first-fit search, grows heap via syscall; called by malloc
+JJ 0x061bb1f6 lib_Malloc CONFIRM lib_Malloc rounds to 4, splits free block, returns data ptr
+JJ 0x061bb4e0 hw_SetRegA7bit CONFIRM hw_SetRegA7bit mask-set low 7 bits of 16-bit reg
+JJ 0x061bb508 hw_SetRegBHighByte CONFIRM hw_SetRegBHighByte sets high byte field of 16-bit reg
+JJ 0x061bb534 hw_WriteRegCStrobe CONFIRM hw_WriteRegCStrobe writes 1 then param|1 to byte regs
+JJ 0x061bb55a hw_SetRegD2bit CONFIRM hw_SetRegD2bit mask-set low 2 bits of byte reg
+JJ 0x061bb56e hw_WriteRegEWord CONFIRM hw_WriteRegEWord word split into two byte regs
+JJ 0x061bb58a hw_WriteRegFWord CONFIRM hw_WriteRegFWord word split into another byte reg pair
+JJ 0x061bb866 fmt_HexLongLowerSpacePad CONFIRM fmt_HexLongLowerSpacePad 8 hex digits lowercase, leading zeros as spaces
+JJ 0x061bb962 fmt_HexLongUpperSpacePad RENAME fmt_HexWordUpperSpacePad loop counter starts 0xc and drops 4 per digit so only 4 digits (16-bit); leading zeros become spaces
+JJ 0x061bbc32 fmt_HexLongLower CONFIRM fmt_HexLongLower 8 lowercase digits plus terminator; used by hex table/grid dumps
+JJ 0x061bbc70 fmt_HexLongUpper CONFIRM fmt_HexLongUpper 8 uppercase digits plus terminator; no callers
+JJ 0x061bbcb6 fmt_HexLongLowerSpacePad8 CONFIRM fmt_HexLongLowerSpacePad8 8 lowercase digits, leading zeros as spaces; used by result/bonus screens
+JJ 0x061bbf78 fmt_HexLongUpperTrim CONFIRM fmt_HexLongUpperTrim 8 uppercase digits, leading zeros dropped entirely; no callers
+JJ 0x061bc060 disc_BcdChecksumMask RENAME math_BinToBcd per set bit of input adds a table entry with BCD add into 4 bytes; callers are score/hud number displays, not disc
+JJ 0x061bc148 test_MemoryPattern CONFIRM test_MemoryPattern byte/word/long pattern write-readback with mask, -1 on mismatch; caller is self-check
+JJ 0x061bc384 cd_ScanDevices CONFIRM cd_ScanDevices loops 7 SCSI ids, 0x38-byte entries, inquiry then probe each
+JJ 0x061bc43a cd_ProbeDrive CONFIRM cd_ProbeDrive per-device ready check, capacity, volume descriptor read for type 5 devices
+JJ 0x061bc554 cd_ReadVolumeDescriptor CONFIRM cd_ReadVolumeDescriptor reads sector 16, compares CD001 signature, stores size and name
+JJ 0x061bc66a cd_RequestSenseStatus CONFIRM cd_RequestSenseStatus sense command, maps sense key to error code and 0/1/-1
+JJ 0x061bc784 cd_SendCmd1e CONFIRM cd_SendCmd1e six-byte cmd 0x1e with bit0 param; called by disc wait
+JJ 0x061bc7cc cd_SendCmdBlock6 CONFIRM cd_SendCmdBlock6 stores one byte into cmd buffer and issues six-byte command; shared by scan/probe/wait
+JJ 0x061bc80e anim_InitSystem RENAME snd_InitSystem copies init table, sets callbacks, clears 16 channel status bytes; callers around it are snd_ dispatcher so sound engine
+JJ 0x061bc9c8 anim_LoadScriptSet RENAME snd_LoadScriptSet overlaps StartScript body without channel param; called by snd dispatcher and menu; sound script loader
+JJ 0x061bc9cc anim_StartScript RENAME snd_StartScript indexes script table, inits paired 0x74-byte channels; callers are volume/pan wrappers and snd dispatcher
+JJ 0x061bd67a anim_StartScriptClamped RENAME snd_StartScriptClamped clamps two 0-127 values (volume/pan) then starts script; called by snd dispatcher
+JJ 0x061bd6e0 anim_ResetChannels RENAME snd_ResetChannels sets idle status on 8 channel pairs; called by snd dispatcher and snd_UpdateChannels
+JJ 0x061bd714 anim_PauseChannels RENAME snd_PauseChannels saves status bytes, marks idle, sets pause bit; only snd dispatcher calls
+JJ 0x061bd76a anim_ResumeChannels RENAME snd_ResumeChannels restores saved status bytes, clears pause bit; only snd dispatcher calls
+JJ 0x061bd7b4 anim_StartScriptWithMask RENAME snd_StartScriptWithMask masks param, sets flag bit 8, starts script on default channel; no callers
+JJ 0x061bd7f8 anim_SetMaskAndStep RENAME snd_SetMaskAndStep when active stores masked value, flips flag bits 8/0x10; snd dispatcher only
+JJ 0x061bd82c anim_ClearAllChannels RENAME snd_ClearAllChannels zeroes status and counters of all channels, resets flags; snd dispatcher only
+JJ 0x061c3498 math_DivideSigned32 CONFIRM math_DivideSigned32 unrolled div-step compiler helper, quotient; callers are sin table, format, combo table
+JJ 0x061c3540 math_DivideSigned64 CONFIRM math_DivideSigned64 unrolled 64-by-32 division helper; many callers in text/meter/clock code
+JJ 0x061c3608 math_DivModUnsigned64 CONFIRM math_DivModUnsigned64 unrolled unsigned divide returning pair; divide-by-zero stores constant and returns
+JJ 0x061c36e0 math_ShiftLeftVar RENAME math_ShiftRightArith out-of-range count returns 0 or -1 by sign of input, i.e. arithmetic right shift helper; callers negate shifted distances
+JJ 0x061c37f8 math_ShiftDispatch RENAME math_ShiftRightLogical jump-table shift, 0 for count over 31; callers are hex digit formatters extracting digits
+JJ 0x061c3898 math_DivideUnsigned32 RENAME fp_SubFloat exponent masks, NaN return, flips sign of second operand; callers are damage calc and float formatting, not integer divide
+JJ 0x061c389e math_ModuloUnsigned32 RENAME fp_AddFloat same body as sub entry without sign flip, exponent align and NaN checks; callers are float damage calc and float format
+JJ 0x061c3e74 fp_AddDouble CONFIRM fp_AddDouble double add with exponent align, NaN/inf checks
+JJ 0x061c4124 fp_CompareFloat RENAME fp_FloatToDouble widens single float to two-word double stored via out pointer, no comparison; caller is damage calc
+JJ 0x061c465c sys_CallOrZero RENAME sys_GrowHeap positive size passed to syscall, -1 mapped to 0; only caller is heap free-block search
+JJ 0x061c4714 scsi_Init CONFIRM scsi_Init waits for controller, runs reset sequence, error code 4 on failure
+JJ 0x061c4738 scsi_WaitReady CONFIRM scsi_WaitReady polls status bit with retry count, issues select/reset writes
+JJ 0x061c482c scsi_ResetSequence CONFIRM scsi_ResetSequence fixed controller register write sequence with delays
+JJ 0x061c48a8 dmac_StartRead CONFIRM dmac_StartRead sets address/length regs, direction 0, runs state-table loop until -1
+JJ 0x061c4910 dmac_StartWrite CONFIRM dmac_StartWrite same as read with direction 1; returns status or -1; no callers
+JJ 0x061c550c scsi_SendShortCmd CONFIRM scsi_SendShortCmd sends ten-byte command then data phase; called by drive probe
+JJ 0x061c55e4 scsi_SendCmd6A CONFIRM scsi_SendCmd6A six-byte command with one byte param then data phase; called by sense request
+JJ 0x061c5614 scsi_SendCmd6B CONFIRM scsi_SendCmd6B six-byte command with one byte param then data phase; called by device scan
+JJ 0x061c74f8 fmt_EmitField RENAME fmt_ParseSpec table-driven scan of a format spec, returns consumed length or -1; caller is fmt_Format
+JJ 0x061c76c0 math_ShiftDispatch_2 RENAME math_ShiftRightLogicalB duplicate jump-table shift helper in another module; numeric suffix not allowed
+JJ 0x061c7ff0 fp_SubDouble CONFIRM fp_SubDouble flips sign of second operand then aligns and adds
+JJ 0x061c83f4 fp_MulDouble RENAME fp_DivDouble body has shift-subtract loop with sticky remainder bit, divide not multiply; caller is float format
+JJ 0x061c85f4 fp_IntToFloat RENAME fp_IntToDouble normalizes int and writes 11-bit exponent plus two mantissa words, double result
+JJ 0x061c8648 fp_IsUnorderedDouble RENAME fp_LessThanDouble NaN gives false, both zero false, else magnitude/sign compare returns a<b bool
+JJ 0x0624a9de junk_0624a9de CONFIRM junk_0624a9de data bytes decoded as code, halts on bad data
+JJ 0x0624aa42 junk_0624aa42 CONFIRM junk_0624aa42 data bytes decoded as code, halts on bad data
+JJ 0x0624aad9 junk_0624aad9 CONFIRM junk_0624aad9 data bytes decoded as code, halts on bad data
+JJ 0x0624ab3a junk_0624ab3a CONFIRM junk_0624ab3a data bytes decoded as code, halts on bad data
+JJ 0x0624baa6 junk_0624baa6 CONFIRM junk_0624baa6 data bytes decoded as code, halts on bad data
+JJ 0x0624bace junk_0624bace CONFIRM junk_0624bace data bytes decoded as code, halts on bad data
+JJ 0x0624bb22 junk_0624bb22 CONFIRM junk_0624bb22 data bytes decoded as code, halts on bad data
+JJ 0x0624bb3e junk_0624bb3e CONFIRM junk_0624bb3e data bytes decoded as code, halts on bad data
+JJ 0x0624bb80 junk_0624bb80 CONFIRM junk_0624bb80 data bytes decoded as code, halts on bad data
+JJ 0x0624bbb2 junk_0624bbb2 CONFIRM junk_0624bbb2 data bytes decoded as code, halts on bad data
+JJ 0x0624bbb6 junk_0624bbb6 CONFIRM junk_0624bbb6 data bytes decoded as code, halts on bad data
+JJ 0x0624bbba junk_0624bbba CONFIRM junk_0624bbba data bytes decoded as code, halts on bad data
+JJ 0x0624bca2 junk_0624bca2 CONFIRM junk_0624bca2 data bytes decoded as code, halts on bad data
+JJ 0x0624bcf3 junk_0624bcf3 CONFIRM junk_0624bcf3 data bytes decoded as code, halts on bad data
+JJ 0x0624bd6c junk_0624bd6c CONFIRM junk_0624bd6c data bytes decoded as code, halts on bad data
+JJ 0x0624bdd8 junk_0624bdd8 CONFIRM junk_0624bdd8 data bytes decoded as code, halts on bad data
+JJ 0x0624c1e0 junk_0624c1e0 CONFIRM junk_0624c1e0 data bytes decoded as code, halts on bad data
+JJ 0x0624c7fe junk_0624c7fe CONFIRM junk_0624c7fe data bytes decoded as code, halts on bad data
+JJ 0x06c22baa junk_06c22baa CONFIRM junk_06c22baa data bytes decoded as code, halts on bad data

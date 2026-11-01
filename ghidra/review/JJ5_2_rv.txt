@@ -1,0 +1,64 @@
+JJ 0x060edb72 fx_SpawnType34A CONFIRM fx_SpawnType34A allocs object type 0x34 copying parent sprite fields and registers
+JJ 0x060edc20 fx_SpawnType34B CONFIRM fx_SpawnType34B allocs type 0x34 beside parent offset -0x3b or +0x3b by facing
+JJ 0x060edcca fx_SpawnType34C CONFIRM fx_SpawnType34C allocs type 0x34 by parent type table, copies fields
+JJ 0x060ee83c fx_SpawnType35Spark CONFIRM fx_SpawnType35Spark allocs type 0x35 spark child, update proc by kind 0-3, copies parent pos and sprite fields
+JJ 0x060ee946 fx_UpdateType35 CONFIRM fx_UpdateType35 type 0x35 update state machine, tracks parent pos by facing, spawns kind 4 trail sparks
+JJ 0x060eeb00 fx_SpawnSparksByParentType CONFIRM fx_SpawnSparksByParentType switch on parent type spawning random-offset type 0x35 sparks via fx_SpawnType35Spark, uses rng
+JJ 0x060ef1b8 fx_SpawnType35ByKind CONFIRM fx_SpawnType35ByKind allocs type 0x35 object, switch on kind 0-0xe sets update proc, sprite table, offsets from parent
+JJ 0x060ef858 fx_SpawnType36Copy CONFIRM fx_SpawnType36Copy allocs type 0x36 object copying parent pos, sprite table, +0x68 and +0x78 fields
+JJ 0x060ef9a0 fx_SpawnType37 CONFIRM fx_SpawnType37 allocs type 0x37 object sized by parent type table, flag selects offset layout
+JJ 0x060efbe8 fx_SpawnType38A CONFIRM fx_SpawnType38A allocs type 0x38 object copying parent fields, variant 0/1/2 picks init callback
+JJ 0x060efc9c fx_SpawnType38B CONFIRM fx_SpawnType38B allocs type 0x38 object with optional anim field override, variant selects init
+JJ 0x060efd82 fx_SpawnType38C CONFIRM fx_SpawnType38C allocs type 0x38 object layer 2 copying parent +0x68, variant selects init
+JJ 0x060f01ac ui_InitModeSprite CONFIRM ui_InitModeSprite sets object update proc, sprite table and screen pos by game mode byte 1-7
+JJ 0x060f04c2 ui_SpawnType39Group CONFIRM ui_SpawnType39Group spawns 1/4/9 type 0x39 objects by kind, tracks count in globals
+JJ 0x060f0794 fx_SpawnType3A CONFIRM fx_SpawnType3A allocs type 0x3a child copying parent fields, sprite table by kind, special kinds 0xe 0x15 0x16
+JJ 0x060f08e0 fx_UpdateType3A CONFIRM fx_UpdateType3A type 0x3a update, substate 0 counter, 1 and 2 wait for anim end, swap sprite table
+JJ 0x060f0956 ui_SpawnType3B CONFIRM ui_SpawnType3B allocs type 0x3b object at fixed screen pos, kind clamped under 0x14
+JJ 0x060f0ab2 ui_InitType3C CONFIRM ui_InitType3C initializes type 0x3c object fields, update proc, sprite table
+JJ 0x060f0b0a ui_SpawnType3CPair CONFIRM ui_SpawnType3CPair allocs type 0x3c objects via ui_InitType3C, second only for mode 0 or 1
+JJ 0x060f0f84 fx_SpawnType3D CONFIRM fx_SpawnType3D allocs type 0x3d effect, switch on kind 0-0xb sets offset from parent by facing, sprite table
+JJ 0x060f1414 fx_SpawnType3E CONFIRM fx_SpawnType3E allocs type 0x3e effect at parent pos plus offset table by kind, scale table by arg
+JJ 0x060f15fc fx_SpawnType3F CONFIRM fx_SpawnType3F allocs type 0x3f effect at parent offset table, velocity from table flipped by facing
+JJ 0x060f1b9c fx_SpawnType40 CONFIRM fx_SpawnType40 allocs type 0x40 effect, per-kind position offset from parent, sprite table by kind
+JJ 0x060f1da2 fx_SpawnType41 CONFIRM fx_SpawnType41 allocs type 0x41 object at given x,y with sprite table by kind arg
+JJ 0x060f1f5c fx_SpawnType42Burst CONFIRM fx_SpawnType42Burst loops 4 allocating type 0x42 debris with offsets and velocities from tables mirrored by facing
+JJ 0x060f28e8 gfx_ResetWipeState CONFIRM gfx_ResetWipeState clears wipe transition state byte, tiny setter
+JJ 0x060f28f0 gfx_RunWipeTransition CONFIRM gfx_RunWipeTransition state machine drawing tilemap tiles mirrored in four quadrants for wipe or iris, loads palettes first
+JJ 0x060f30c8 fx_SpawnType44 CONFIRM fx_SpawnType44 allocs type 0x44 object beside parent offset -0x13 or +0x13 by facing
+JJ 0x060f326c fx_SpawnType45Pair CONFIRM fx_SpawnType45Pair loops up to 2 allocating type 0x45 effects with offset and velocity tables by kind
+JJ 0x060f3434 fx_SpawnType45Child CONFIRM fx_SpawnType45Child allocs type 0x45 child of effect using parent's parent pos, offset and velocity tables
+JJ 0x060f3578 fx_CopyPosFromObj CONFIRM fx_CopyPosFromObj enables object, copies x y facing from second object, calls helper when global flag clear
+JJ 0x060f3762 fx_SpawnType46 CONFIRM fx_SpawnType46 allocs type 0x46 object copying parent fields and +0x13 byte into +0x11
+JJ 0x060f39d4 fx_SpawnType47Base CONFIRM fx_SpawnType47Base allocs bare type 0x47 object, parent set, update proc, no sprite
+JJ 0x060f3a34 fx_SpawnType47Offset CONFIRM fx_SpawnType47Offset allocs type 0x47 object at parent pos plus offset tables, scale and sprite by parent level 1-3
+JJ 0x060f3e4c fx_SpawnType48 CONFIRM fx_SpawnType48 allocs type 0x48 object, sprite table and update by kind 0-3
+JJ 0x060f3f9c fx_SpawnType49Debris CONFIRM fx_SpawnType49Debris loops count from table spawning type 0x49 pieces with rng offsets and velocities
+JJ 0x060f41e6 fx_SetType49Sprite CONFIRM fx_SetType49Sprite sets sprite table and attrs of type 0x49 piece from kind table
+JJ 0x060f4520 fx_SpawnType4A CONFIRM fx_SpawnType4A allocs type 0x4a object offset from parent by table, sprite table kind 0 or 1
+JJ 0x060f4c76 fx_SpawnType4BA CONFIRM fx_SpawnType4BA allocs type 0x4b object offset from parent by tables flipped by facing
+JJ 0x060f4d76 fx_SpawnType4BB CONFIRM fx_SpawnType4BB allocs type 0x4b kind 3 object with rng velocity, timer by param 0-3
+JJ 0x060f4f98 fx_SpawnType4BC CONFIRM fx_SpawnType4BC allocs type 0x4b kind 3 object, update proc by param, zeroed velocity
+JJ 0x060f50c4 fx_SpawnType4BD CONFIRM fx_SpawnType4BD allocs type 0x4b kind 3 object above parent or parent's parent, zeroed velocity
+JJ 0x060f52fa fx_SpawnType4C CONFIRM fx_SpawnType4C allocs type 0x4c object at y 0x68, x offset by facing, sprite by parent kind
+JJ 0x060f5728 fx_ClearParticlePoolA CONFIRM fx_ClearParticlePoolA zeroes flag bytes of 32 particle slots in per-owner pool
+JJ 0x060f5768 fx_SpawnParticlesFromTable CONFIRM fx_SpawnParticlesFromTable fills free particle slots from table entries with offsets and velocities flipped by facing
+JJ 0x060f5874 fx_SpawnRandomParticles CONFIRM fx_SpawnRandomParticles fills free particle slots with rng positions and velocities by mode 0-2
+JJ 0x060f5980 fx_UpdateParticlePool CONFIRM fx_UpdateParticlePool steps 32 particles, moves by velocity, draws via sprite helper, counts drawn
+JJ 0x060f5afc fx_ClearParticlePoolB CONFIRM fx_ClearParticlePoolB clears active flag of 32 particle slots, stride 0x44
+JJ 0x060f6162 fx_SpawnType4E CONFIRM fx_SpawnType4E allocs type 0x4e object copying parent pos, dispatches init by param table
+JJ 0x060f62a4 fx_GetStageAnchorPos CONFIRM fx_GetStageAnchorPos computes x y anchor from camera globals by mode 0 1 2
+JJ 0x060f6b28 fx_CallByIndex CONFIRM fx_CallByIndex indirect call through function pointer table by index
+JJ 0x060f7c14 fx_InitType4F CONFIRM fx_InitType4F initializes object as type 0x4f with sprite table and update proc
+JJ 0x060f8ed8 fx_InitType50 CONFIRM fx_InitType50 initializes object as type 0x50 with sprite table and update proc
+JJ 0x060f94c0 fx_InitType52 CONFIRM fx_InitType52 initializes object as type 0x52 layer 2 with update proc
+JJ 0x060f9520 fx_SpawnType52Variant CONFIRM fx_SpawnType52Variant big switch on 0-0x1b spawning type 0x52 actors with sprite, position, facing per variant
+JJ 0x060f9e08 fx_SpawnType52Child1F CONFIRM fx_SpawnType52Child1F allocs type 0x52 child variant 0x1f offset +0x33,+7 from parent
+JJ 0x060fb6dc fx_SpawnType53 CONFIRM fx_SpawnType53 allocs type 0x53 object offset +-0x72 x and +0x4b y from parent by facing
+JJ 0x060fb8d0 fx_SpawnType54Quad CONFIRM fx_SpawnType54Quad loops 4 allocating type 0x54 pieces with offset and velocity tables flipped by facing
+JJ 0x060fbdb0 fx_SpawnType55 CONFIRM fx_SpawnType55 allocs type 0x55 object y 0x48, x and velocity by facing, clears flag on failure
+JJ 0x060fbfe6 fx_SpawnType56 CONFIRM fx_SpawnType56 allocs type 0x56 object at parent position with sprite table
+JJ 0x060fc24e fx_SpawnType57 CONFIRM fx_SpawnType57 allocs type 0x57 object with x y offsets and kind 0-2 selecting sprite and update
+JJ 0x060fd08a fx_SpawnType59 CONFIRM fx_SpawnType59 allocs type 0x59 object by kind param, dispatches init through function table
+JJ 0x060fdf54 fx_SpawnType5AA CONFIRM fx_SpawnType5AA allocs type 0x5a variant 0 at owner offset from table by owner kind
+JJ 0x060fe08e fx_SpawnType5AB CONFIRM fx_SpawnType5AB allocs type 0x5a variant 1 at owner offset from table by owner kind

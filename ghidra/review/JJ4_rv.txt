@@ -1,0 +1,192 @@
+JJ 0x060b6b64 chr_TryTransition_63 CONFIRM chr_TryTransition_63 command check then state jump 0xf
+JJ 0x060b6c56 chr_TryTransition_64 CONFIRM chr_TryTransition_64 two command checks then branches to state jump
+JJ 0x060b6df4 chr_TryTransition_65 CONFIRM chr_TryTransition_65 command check then set state byte and jump
+JJ 0x060b7048 chr_Helper_32 RENAME chr_LoadVec4FlipByFacing copies 4 words from record, negates first two when facing flag set
+JJ 0x060b7080 chr_Helper_33 RENAME chr_LoadVec4FromTable indexes 16-byte table record and calls loader
+JJ 0x060b7090 chr_Helper_34 RENAME chr_CountdownOrOpponentNear decrements counter, true at zero or opponent within 0x40 ahead
+JJ 0x060b9260 chr_Helper_35 UNSURE chr_Helper_35 multi-field state test returning 1 for two values, role unclear
+JJ 0x060b9e44 chr_Helper_36 RENAME chr_ClampFieldByFacing clamps a 32-bit field into facing-dependent range
+JJ 0x060bad9e chr_UpdateState_13 UNSURE chr_UpdateState_13 direction input vs distance check, no callers
+JJ 0x060bbb8a chr_Helper_37 UNSURE chr_Helper_37 timer<1 calls fn with global else returns 0x60
+JJ 0x060bbb9e chr_DispatchStateJump_22 CONFIRM chr_DispatchStateJump_22 tail call via pointer table
+JJ 0x060bbba6 chr_CallWithField_2 CONFIRM chr_CallWithField_2 calls fn with object and one field
+JJ 0x060bbbae chr_Helper_38 RENAME chr_NearestOpponentOnRight compares abs x distance to two opponents, returns side sign
+JJ 0x060bbc68 chr_UpdateState_14 RENAME chr_ToggleAltFlag toggles flag byte and sets flag 0xe
+JJ 0x060bbc8e chr_UpdateState_15 RENAME chr_SetStateFromTable sets state byte from table by index, clears sub-state
+JJ 0x060bbcae chr_StepState_8 RENAME chr_StepTwoPhaseAnim phase0 counts down then starts anim, phase1 runs until end marker returns 1
+JJ 0x060bc8b8 chr_TryTransition_66 CONFIRM chr_TryTransition_66 pattern check then sets both chars to state 0x1a
+JJ 0x060bc93a chr_TryTransition_67 CONFIRM chr_TryTransition_67 pattern check then sets both chars state, copies facing
+JJ 0x060bc9a6 chr_TryTransition_68 CONFIRM chr_TryTransition_68 same shape, selects slot 2
+JJ 0x060bca38 chr_TryTransition_69 CONFIRM chr_TryTransition_69 same shape, selects slot 3
+JJ 0x060bcac0 chr_DispatchStateJump_23 CONFIRM chr_DispatchStateJump_23 indexes handler table by state byte; caller dispatches per mode
+JJ 0x060c383a chr_TryTransition_70 CONFIRM chr_TryTransition_70 command check then SetState 0
+JJ 0x060c38a6 chr_TryTransition_71 CONFIRM chr_TryTransition_71 command check then SetState 1
+JJ 0x060c38ec chr_TryTransition_72 CONFIRM chr_TryTransition_72 command check then SetState 4
+JJ 0x060c392c chr_TryTransition_73 CONFIRM chr_TryTransition_73 command check then SetState 6
+JJ 0x060c3972 chr_TryTransition_74 CONFIRM chr_TryTransition_74 command check then SetState 7
+JJ 0x060c39d6 chr_TryTransition_75 CONFIRM chr_TryTransition_75 command check then SetState 10
+JJ 0x060c3a12 chr_TryTransition_76 CONFIRM chr_TryTransition_76 command check then SetState 0xb
+JJ 0x060c3a4c chr_TryTransition_77 CONFIRM chr_TryTransition_77 command check then SetState 0xf
+JJ 0x060c3ab8 chr_SetState_8 CONFIRM chr_SetState_8 writes state byte on both chars with per-state init
+JJ 0x060c3d96 chr_UpdateFlicker_3 CONFIRM chr_UpdateFlicker_3 parity-based visibility toggle, ramps bytes 0x5a/0x5b, clamps
+JJ 0x060c3e5e chr_UpdateFlicker_4 CONFIRM chr_UpdateFlicker_4 same flicker body without init call
+JJ 0x060c3f08 chr_UpdateState_16 RENAME chr_UpdateFollowOwnerPhases copies owner x/y plus facing offset 0x14, phased countdown
+JJ 0x060c42a8 chr_Helper_39 UNSURE chr_Helper_39 checks partner state 10 and several sub-fields, no callers
+JJ 0x060c48c2 chr_SetState_9 CONFIRM chr_SetState_9 sets state on both chars and positions partner +-0x10 by facing
+JJ 0x060c49f8 mem_LoopFill_5 RENAME chr_ClearCommandSlotsExcept loop over 2 slots zeroing bytes except selected index
+JJ 0x060c4a3a chr_TryTransition_78 CONFIRM chr_TryTransition_78 command check then SetState_9 4 and clear slots
+JJ 0x060c4a8a chr_TryTransition_79 CONFIRM chr_TryTransition_79 command check, meter gate, SetState_9 6
+JJ 0x060c4b3c chr_TryTransition_80 CONFIRM chr_TryTransition_80 command check then SetState_9 5
+JJ 0x060c4bc0 chr_TryTransition_81 CONFIRM chr_TryTransition_81 command check then SetState_9 7
+JJ 0x060c4c04 chr_TryTransition_82 CONFIRM chr_TryTransition_82 command check then SetState_9 0xb
+JJ 0x060c4c54 chr_TryTransition_83 CONFIRM chr_TryTransition_83 command check then SetState_9 0xe
+JJ 0x060c4cc4 chr_TryTransition_84 CONFIRM chr_TryTransition_84 command check then SetState_9 1
+JJ 0x060c4d10 chr_TryTransition_85 CONFIRM chr_TryTransition_85 command check then SetState_9 7
+JJ 0x060c4d5a chr_TryTransition_86 CONFIRM chr_TryTransition_86 command check then SetState_9 0x10 or 0xe
+JJ 0x060c4e12 chr_TryTransition_87 CONFIRM chr_TryTransition_87 command check, gate, SetState_9 0x13
+JJ 0x060c6300 chr_DispatchStateJump_24 RENAME chr_StepSubStateByResult calls fn then bumps substate or starts next anim by result sign
+JJ 0x060c6c44 chr_DispatchStateJump_25 CONFIRM chr_DispatchStateJump_25 cascade of condition checks each tail-calling a handler
+JJ 0x060c6d54 chr_DispatchStateJump_26 CONFIRM chr_DispatchStateJump_26 condition checks each tail-calling a handler
+JJ 0x060c757e chr_Helper_40 UNSURE chr_Helper_40 compares two bytes against table threshold, no callers
+JJ 0x060c7798 chr_Helper_41 RENAME chr_InitMoveParamsByFacing sets timers 0x3c/10 and facing-dependent x value
+JJ 0x060c77d2 chr_UpdateState_17 CONFIRM chr_UpdateState_17 bumps substate, init helper, sets anim
+JJ 0x060c7800 chr_UpdateState_18 CONFIRM chr_UpdateState_18 on flag bumps substate and sets several anims
+JJ 0x060c7890 chr_DispatchStateJump_27 CONFIRM chr_DispatchStateJump_27 runs steps then tail-calls handler
+JJ 0x060c7ad8 chr_CallTableEntry_3 CONFIRM chr_CallTableEntry_3 calls handler from table unless entry is -1
+JJ 0x060c7f80 chr_DispatchStateJump_28 CONFIRM chr_DispatchStateJump_28 copies byte then tail-calls table entry by index
+JJ 0x060c7f98 chr_TryTransition_88 CONFIRM chr_TryTransition_88 command check then state 2/jump 3
+JJ 0x060c805e chr_TryTransition_89 CONFIRM chr_TryTransition_89 command check then state 4/jump 5
+JJ 0x060c80fc chr_TryTransition_90 CONFIRM chr_TryTransition_90 command check then state 6/jump 7
+JJ 0x060c81b8 chr_TryTransition_91 CONFIRM chr_TryTransition_91 command check then state 8/jump 9
+JJ 0x060c8256 chr_TryTransition_92 CONFIRM chr_TryTransition_92 command check, partner gate, jump 0xb
+JJ 0x060c833a chr_TryTransition_93 CONFIRM chr_TryTransition_93 command check, partner gate, jump 0xd
+JJ 0x060c84bc chr_Helper_42 RENAME chr_SetPosRelativeToPartner copies partner facing, x = partner x +- table offset
+JJ 0x060c8520 chr_DispatchStateJump_29 CONFIRM chr_DispatchStateJump_29 switch over substate byte with per-case handlers
+JJ 0x060c87e2 chr_Helper_43 RENAME chr_SetStartPosByMode param 0/1 picks x start by facing, sets y
+JJ 0x060c883c chr_Helper_44 RENAME chr_LoadVec4FromTableFlipLeft copies 16-byte record, negates two words when facing is zero
+JJ 0x060c93ca chr_Helper_45 RENAME chr_StoreNegatedCallResult stores negated result of a call into object field, returns byte
+JJ 0x060c96a8 chr_CallWithField_3 CONFIRM chr_CallWithField_3 calls fn with object and one field
+JJ 0x060cb078 chr_TryTransition_94 CONFIRM chr_TryTransition_94 command check then SetState_10 0
+JJ 0x060cb0bc chr_TryTransition_95 CONFIRM chr_TryTransition_95 command check then SetState_10 2
+JJ 0x060cb114 chr_TryTransition_96 CONFIRM chr_TryTransition_96 command check then SetState_10 3
+JJ 0x060cb15a chr_TryTransition_97 CONFIRM chr_TryTransition_97 command check then SetState_10 6
+JJ 0x060cb1ae chr_TryTransition_98 CONFIRM chr_TryTransition_98 button gate, command check, SetState_10 9
+JJ 0x060cb266 chr_TryTransition_99 CONFIRM chr_TryTransition_99 command check then SetState_10 0xd
+JJ 0x060cb2ae chr_TryTransition_100 CONFIRM chr_TryTransition_100 gates, command check, SetState_10 0xe
+JJ 0x060cb342 chr_TryTransition_101 CONFIRM chr_TryTransition_101 button gate, command check, SetState_10 10
+JJ 0x060cb3c8 chr_TryTransition_102 CONFIRM chr_TryTransition_102 command check then SetState_10 1
+JJ 0x060cb436 chr_TryTransition_103 CONFIRM chr_TryTransition_103 command check then SetState_10 8
+JJ 0x060cb49c chr_SetState_10 CONFIRM chr_SetState_10 writes state byte and per-state partner setup
+JJ 0x060cdd34 chr_DispatchStateJump_30 CONFIRM chr_DispatchStateJump_30 substate 0-4 machine dispatching to handlers
+JJ 0x060cea68 chr_UpdateState_19 CONFIRM chr_UpdateState_19 bumps substate, helper call, sets anim
+JJ 0x060cea8a chr_DispatchStateJump_31 CONFIRM chr_DispatchStateJump_31 input-gated anim set then tail-call handler
+JJ 0x060ceaec chr_DispatchStateJump_32 CONFIRM chr_DispatchStateJump_32 substate 0-2 handlers with velocity integration
+JJ 0x060cec00 chr_CallTableEntry_4 CONFIRM chr_CallTableEntry_4 calls handler from table unless entry is -1
+JJ 0x060cec26 chr_DispatchStateJump_33 CONFIRM chr_DispatchStateJump_33 tail-calls handler indexed by state byte
+JJ 0x060cf09c chr_Helper_46 RENAME chr_SnapToLinkedObjectPos copies x/y from linked object, clears flags unless condition
+JJ 0x060cf0e4 chr_StepState_9 CONFIRM chr_StepState_9 conditional steps and anim set, returns handled flag
+JJ 0x060cf5fc chr_DispatchStateJump_34 CONFIRM chr_DispatchStateJump_34 copies byte then tail-calls table entry by index
+JJ 0x060cf614 chr_TryTransition_104 CONFIRM chr_TryTransition_104 either command then jump 3
+JJ 0x060cf6e8 chr_TryTransition_105 CONFIRM chr_TryTransition_105 command check then jump 6
+JJ 0x060cf786 chr_TryTransition_106 CONFIRM chr_TryTransition_106 gate, command check, jump 0xc
+JJ 0x060cf840 chr_TryTransition_107 CONFIRM chr_TryTransition_107 command check then jump 0xf
+JJ 0x060cf8de chr_TryTransition_108 CONFIRM chr_TryTransition_108 gate, command, partner gate, jump 0x12
+JJ 0x060cf9c4 chr_SetState_11 CONFIRM chr_SetState_11 puts partner object in state 0x17 copying position and facing
+JJ 0x060cfa48 chr_TryTransition_109 CONFIRM chr_TryTransition_109 command check, partner gate, jump 0x14
+JJ 0x060cfb28 chr_TryTransition_110 CONFIRM chr_TryTransition_110 command check, partner gate, jump 0x16
+JJ 0x060cfcbe chr_Helper_47 RENAME chr_ClearPairFlags zeroes same flag bytes on both chars and a partner byte
+JJ 0x060d1b54 chr_Helper_48 RENAME chr_StoreNegatedCallResult stores negated result of a call into object field, returns byte
+JJ 0x060d25ba chr_Helper_49 RENAME chr_LoadVec4FlipByFacing copies 4 words from record, negates first two when facing flag set
+JJ 0x060d25f2 chr_CallWithField_4 RENAME chr_CallThunk takes no argument, just calls a pointer
+JJ 0x060d25fc chr_CallWithField_5 CONFIRM chr_CallWithField_5 calls fn with object and one field
+JJ 0x060d261c chr_DispatchStateJump_35 CONFIRM chr_DispatchStateJump_35 resets bytes then tail-calls handler by state
+JJ 0x060d39e4 chr_TryTransition_111 CONFIRM chr_TryTransition_111 command check then SetState_12 0
+JJ 0x060d3a38 chr_TryTransition_112 CONFIRM chr_TryTransition_112 command check then SetState_12 2
+JJ 0x060d3a7e chr_TryTransition_113 CONFIRM chr_TryTransition_113 command check then SetState_12 3
+JJ 0x060d3ac4 chr_TryTransition_114 CONFIRM chr_TryTransition_114 command check then SetState_12 6
+JJ 0x060d3b38 chr_TryTransition_115 CONFIRM chr_TryTransition_115 button gate, command check, SetState_12 9
+JJ 0x060d3be8 chr_TryTransition_116 CONFIRM chr_TryTransition_116 command check then SetState_12 0xd
+JJ 0x060d3c30 chr_TryTransition_117 CONFIRM chr_TryTransition_117 command check, gates, SetState_12 0xe
+JJ 0x060d3cb0 chr_TryTransition_118 CONFIRM chr_TryTransition_118 button gate, command check, SetState_12 10
+JJ 0x060d3d6c chr_TryTransition_119 CONFIRM chr_TryTransition_119 command check then SetState_12 1
+JJ 0x060d3dc2 chr_TryTransition_120 CONFIRM chr_TryTransition_120 pattern gate, grounded check, SetState_12 8
+JJ 0x060d3e3c chr_SetState_12 CONFIRM chr_SetState_12 sets state byte, clears substeps, syncs partner; 10 TryTransition callers
+JJ 0x060d472c chr_DispatchStateJump_36 CONFIRM chr_DispatchStateJump_36 substep switch with tail-call dispatch
+JJ 0x060d4fdc chr_DispatchStateJump_37 CONFIRM chr_DispatchStateJump_37 same substep switch plus x movement
+JJ 0x060d79c6 chr_UpdateState_20 CONFIRM chr_UpdateState_20 bumps substep, sets anim from table pointer
+JJ 0x060d7a04 chr_DispatchStateJump_38 CONFIRM chr_DispatchStateJump_38 input-gated anim set and tail call
+JJ 0x060d7a66 chr_DispatchStateJump_39 CONFIRM chr_DispatchStateJump_39 3-substep switch, y velocity integrate, tail call
+JJ 0x060d7b60 chr_CallTableEntry_5 CONFIRM chr_CallTableEntry_5 calls fn with table entry unless -1
+JJ 0x060d7b86 chr_DispatchStateJump_40 CONFIRM chr_DispatchStateJump_40 indexed jump table call by substate byte
+JJ 0x060d7ce0 chr_Helper_50 RENAME chr_CopyPartnerPos copies x,y from partner object, clears two flag bytes on both
+JJ 0x060d7d48 chr_UpdateFlicker_5 CONFIRM chr_UpdateFlicker_5 toggles visibility by frame bit, fades mark bytes, returns done
+JJ 0x060d7d8c chr_UpdateFlicker_6 CONFIRM chr_UpdateFlicker_6 flicker plus fade with init call on 0xff
+JJ 0x060d9040 chr_Helper_51 RENAME chr_SetNegatedFieldFromCall stores negated call result into field, returns byte
+JJ 0x060d90ac chr_Helper_52 RENAME chr_CopyVec4FlipFacing copies 4 words, negates first two when facing flag set
+JJ 0x060d90e4 chr_Helper_53 RENAME chr_CopyVec2FlipFacing copies 2 words, negates when facing flag set
+JJ 0x060d910c chr_CallWithField_6 CONFIRM chr_CallWithField_6 calls fn with object and one field
+JJ 0x060d9128 chr_DispatchStateJump_41 CONFIRM chr_DispatchStateJump_41 indexed jump table call by state byte
+JJ 0x060da130 chr_DispatchStateJump_42 CONFIRM chr_DispatchStateJump_42 check then tail-call one of two handlers by byte
+JJ 0x060da160 chr_DispatchStateJump_43 RENAME chr_UpdateSeekPartner moves toward partner with clamped speed, fades, ends when close
+JJ 0x060da2dc chr_DispatchStateJump_44 CONFIRM chr_DispatchStateJump_44 calls helpers then conditional tail call
+JJ 0x060de434 chr_UpdateState_21 CONFIRM chr_UpdateState_21 substep 0 sets anim, advances state when anim ends
+JJ 0x060deb0e chr_DispatchStateJump_45 CONFIRM chr_DispatchStateJump_45 indexed jump table call by param
+JJ 0x060def04 chr_DispatchStateJump_46 RENAME chr_SpawnEffectByIndex allocs pool object, fills from table row, dispatches by index
+JJ 0x060df1e4 chr_Helper_54 UNSURE chr_Helper_54 picks constant by byte 0..2 then calls fn, purpose unclear
+JJ 0x060df224 mem_LoopFill_6 RENAME chr_AnyObjectNearX loops object table, returns 1 if any within x range
+JJ 0x060df262 mem_LoopFill_7 RENAME chr_PushXFromObjects loops object table, repositions x beside near object by facing
+JJ 0x060df2e6 chr_Helper_55 RENAME chr_SnapXToNearestObject scans object table for nearest in direction, sets x beside it
+JJ 0x060df3ba chr_Helper_56 RENAME mem_AddObjectToTable appends pointer to table, increments count byte
+JJ 0x060df3d2 mem_LoopFill_8 RENAME mem_RemoveObjectFromTable finds pointer in table, swaps last into slot, decrements count
+JJ 0x060df440 mem_LoopFill_9 RENAME mem_ClearObjectTable zeroes count and 10 table slots; called from game reset
+JJ 0x060df55e obj_SpawnEffect RENAME obj_SpawnFxType4 allocs pool object, type byte 4, sets update ptr and param
+JJ 0x060df650 obj_SpawnEffect_2 RENAME obj_SpawnFxType7 allocs pool object, type byte 7, extra table byte by param
+JJ 0x060df73a obj_SpawnEffect_3 RENAME obj_SpawnFxType8 allocs pool object, type byte 8, counter 0x10
+JJ 0x060df890 obj_SpawnEffect_4 RENAME obj_SpawnFxType9 allocs pool object, type byte 9, sets update ptr and param
+JJ 0x060df9f4 obj_SpawnEffect_5 RENAME obj_SpawnFxTypeC allocs pool object, type byte 0xc, extra table byte by param
+JJ 0x060dfb2c obj_SpawnEffect_6 RENAME obj_SpawnFxTypeE allocs pool object, type byte 0xe, param stored in field
+JJ 0x060dfc86 obj_SpawnEffect_7 RENAME obj_SpawnFxTypeF allocs pool object, type byte 0xf, counter 0
+JJ 0x060dfcf8 chr_DispatchStateJump_47 CONFIRM chr_DispatchStateJump_47 indexed jump table call by byte at +0x10
+JJ 0x060e021e chr_RunStateLogic_5 RENAME gfx_ShiftPaletteHueCopy per color converts 5-5-5, adds param with wrap, writes to second buffer
+JJ 0x060e03c0 chr_RunStateLogic_6 RENAME gfx_ShiftPaletteHueInPlace same color shift written back in place
+JJ 0x060e0530 chr_Helper_57 RENAME gfx_SplitPaletteChannels unpacks 5-5-5 colors into three offset channel tables
+JJ 0x060e0b48 mem_LoopFill_10 RENAME gfx_RaiseTable80By6 80 bytes: nonzero values under 0x3f get +6, clamped 0x3f
+JJ 0x060e0c16 mem_LoopFill_11 RENAME gfx_RaiseTable16By3 16 bytes: nonzero values under 0x3f get +3, clamped 0x3f
+JJ 0x060e0ca8 mem_LoopFill_12 RENAME gfx_LowerTable80By8 80 bytes: nonzero values minus 8, clamped at 0
+JJ 0x060e0d44 mem_LoopFill_13 RENAME ui_BuildRankingRows inits two 0x50 byte arrays then builds 5 rows via row formatter
+JJ 0x060e0dba ui_NameEntryHandle RENAME ui_FormatRankingRow builds row: 3 bytes name, mapped chars, score digits via hex digit table
+JJ 0x060e0eb4 mem_LoopFill_14 RENAME mem_ClearTextEntries zeroes two flag bytes per 0x88 stride block
+JJ 0x060e0ecc mem_LoopFill_15 RENAME mem_FindFreeTextEntry first entry with zero flag, stride 0x44, else null
+JJ 0x060e0eea mem_LoopFill_16 RENAME ui_QueueTextEntries 16 records: alloc free entry, fill pointers and fields
+JJ 0x060e0f60 chr_UpdateState_22 RENAME game_LoadResourceListWait loops resource ids, retries call until valid, waits a frame
+JJ 0x060e0ffc ui_NameEntryHandle_2 RENAME ui_DrawTextEntries walks text entries, draws glyph sprites per entry kind, digit and label text
+JJ 0x060e15b4 obj_SpawnEffect_8 RENAME dbg_SpawnAnimViewer allocs type 0x22 viewer object, copies pos and char from source, sets table and motion
+JJ 0x060e16bc chr_DispatchStateJump_48 RENAME dbg_SpawnAnimViewerDefault same viewer object at fixed pos with defaults, no args
+JJ 0x060e1992 chr_Helper_58 RENAME dbg_LoadCharAnimTable sets +0x74 table ptr from char index byte
+JJ 0x060e19d8 chr_Helper_59 RENAME dbg_SetMotionFromTable sets motion from char table entry at motion index
+JJ 0x060e1a02 chr_Helper_60 RENAME dbg_CycleCharIndex steps char index byte 0..0x3c with wrap, resets motion, reloads table
+JJ 0x060e1a4e chr_Helper_61 RENAME dbg_CycleMotionIndex steps motion index with wrap at table count, reloads motion
+JJ 0x060e1a9a chr_Helper_62 UNSURE chr_Helper_62 toggles two bytes between values 4 and 10 via table; purpose unclear
+JJ 0x060e1ae0 chr_Helper_63 RENAME dbg_AdjustMarksByPad pad bits add or subtract on the two mark bytes
+JJ 0x060e1b20 chr_Helper_64 UNSURE chr_Helper_64 cycles index 0..9 into table, sets +0x7c and +0x44; meaning unclear
+JJ 0x060e21f2 chr_SetState_13 RENAME obj_SpawnOwnedFxByKind allocs object from template by owner byte, owner ptr +8, dispatches by kind
+JJ 0x060e2550 chr_StepState_10 RENAME obj_SpawnCopyType24 allocs type 0x24 object copying parent anim, pos, facing
+JJ 0x060e2682 chr_DispatchStateJump_49 RENAME obj_SpawnCopyType25 allocs type 0x25 copy of parent, anim by index, tail call
+JJ 0x060e27b0 obj_SpawnEffect_9 RENAME obj_SpawnFxType26FromObj type 0x26 object at source pos and facing, anim by source byte; 2 plyr callers
+JJ 0x060e2868 obj_SpawnEffect_10 RENAME obj_SpawnFxType26AtPos type 0x26 object at given x,y and facing
+JJ 0x060e294c obj_SpawnEffect_11 RENAME obj_SpawnFxType26Offset type 0x26 object offset from source, x flipped by facing
+JJ 0x060e2a38 chr_SetState_14 RENAME obj_SpawnFxType27Copy allocs type 0x27 object copying parent fields, owner ptr
+JJ 0x060e2ed4 chr_DispatchStateJump_50 RENAME obj_SpawnPairFxType28 allocs two type 0x28 objects at fixed y, anims by value
+JJ 0x060e3020 chr_StepState_11 RENAME obj_UpdateRandomBurst slides x toward target then spawns random burst objects
+JJ 0x060e313e obj_SpawnEffect_12 RENAME ui_SpawnPlayerPairByKind allocs two type-0x28 sprites per kind index, orders and offsets them
+JJ 0x060e35f8 obj_SpawnEffect_13 RENAME ui_SpawnPlayerPairByKindAlt same pair spawn as sibling with extra backdrop object
+JJ 0x060e3b90 obj_SpawnEffect_14 RENAME ui_SpawnSpritesByKind allocs type-0x28 sprites chosen by kind table, called from ui_SpawnByKind
+JJ 0x060e40a8 chr_UpdateState_23 RENAME ui_SyncSpriteToOwnerIndex copies owner index 0x13 to sprite scale/anim/visibility
+JJ 0x060e41e8 chr_UpdateState_24 UNSURE chr_UpdateState_24 sibling update; body not conclusive
+JJ 0x060e4684 obj_SpawnEffect_15 RENAME ui_SpawnSpriteUnlessMode3 skips when global mode is 3, else allocs one type-0x28 sprite
+JJ 0x060e47e4 obj_SpawnEffect_16 RENAME ui_SpawnFadeSprite allocs type-0x28 sprite with fade marks 0x7f at fixed pos
+JJ 0x060e4968 obj_SpawnEffect_17 RENAME ui_SpawnOwnedSpriteGroup allocs five slots, links owner, fills type-0x28 sprites
+JJ 0x060e4f40 obj_SpawnEffect_18 RENAME ui_SpawnRandomTableSprite picks random table entry for anim and palette of new sprite
+JJ 0x060e52f4 obj_SpawnEffect_19 RENAME ui_SpawnSpriteClearFlag allocs type-0x28 sprite, clears global flag first
+JJ 0x060e5392 chr_DispatchStateJump_51 RENAME chr_StepThenSpawnSprite runs step, on -1 hides and spawns sprite 19, tail-jumps
+JJ 0x060e540c chr_DispatchStateJump_52 RENAME ui_SpawnSpriteAndRun allocs type-0x28 sprite then tail-jumps to its handler

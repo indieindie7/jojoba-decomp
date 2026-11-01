@@ -1,0 +1,192 @@
+JJ 0x06159da0 obj_SetBoxFromTable CONFIRM obj_SetBoxFromTable name matches body and callers: reads 10-byte table row and calls box setter with offsets, adjusts by 
+JJ 0x0615a16a obj_SpawnChildType08 CONFIRM obj_SpawnChildType08 name matches body and callers: allocates child object type 8 from parent with byte param
+JJ 0x0615a2b8 txt_BuildStringTiles CONFIRM txt_BuildStringTiles name matches body and callers: loops over characters of string building tile entries up to 0x20
+JJ 0x0615a48e spr_BuildPlayerList_A CONFIRM spr_BuildPlayerList_A name matches body and callers: loops over player slot (stride 0x880) entries building sprite or effec
+JJ 0x0615ab3c spr_ScanPlayerSlots_B CONFIRM spr_ScanPlayerSlots_B name matches body and callers: loops 0x1f entries of 0x44 bytes per player block, processes active on
+JJ 0x0615b776 spr_BuildPlayerList_C CONFIRM spr_BuildPlayerList_C name matches body and callers: large per-player (0x880 stride) list builder with table lookups
+JJ 0x0615c47c fx_SpawnPlayerEffect_A CONFIRM fx_SpawnPlayerEffect_A name matches body and callers: allocs object from pool 4 or 5 by side, attaches display list pointer
+JJ 0x0615d692 fx_SpawnPlayerEffect_Large CONFIRM fx_SpawnPlayerEffect_Large name matches body and callers: allocs pool 2 or 3 by side byte, seven params, large initializer
+JJ 0x0615e034 fx_SpawnPlayerEffect_B CONFIRM fx_SpawnPlayerEffect_B name matches body and callers: allocs pool 2 or 3 by side byte, sets position from owner
+JJ 0x0615e1c8 fx_SpawnPlayerEffect_C CONFIRM fx_SpawnPlayerEffect_C name matches body and callers: allocs pool 2 or 3 by side with two short params
+JJ 0x0615e334 fx_SpawnPlayerEffect_D CONFIRM fx_SpawnPlayerEffect_D name matches body and callers: allocs pool 2 or 3 by side with two short offsets
+JJ 0x0615e518 fx_SpawnPlayerEffect_Type0A CONFIRM fx_SpawnPlayerEffect_Type0A name matches body and callers: allocs pool 2 or 3, type 10, links parent object at +8
+JJ 0x0615f23e fx_SpawnBySide_A CONFIRM fx_SpawnBySide_A name matches body and callers: allocs pool 2 or 3 depending on byte at +0xf of param
+JJ 0x0615f33c fx_SpawnBySide_B CONFIRM fx_SpawnBySide_B name matches body and callers: allocs pool 2 or 3 depending on byte at +0xf of param
+JJ 0x0615f420 hit_CompareBoxRows CONFIRM hit_CompareBoxRows name matches body and callers: compares two box tables indexed by short ids, returns overlap result
+JJ 0x0615f510 hit_CheckBoxesWrapper CONFIRM hit_CheckBoxesWrapper name matches body and callers: looks up row ids from two objects and calls box compare, returns bool
+JJ 0x0615f55a obj_CheckStageEdge CONFIRM obj_CheckStageEdge name matches body and callers: compares object x with scroll position range plus 0x20 for specific mo
+JJ 0x0615f694 obj_SpawnChildType4D CONFIRM obj_SpawnChildType4D name matches body and callers: allocates child type 0x4d from parent, byte param and int param
+JJ 0x0615f954 obj_CopyPosFromTarget CONFIRM obj_CopyPosFromTarget name matches body and callers: copies x y z from linked target pointer into object
+JJ 0x0615f9f8 obj_InitFromOwner CONFIRM obj_InitFromOwner name matches body and callers: initializes object from owner, selects data pointer by owner type, cle
+JJ 0x0615fb5c obj_CopyHistoryBuffer CONFIRM obj_CopyHistoryBuffer name matches body and callers: copies 15 word entries of position history from owner block
+JJ 0x0615ffee obj_SpawnChildType_A CONFIRM obj_SpawnChildType_A name matches body and callers: allocates child from parent type with char param
+JJ 0x0616017e obj_SpawnChildType_B CONFIRM obj_SpawnChildType_B name matches body and callers: allocates child from parent type with three char params
+JJ 0x061604e8 obj_SpawnChildType0F_A CONFIRM obj_SpawnChildType0F_A name matches body and callers: allocates child type 0xf with two byte params
+JJ 0x061605f0 obj_SpawnChildType0F_B CONFIRM obj_SpawnChildType0F_B name matches body and callers: allocates child type 0xf with two byte params variant
+JJ 0x06160aa2 fx_SpawnBurst_A CONFIRM fx_SpawnBurst_A name matches body and callers: loops param_2 times spawning effects from tables, checks per-type flag
+JJ 0x06160c20 fx_SpawnBurst_B CONFIRM fx_SpawnBurst_B name matches body and callers: loops param_2 times spawning effects from tables with pointer tables
+JJ 0x06160da0 fx_SpawnBurst_C CONFIRM fx_SpawnBurst_C name matches body and callers: loops param_2 times spawning effects using 8-byte table entries by par
+JJ 0x0616110c obj_SpawnChildType11 CONFIRM obj_SpawnChildType11 name matches body and callers: allocates child type 0x11 from parent with char param
+JJ 0x0616136a obj_SpawnChildType12 CONFIRM obj_SpawnChildType12 name matches body and callers: allocates child type 0x12 from parent, uses owner link at offset
+JJ 0x06161670 obj_SpawnChildType_C CONFIRM obj_SpawnChildType_C name matches body and callers: allocates child from parent type with char param
+JJ 0x06161cee obj_SpawnChildType14 CONFIRM obj_SpawnChildType14 name matches body and callers: allocates child type 0x14 from parent with byte param
+JJ 0x06162062 obj_SpawnChildType_D CONFIRM obj_SpawnChildType_D name matches body and callers: allocates child from parent type, initializes flags
+JJ 0x061628a6 fx_SpawnPlayerEffect_E CONFIRM fx_SpawnPlayerEffect_E name matches body and callers: allocs pool 2 or 3 by side, long initializer with two params
+JJ 0x06162ca0 obj_SpawnChildType17 CONFIRM obj_SpawnChildType17 name matches body and callers: allocates child type 0x17 linked to parent with byte param
+JJ 0x061633e2 fx_SpawnPlayerEffect_Type18_A CONFIRM fx_SpawnPlayerEffect_Type18_A name matches body and callers: allocs pool 2 or 3, type 0x18, copies side bytes from parent
+JJ 0x06163a08 fx_SpawnPlayerEffect_Type18_B CONFIRM fx_SpawnPlayerEffect_Type18_B name matches body and callers: allocs pool 2 or 3, type 0x18, copies side bytes from parent variant
+JJ 0x06163b84 obj_SpawnChildType07 CONFIRM obj_SpawnChildType07 name matches body and callers: allocates child type 7 linked to parent with two byte params
+JJ 0x06164250 obj_UpdateStub_A UNSURE obj_UpdateStub_A large or indirect-call routine, role not pinned down
+JJ 0x06164288 obj_ApplyVelocityAndCall CONFIRM obj_ApplyVelocityAndCall name matches body and callers: adds velocity to x y then calls two helper functions
+JJ 0x061642cc obj_SetFacingFromIndex CONFIRM obj_SetFacingFromIndex name matches body and callers: sets facing flag by index threshold and calls script setter from table
+JJ 0x06164360 obj_ClearStateFields CONFIRM obj_ClearStateFields name matches body and callers: clears several fields at index offset and loads table pointer
+JJ 0x0616459a obj_SpawnType1B_Loop CONFIRM obj_SpawnType1B_Loop name matches body and callers: searches up to 3 free slots then spawns type 0x1b object
+JJ 0x06164b20 obj_SpawnType1C_A CONFIRM obj_SpawnType1C_A name matches body and callers: allocates type 0x1c object from parent
+JJ 0x06164c40 obj_SpawnType1C_B CONFIRM obj_SpawnType1C_B name matches body and callers: allocates type 0x1c object from owner link with extra field
+JJ 0x06165982 obj_CheckDistanceToOwner CONFIRM obj_CheckDistanceToOwner name matches body and callers: calls distance helper between object and owner x, compares to constant
+JJ 0x061663c4 obj_InitDefaults CONFIRM obj_InitDefaults name matches body and callers: sets active flag and clears fields on object pointer with mode param
+JJ 0x0616644a obj_SpawnType1D_A CONFIRM obj_SpawnType1D_A name matches body and callers: allocates type 0x1d object with byte param and script label A
+JJ 0x061664b4 obj_SpawnType1D_B CONFIRM obj_SpawnType1D_B name matches body and callers: allocates type 0x1d object with byte param and script label B
+JJ 0x061664f8 obj_SpawnType1D_C CONFIRM obj_SpawnType1D_C name matches body and callers: allocates type 0x1d object with two byte params
+JJ 0x06166548 obj_SpawnType1D_D CONFIRM obj_SpawnType1D_D name matches body and callers: allocates type 0x1d object with byte param and script label D
+JJ 0x06166830 obj_UpdateComplex_06166830 RENAME obj_UpdateOwnerLinked drop address suffix; owner-linked update routine
+JJ 0x06166baa fx_SpawnType1E_A CONFIRM fx_SpawnType1E_A name matches body and callers: allocs pool 2 or 3 by side, type 0x1e effect
+JJ 0x06166ce2 fx_SpawnType1E_B CONFIRM fx_SpawnType1E_B name matches body and callers: allocs pool 4 by side, type 0x1e effect with owner link
+JJ 0x06167a36 fx_SpawnType1F_A CONFIRM fx_SpawnType1F_A name matches body and callers: allocs pool 2 or 3, type 0x1f effect with three params
+JJ 0x06167bcc fx_SpawnType1F_B CONFIRM fx_SpawnType1F_B name matches body and callers: allocs pool 2 or 4, type 0x1f effect with one int param
+JJ 0x06167e10 obj_SpawnType20 CONFIRM obj_SpawnType20 name matches body and callers: allocates type 0x20 object with two char params
+JJ 0x06167fce obj_SpawnType21 CONFIRM obj_SpawnType21 name matches body and callers: allocates type 0x21 object from parent
+JJ 0x06168538 obj_SpawnType22_Search5 CONFIRM obj_SpawnType22_Search5 name matches body and callers: searches 5 candidate slots, spawns type 0x22 object
+JJ 0x0616883e obj_SpawnType22_Search4 CONFIRM obj_SpawnType22_Search4 name matches body and callers: searches 4 candidate slots, spawns type 0x22 object
+JJ 0x06168b62 obj_SpawnType22_Search32 CONFIRM obj_SpawnType22_Search32 name matches body and callers: scans 0x20 entries for free slot, spawns type 0x22 object
+JJ 0x06168d7c obj_SpawnType23 CONFIRM obj_SpawnType23 name matches body and callers: allocates type 0x23 object with two byte params
+JJ 0x061690b0 obj_ClearFlag CONFIRM obj_ClearFlag name matches body and callers: tiny: modifies one byte field in object
+JJ 0x061690e4 obj_SetPosFromTable CONFIRM obj_SetPosFromTable name matches body and callers: sets x y from 4-byte table by index, flips with owner facing
+JJ 0x0616a064 obj_CopyVec3FromPtr CONFIRM obj_CopyVec3FromPtr name matches body and callers: copies three words from pointer into object fields, returns owner
+JJ 0x0616a09e obj_CheckInView CONFIRM obj_CheckInView name matches body and callers: compares object x y against camera values
+JJ 0x0616a4c0 obj_SpawnType24_Search7 CONFIRM obj_SpawnType24_Search7 name matches body and callers: searches 7 slots then spawns type 0x24 object
+JJ 0x0616ae78 obj_SpawnType25 CONFIRM obj_SpawnType25 name matches body and callers: allocates type 0x25 object with byte and char params
+JJ 0x0616afb4 obj_SpawnType25_Wrapper CONFIRM obj_SpawnType25_Wrapper name matches body and callers: calls type 0x25 spawner with param 1 when arg is 2
+JJ 0x0616b45e obj_ClearTwoFlags CONFIRM obj_ClearTwoFlags name matches body and callers: clears one flag in object and one in owner
+JJ 0x0616b7da obj_SetPosFromOwnerTable CONFIRM obj_SetPosFromOwnerTable name matches body and callers: sets position from owner facing-based 6-byte table, fills short array
+JJ 0x0616b95e obj_SyncFacingWithOwner CONFIRM obj_SyncFacingWithOwner name matches body and callers: copies facing and field from owner, sets position from owner offset
+JJ 0x0616b9c8 obj_UpdateCounters CONFIRM obj_UpdateCounters name matches body and callers: updates two bytes based on owner state value 1
+JJ 0x0616ba78 obj_SyncYOffsetOwner CONFIRM obj_SyncYOffsetOwner name matches body and callers: sets field to owner y minus own y
+JJ 0x0616ba90 obj_CheckOwnerState CONFIRM obj_CheckOwnerState name matches body and callers: returns 1 unless owner state equals 1 and flag clear
+JJ 0x0616bace obj_SetSpriteFromOwner_A CONFIRM obj_SetSpriteFromOwner_A name matches body and callers: sets sprite attr constants and copies owner script pointers
+JJ 0x0616baea obj_SetSpriteFromOwner_B CONFIRM obj_SetSpriteFromOwner_B name matches body and callers: sets sprite attr from owner byte and copies owner script pointers
+JJ 0x0616bb0a obj_CopyVec3FromPtr_2 RENAME obj_CopyVec3FromPtrB drop numeric suffix; same job as sibling
+JJ 0x0616bb68 obj_SpawnType27 CONFIRM obj_SpawnType27 name matches body and callers: allocates type 0x27 object with two byte params
+JJ 0x0616c18e obj_IsOffscreenX CONFIRM obj_IsOffscreenX name matches body and callers: returns 1 if x outside camera window with 0x40 margin
+JJ 0x0616c1e0 obj_SpawnType28 CONFIRM obj_SpawnType28 name matches body and callers: allocates type 0x28 object if owner state below 6
+JJ 0x0616c5a4 obj_CheckInOwnerRange CONFIRM obj_CheckInOwnerRange name matches body and callers: checks y not below limit and x within owner range using table
+JJ 0x0616d276 obj_SpawnType2A_A CONFIRM obj_SpawnType2A_A name matches body and callers: allocates type 0x2a object with byte param
+JJ 0x0616d2a4 obj_SpawnType2A_B CONFIRM obj_SpawnType2A_B name matches body and callers: allocates type 0x2a object variant with byte param
+JJ 0x0616d748 fx_SpawnType2B_A CONFIRM fx_SpawnType2B_A name matches body and callers: allocs pool 2 or 3 by side, type 0x2b effect, large init
+JJ 0x0616dce0 fx_SpawnType2B_B CONFIRM fx_SpawnType2B_B name matches body and callers: allocs pool 2 or 3, type 0x2b effect, small init
+JJ 0x0616e290 fx_SpawnType2B_C CONFIRM fx_SpawnType2B_C name matches body and callers: allocs pool 2 or 3, type 0x2b effect with byte param
+JJ 0x0616e602 fx_SpawnType2B_D CONFIRM fx_SpawnType2B_D name matches body and callers: allocs pool 2 or 3, type 0x2b effect, small init
+JJ 0x0616e910 fx_SpawnType2B_E CONFIRM fx_SpawnType2B_E name matches body and callers: allocs pool 2 or 3, type 0x2b effect with int param
+JJ 0x0616ec6e fx_SpawnType2B_F CONFIRM fx_SpawnType2B_F name matches body and callers: allocs pool 2 or 3, type 0x2b effect with byte param
+JJ 0x0616efe8 fx_SpawnType2B_G CONFIRM fx_SpawnType2B_G name matches body and callers: allocs pool 2 or 3, type 0x2b effect with int param and script label
+JJ 0x0616f368 fx_SpawnType2B_H CONFIRM fx_SpawnType2B_H name matches body and callers: allocs pool 2 or 3, type 0x2b effect with byte param
+JJ 0x0616f57e fx_SpawnType2B_I CONFIRM fx_SpawnType2B_I name matches body and callers: allocs pool 2 or 3, type 0x2b effect
+JJ 0x0616fa1c fx_SpawnType2B_J CONFIRM fx_SpawnType2B_J name matches body and callers: allocs pool 2 or 3, type 0x2b effect with script label
+JJ 0x0616fde6 fx_SpawnType2B_K CONFIRM fx_SpawnType2B_K name matches body and callers: allocs pool 2 or 3, type 0x2b effect using owner link
+JJ 0x06170000 fx_SpawnType2B_L CONFIRM fx_SpawnType2B_L name matches body and callers: allocs pool 2 or 3, type 0x2b effect with int param
+JJ 0x0617025e fx_SpawnType2B_M CONFIRM fx_SpawnType2B_M name matches body and callers: allocs pool 2 or 3, type 0x2b effect, small init
+JJ 0x061706d0 fx_SpawnType1E_C CONFIRM fx_SpawnType1E_C name matches body and callers: allocs pool 2 or 3, type 0x1e effect with int param
+JJ 0x06170ac8 obj_SpawnType2D CONFIRM obj_SpawnType2D name matches body and callers: allocates type 0x2d object from parent
+JJ 0x06170fc2 fx_SpawnType2E_A CONFIRM fx_SpawnType2E_A name matches body and callers: allocs pool 2 or 3, type 0x2e effect with int param
+JJ 0x0617120c fx_SpawnType2E_B CONFIRM fx_SpawnType2E_B name matches body and callers: allocs pool 4 or 5, type 0x2e effect, large init
+JJ 0x06171546 fx_SpawnType2E_C CONFIRM fx_SpawnType2E_C name matches body and callers: allocs pool 2 or 3, type 0x2e effect with two int params
+JJ 0x061717aa obj_SpawnType2F CONFIRM obj_SpawnType2F name matches body and callers: allocates type 0x2f object with two byte params
+JJ 0x061735e4 obj_IsOutOfBounds_2 RENAME obj_IsOutOfBoundsY drop numeric suffix; camera window plus y test
+JJ 0x06173614 obj_StepVelocityXY CONFIRM obj_StepVelocityXY name matches body and callers: calls x step then y step helpers
+JJ 0x06173624 obj_StepVelocityX CONFIRM obj_StepVelocityX name matches body and callers: adds velocity and accel to x position
+JJ 0x06173668 obj_StepVelocityY CONFIRM obj_StepVelocityY name matches body and callers: adds velocity and accel to y position
+JJ 0x06173688 obj_SetDecayFromScroll CONFIRM obj_SetDecayFromScroll name matches body and callers: sets field from global scroll value minus 0x40 times 3
+JJ 0x061736b8 obj_IsFrameBelow12 CONFIRM obj_IsFrameBelow12 name matches body and callers: returns 1 if counter byte below 12
+JJ 0x061736f6 fx_SpawnType30_A CONFIRM fx_SpawnType30_A name matches body and callers: allocs pool 2 or 3, type 0x30 effect with byte param
+JJ 0x06173fb4 obj_CanSpawnCheck_A UNSURE obj_CanSpawnCheck_A large or indirect-call routine, role not pinned down
+JJ 0x061746ac obj_CanSpawnCheck_B UNSURE obj_CanSpawnCheck_B large or indirect-call routine, role not pinned down
+JJ 0x06176110 game_AddScoreOrPoints UNSURE game_AddScoreOrPoints large or indirect-call routine, role not pinned down
+JJ 0x061761fe fx_SpawnType30_B CONFIRM fx_SpawnType30_B name matches body and callers: allocs pool 2 or 3, type 0x30 effect
+JJ 0x06176898 game_UpdateObjectPool UNSURE game_UpdateObjectPool large or indirect-call routine, role not pinned down
+JJ 0x06178918 game_UpdateSceneState_A UNSURE game_UpdateSceneState_A large or indirect-call routine, role not pinned down
+JJ 0x06178c74 game_UpdateSceneState_B UNSURE game_UpdateSceneState_B large or indirect-call routine, role not pinned down
+JJ 0x06178e38 game_UpdateSceneState_C UNSURE game_UpdateSceneState_C large or indirect-call routine, role not pinned down
+JJ 0x06178fd6 game_UpdateSceneState_D UNSURE game_UpdateSceneState_D large or indirect-call routine, role not pinned down
+JJ 0x06179180 game_AdvanceDispatch UNSURE game_AdvanceDispatch large or indirect-call routine, role not pinned down
+JJ 0x061791f8 game_CheckModeCounter UNSURE game_CheckModeCounter large or indirect-call routine, role not pinned down
+JJ 0x061792f8 input_CheckButtonMask CONFIRM input_CheckButtonMask name matches body and callers: tests input bits against mask words, checks flag byte, returns value
+JJ 0x06179508 game_UpdateModeLarge UNSURE game_UpdateModeLarge large or indirect-call routine, role not pinned down
+JJ 0x06179d58 cam_SetScrollFromObject CONFIRM cam_SetScrollFromObject name matches body and callers: copies object x field into two scroll shorts with offset
+JJ 0x0617aac4 gfx_ClearLayers CONFIRM gfx_ClearLayers name matches body and callers: calls several layer clear helpers with global value then zero
+JJ 0x0617af8a game_UpdateHudLayout UNSURE game_UpdateHudLayout large or indirect-call routine, role not pinned down
+JJ 0x0617b558 txt_DrawLine_A CONFIRM txt_DrawLine_A name matches body and callers: draws text line via helper (2,...) for param 1 using 8-byte table
+JJ 0x0617b5b4 txt_DrawLine_B CONFIRM txt_DrawLine_B name matches body and callers: draws text line via helper with char selectors and 8-byte table
+JJ 0x0617ba9e txt_DrawLine_C CONFIRM txt_DrawLine_C name matches body and callers: two helper calls (3,...) drawing text with 16-byte table entry by inde
+JJ 0x0617bb10 txt_DrawBlock_A CONFIRM txt_DrawBlock_A name matches body and callers: multiple draw helper calls starting with (8,0,...) using global pointe
+JJ 0x0617c0e4 txt_DrawBlock_B CONFIRM txt_DrawBlock_B name matches body and callers: draw helper call (2,0,...) with global pointers
+JJ 0x0617c144 txt_DrawBlock_C CONFIRM txt_DrawBlock_C name matches body and callers: draw helper call (2,0,...) with global pointers, twin of block B
+JJ 0x0617c73c txt_DrawLine_D CONFIRM txt_DrawLine_D name matches body and callers: two draw helper calls (3,...) with 8-byte table entry
+JJ 0x0617cdac txt_DrawLine_E CONFIRM txt_DrawLine_E name matches body and callers: draw helper call (3,...) with 4-byte table entry by index
+JJ 0x0617ce04 txt_DrawBlock_D CONFIRM txt_DrawBlock_D name matches body and callers: draw helper calls with global pointer args in a block
+JJ 0x0617d0fc gfx_SetLayerScrollPair CONFIRM gfx_SetLayerScrollPair name matches body and callers: set video layer scroll x/y pair via indirect setter PTR_FUN
+JJ 0x0617d150 gfx_SetLayerScrollPair_2 RENAME gfx_SetLayerScrollPairB drop numeric suffix; variant of pair setter
+JJ 0x0617d8ae gfx_SetLayerScrollQuad CONFIRM gfx_SetLayerScrollQuad name matches body and callers: set four layer scroll values via indirect layer setter
+JJ 0x0617dc26 gfx_SetLayerScrollQuad_2 RENAME gfx_SetLayerScrollQuadB drop numeric suffix; variant of quad setter
+JJ 0x0617de9c gfx_SetLayer3Const CONFIRM gfx_SetLayer3Const name matches body and callers: sets layer 3 scroll to constant values via layer setter
+JJ 0x0617e080 gfx_InitLayerTable CONFIRM gfx_InitLayerTable name matches body and callers: initialises table of video layer scroll and enable values
+JJ 0x0617e3b4 gfx_SetLayerPairByIndex CONFIRM gfx_SetLayerPairByIndex name matches body and callers: set layer scroll pair selected by index argument
+JJ 0x0617e458 gfx_SetStageLayerScroll CONFIRM gfx_SetStageLayerScroll name matches body and callers: switch 0..0x10 stage id selecting background layer scroll values
+JJ 0x0617eacc gfx_ClearLayers_7eacc RENAME gfx_ClearAllLayerState drop address suffix; clears all layer scroll state
+JJ 0x0617ed0c scene_ClearBgLayers CONFIRM scene_ClearBgLayers name matches body and callers: clears background layer setup via layer setter calls
+JJ 0x0617ee90 scene_ClearBgLayers_2 RENAME scene_ClearBgLayersB drop numeric suffix; variant
+JJ 0x0617f014 scene_SetBgLayers CONFIRM scene_SetBgLayers name matches body and callers: sets background layer scroll values for scene
+JJ 0x0617f310 gfx_DmaStart CONFIRM gfx_DmaStart name matches body and callers: starts DMA transfer using source dest count arguments
+JJ 0x0617f332 ui_SetSelectionBuf CONFIRM ui_SetSelectionBuf name matches body and callers: writes selection state into UI buffer
+JJ 0x0617f3e6 plyr_InitCharSelectSlots CONFIRM plyr_InitCharSelectSlots name matches body and callers: initialises per-player character select slot variables
+JJ 0x0617f436 char_CheckTimerThreshold CONFIRM char_CheckTimerThreshold name matches body and callers: compares character timer against threshold returns flag
+JJ 0x0617f574 pal_FillColor CONFIRM pal_FillColor name matches body and callers: fills palette RAM 0x04080000 range with colour value
+JJ 0x0617f6ec pal_ClearBuffers CONFIRM pal_ClearBuffers name matches body and callers: clears palette work buffers
+JJ 0x0617f7a2 plyr_ClearFlags_A CONFIRM plyr_ClearFlags_A name matches body and callers: clears per-player flag bytes group A
+JJ 0x0617f7c8 plyr_ClearFlags_B CONFIRM plyr_ClearFlags_B name matches body and callers: clears per-player flag bytes group B
+JJ 0x0617f828 pal_ClearSpriteBuffers CONFIRM pal_ClearSpriteBuffers name matches body and callers: clears sprite and palette list buffers
+JJ 0x0617f894 input_SetPlayerBit CONFIRM input_SetPlayerBit name matches body and callers: sets bit for player index in input state byte
+JJ 0x0617f8d4 input_UpdateStateFlags CONFIRM input_UpdateStateFlags name matches body and callers: updates input state flags from player bits
+JJ 0x0617f928 demo_Start CONFIRM demo_Start name matches body and callers: starts attract demo state
+JJ 0x0617f9c8 cam_SetScrollTarget CONFIRM cam_SetScrollTarget name matches body and callers: sets camera scroll target position values
+JJ 0x0617fa80 cam_SetStageFlags CONFIRM cam_SetStageFlags name matches body and callers: sets camera flags for stage
+JJ 0x0617fc8a stage_IsCameraAtEdge CONFIRM stage_IsCameraAtEdge name matches body and callers: returns whether camera is at stage edge
+JJ 0x0617fce0 game_InitRound_A UNSURE game_InitRound_A large or indirect-call routine, role not pinned down
+JJ 0x06180324 game_InitRound_B UNSURE game_InitRound_B large or indirect-call routine, role not pinned down
+JJ 0x061807f4 game_InitRound_C UNSURE game_InitRound_C large or indirect-call routine, role not pinned down
+JJ 0x06180c7c round_InitPlayers CONFIRM round_InitPlayers name matches body and callers: initialises both player objects at round start
+JJ 0x06180d90 plyr_InitP1 CONFIRM plyr_InitP1 name matches body and callers: initialises P1 object 0x02034800 fields
+JJ 0x06180ed6 plyr_InitP2 CONFIRM plyr_InitP2 name matches body and callers: initialises P2 object 0x02034c20 fields
+JJ 0x06180ffc game_ResetState CONFIRM game_ResetState name matches body and callers: resets global game state variables
+JJ 0x0618115c plyr_ResetBoth CONFIRM plyr_ResetBoth name matches body and callers: resets both players via ResetP1 and ResetP2
+JJ 0x061811a4 plyr_ResetP1 CONFIRM plyr_ResetP1 name matches body and callers: resets P1 object state
+JJ 0x06181254 plyr_ResetP2 CONFIRM plyr_ResetP2 name matches body and callers: resets P2 object state
+JJ 0x06181300 game_ClearGlobals RENAME game_ModeInitClear clears globals then calls versus start and setup; mode init
+JJ 0x061813ec plyr_UpdatePair CONFIRM plyr_UpdatePair name matches body and callers: updates both players per frame
+JJ 0x061814d0 plyr_UpdateMain CONFIRM plyr_UpdateMain name matches body and callers: main per-frame player object update
+JJ 0x06181826 stand_UpdateMain CONFIRM stand_UpdateMain name matches body and callers: main per-frame stand object update
+JJ 0x06181922 plyr_ResetCombatState CONFIRM plyr_ResetCombatState name matches body and callers: resets combat state fields of player
+JJ 0x06181a3e mode_VsStart CONFIRM mode_VsStart name matches body and callers: versus mode start
+JJ 0x06181b44 mode_VsSetup CONFIRM mode_VsSetup name matches body and callers: versus mode setup
+JJ 0x06181c48 mode_CharSelectInit CONFIRM mode_CharSelectInit name matches body and callers: character select screen init
+JJ 0x06181f18 mode_ArcadeNextStage CONFIRM mode_ArcadeNextStage name matches body and callers: advances arcade mode to next stage
+JJ 0x06185d2c hit_CheckBoxesGlobal CONFIRM hit_CheckBoxesGlobal name matches body and callers: box overlap test between P1 and P2 globals and Y distance
+JJ 0x06186264 hit_CanHitTarget CONFIRM hit_CanHitTarget name matches body and callers: checks move record byte4 and target state flags before hit
+JJ 0x061864de hit_CheckGuardInput CONFIRM hit_CheckGuardInput name matches body and callers: checks guard direction input bits against facing
+JJ 0x06186df4 hit_CalcDamageScale CONFIRM hit_CalcDamageScale name matches body and callers: computes damage scale through indirect calc callbacks
+JJ 0x06186f64 hit_CalcDamageA CONFIRM hit_CalcDamageA name matches body and callers: computes damage value into param_3 via callbacks
+JJ 0x06187292 hit_CalcDamageB CONFIRM hit_CalcDamageB name matches body and callers: computes damage value using move record and clamp
+JJ 0x06187370 hit_ApplyGuardDamage CONFIRM hit_ApplyGuardDamage name matches body and callers: subtracts two chip damage values from health
+JJ 0x06187422 hit_LookupDamageTableP1 CONFIRM hit_LookupDamageTableP1 name matches body and callers: looks up damage from table by two player indexes
+JJ 0x061874c4 hit_LookupDamageTableP2 CONFIRM hit_LookupDamageTableP2 name matches body and callers: looks up damage from table second variant
+JJ 0x06187548 hit_SetHitStunFromMove CONFIRM hit_SetHitStunFromMove name matches body and callers: sets hitstun values from move record fields
+JJ 0x0618778a hit_SetStunFromMove CONFIRM hit_SetStunFromMove name matches body and callers: copies stun byte from move record to both players

@@ -1,0 +1,64 @@
+JJ 0x060e549e obj_SpawnEffect_20 RENAME ui_SpawnOffsetFromParent spawns type 0x28 object offset from parent by table entry, mirrored by side flag
+JJ 0x060e5768 obj_SpawnEffect_21 RENAME ui_SpawnSideBadge fixed y, x by side; called by ui_SpawnByKind
+JJ 0x060e5b04 obj_SpawnEffect_22 RENAME ui_SpawnSideIconChain spawns 2-3 linked objects chosen by side flag
+JJ 0x060e64d8 obj_SpawnEffect_23 RENAME ui_SpawnPairedHud two type 0x28 objects at two fixed y; kind 0x11
+JJ 0x060e6814 obj_SpawnEffect_24 RENAME ui_SpawnPairedHudB two type 0x28 objects at fixed x and two y; kind 0x12
+JJ 0x060e6a60 ui_SpawnPlayerMarker CONFIRM ui_SpawnPlayerMarker spawns per-player marker object
+JJ 0x060e6b26 ui_UpdatePlayerMarker CONFIRM ui_UpdatePlayerMarker update routine of marker
+JJ 0x060e70ee ui_SpawnBannerObj CONFIRM ui_SpawnBannerObj spawns banner object
+JJ 0x060e719c ui_SpawnRoundIconL CONFIRM ui_SpawnRoundIconL left-side round icon spawn
+JJ 0x060e72d8 ui_SpawnRoundIconR CONFIRM ui_SpawnRoundIconR right-side round icon spawn
+JJ 0x060e7424 ui_SpawnByKind CONFIRM ui_SpawnByKind dispatches spawn by kind id
+JJ 0x060e7c48 ui_UpdateFollowParent CONFIRM ui_UpdateFollowParent update copies parent position
+JJ 0x060e7f14 ui_SpawnTrailChild CONFIRM ui_SpawnTrailChild spawns one trail child
+JJ 0x060e8000 ui_SpawnTrailChain CONFIRM ui_SpawnTrailChain spawns chain of trail children
+JJ 0x060e8122 ui_SpawnCopyChild CONFIRM ui_SpawnCopyChild type 0x29 copy of parent
+JJ 0x060e81ec ui_SpawnCopyChildStatic CONFIRM ui_SpawnCopyChildStatic copy child with static placement
+JJ 0x060e82ce ui_SpawnGhostObj CONFIRM ui_SpawnGhostObj spawns ghost object
+JJ 0x060e83b0 ui_InitGhostFrom CONFIRM ui_InitGhostFrom initializes ghost from source object
+JJ 0x060e8454 ui_SpawnGhostPair CONFIRM ui_SpawnGhostPair spawns two ghosts
+JJ 0x060e84c8 ui_SpawnGhostSingle CONFIRM ui_SpawnGhostSingle spawns one ghost
+JJ 0x060e8550 ui_DispatchSubstate CONFIRM ui_DispatchSubstate jumps by substate index
+JJ 0x060e85e0 gfx_AllocWorkBufObj CONFIRM gfx_AllocWorkBufObj allocates type 0x2a work buffer object
+JJ 0x060e86b4 gfx_BuildRowExtentTable CONFIRM gfx_BuildRowExtentTable builds per-row extent table
+JJ 0x060e89ec dbg_SpawnAnimViewer CONFIRM dbg_SpawnAnimViewer spawns type 0x2b debug viewer
+JJ 0x060e8bb0 dbg_UpdateAnimViewer CONFIRM dbg_UpdateAnimViewer viewer update, input handling
+JJ 0x060e8d9e dbg_SelectChar CONFIRM dbg_SelectChar char index selection
+JJ 0x060e8de2 dbg_SelectMotion CONFIRM dbg_SelectMotion motion selection
+JJ 0x060e8e2e dbg_NextMotionEntry CONFIRM dbg_NextMotionEntry steps to next motion row
+JJ 0x060e8e78 dbg_AdjustPlayerField CONFIRM dbg_AdjustPlayerField adjusts player field value
+JJ 0x060e8e94 dbg_CycleSide CONFIRM dbg_CycleSide cycles side selection
+JJ 0x060e8eba dbg_PrintSideMarker CONFIRM dbg_PrintSideMarker prints side marker text
+JJ 0x060e8f00 dbg_FindCharByPtr CONFIRM dbg_FindCharByPtr finds char index from pointer
+JJ 0x060e8fba dbg_AdjustFrameIndex CONFIRM dbg_AdjustFrameIndex adjusts frame index
+JJ 0x060e8fea dbg_MoveCursorRow CONFIRM dbg_MoveCursorRow moves cursor row
+JJ 0x060e9034 dbg_AdjustFieldValue CONFIRM dbg_AdjustFieldValue adjusts selected field value
+JJ 0x060e9134 dbg_LoadMoveEntry CONFIRM dbg_LoadMoveEntry copies 17 bytes of motion row into viewer struct
+JJ 0x060e9284 dbg_GetViewerState RENAME dbg_GetSelectedPlayerState returns player pointer field plus 2
+JJ 0x060e928e dbg_SetViewerSprite CONFIRM dbg_SetViewerSprite sets viewer sprite
+JJ 0x060e92b8 dbg_ApplyMotionFrame CONFIRM dbg_ApplyMotionFrame applies motion frame
+JJ 0x060e92da dbg_FindFrameByTime CONFIRM dbg_FindFrameByTime finds frame by time
+JJ 0x060e934c dbg_DrawLabels CONFIRM dbg_DrawLabels draws label text, no callers
+JJ 0x060e94c4 dbg_DrawValues CONFIRM dbg_DrawValues draws field values
+JJ 0x060e9818 dbg_DrawCursor CONFIRM dbg_DrawCursor draws cursor
+JJ 0x060e9850 fx_SpawnDebrisObj CONFIRM fx_SpawnDebrisObj type 0x2c with random velocity
+JJ 0x060ea4f8 fx_SpawnParticleEmitter CONFIRM fx_SpawnParticleEmitter type 0x2d emitter
+JJ 0x060eabb0 fx_SpawnTypeEObj RENAME fx_SpawnGrabHoldObj only caller plyr_StartGrabHold
+JJ 0x060eafe2 fx_SpawnTypeFObj RENAME fx_SpawnScreenFadeObj callers gfx_SetupLayerRegs, demo_InitFadeBounds, test_ResetScreenState
+JJ 0x060eb408 ui_SpawnPortraitSlot CONFIRM ui_SpawnPortraitSlot type 0x30 portrait slot
+JJ 0x060eb568 ui_SpawnPortraitPair CONFIRM ui_SpawnPortraitPair spawns portrait pair
+JJ 0x060eb7ac ui_SpawnPortraitSlotB CONFIRM ui_SpawnPortraitSlotB variant slot spawn
+JJ 0x060ebdec ui_InitPortraitPart CONFIRM ui_InitPortraitPart inits one portrait part
+JJ 0x060ec0ca ui_SpawnPortraitSet CONFIRM ui_SpawnPortraitSet spawns parts and inits each
+JJ 0x060ec53e fx_SpawnType31A RENAME fx_SpawnEffectAtParent type 0x31, position from parent, variant 0-2
+JJ 0x060ec650 fx_SpawnType31B RENAME fx_SpawnEffectAtParentSized alloc size from argument, no callers
+JJ 0x060ec732 fx_SpawnType31C RENAME fx_SpawnEffectAtPos explicit x,y args, variants 0-3
+JJ 0x060ec842 fx_SpawnType31D RENAME fx_SpawnEffectAtParentBySide alloc size 4 or 5 by side flag
+JJ 0x060ec95e fx_SpawnType31E RENAME fx_SpawnEffectAtPosTable explicit sprite table index and x,y; caller chr_StepState_11
+JJ 0x060eca54 fx_SpawnType31F RENAME fx_SpawnEffectOffsetFromParent parent position plus dx,dy, optional timer
+JJ 0x060ecb94 fx_SpawnType31G RENAME fx_SpawnEffectAtParentSimple parent position, variants 0-2
+JJ 0x060ecfaa fx_SpawnType32Group RENAME fx_SpawnEffectGroup loops count spawning type 0x32 effects by kind; callers round_EndSequence, contin_GiveUp
+JJ 0x060ed200 fx_SpawnByParentTypeA CONFIRM fx_SpawnByParentTypeA allocs by parent type table, dispatches init by kind
+JJ 0x060ed250 fx_SpawnByKindB CONFIRM fx_SpawnByKindB allocs size 6, dispatches init by kind
+JJ 0x060ed292 fx_InitType33 CONFIRM fx_InitType33 inits type 0x33 from parent fields, bumps +0xb0
+JJ 0x060ed92c fx_PlaceAtParentOffset CONFIRM fx_PlaceAtParentOffset parent pos plus table offset mirrored by facing, swaps sprite

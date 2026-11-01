@@ -1,0 +1,192 @@
+JJ 0x0613230a efx30_Spawn_4 RENAME efx30_SpawnAtOwnerOffset renamed by role: allocates pool object, sets owner +8, type +0xf, handler +4, position 
+JJ 0x06132470 efx30_Spawn_5 RENAME efx30_SpawnAtOwnerOffsetB renamed by role: allocates pool object, sets owner +8, type +0xf, handler +4, position 
+JJ 0x06132610 efx30_Spawn_6 RENAME efx30_SpawnTrailFromTable renamed by role: allocates pool object, sets owner +8, type +0xf, handler +4, position 
+JJ 0x06132766 efx30_Helper RENAME efx30_QueueRequestIfIdle renamed by role: small helper setting object position +0x5c/+0x60 from owner object off
+JJ 0x061327ac efx75_Spawn RENAME efx75_SpawnFromTableIndex renamed by role: allocates pool object, sets owner +8, type +0xf, handler +4, position 
+JJ 0x06132b98 efx75_Spawn_2 RENAME efx75_InitSegment renamed by role: allocates pool object, sets owner +8, type +0xf, handler +4, position 
+JJ 0x06132c4c efx75_SpawnMisc RENAME efx75_SpawnQuad renamed by role: allocates pool objects and sets fields, calls helpers, calls FUN_06132
+JJ 0x06132da8 efx75_Spawn_3 RENAME efx75_SpawnRandomScatter renamed by role: allocates pool object, sets owner +8, type +0xf, handler +4, position 
+JJ 0x06132f24 efx75_SpawnListFromTable CONFIRM efx75_SpawnListFromTable name fits body and callers
+JJ 0x06132f74 efx76_Spawn CONFIRM efx76_Spawn name fits body and callers
+JJ 0x06133094 efx76_SpawnListFromTable CONFIRM efx76_SpawnListFromTable name fits body and callers
+JJ 0x061330d0 efx76_SpawnFromRow CONFIRM efx76_SpawnFromRow name fits body and callers
+JJ 0x06135574 efx76_SpawnMisc RENAME efx76_PlaceByOwnerFacing renamed by role: allocates pool objects and sets fields, calls helpers
+JJ 0x06137ef4 efx76_SpawnMisc_2 RENAME efx76_TriggerSoundCombo renamed by role: allocates pool objects and sets fields, calls helpers
+JJ 0x06137fa8 efx77_Spawn RENAME efx77_SpawnCloneOfOwner renamed by role: allocates pool object, sets owner +8, type +0xf, handler +4, position 
+JJ 0x061380bc efx78_Spawn RENAME efx78_SpawnFromRow7 renamed by role: allocates pool object, sets owner +8, type +0xf, handler +4, position 
+JJ 0x061384c0 efx78_CallStateTable CONFIRM efx78_CallStateTable name fits body and callers
+JJ 0x0613886c efx79_Init RENAME efx79_InitPlain renamed by role: initializes effect object: state +0xc=1, flags, palette +0x5a/5b, spee
+JJ 0x06138924 efx79_Init_2 RENAME efx79_InitPalette renamed by role: initializes effect object: state +0xc=1, flags, palette +0x5a/5b, spee
+JJ 0x06138bbe efx7a_Spawn RENAME efx7a_SpawnVariantFromParent renamed by role: allocates pool object, sets owner +8, type +0xf, handler +4, position 
+JJ 0x06138e62 efx7b_Spawn RENAME efx7b_SpawnChainStart renamed by role: allocates pool object, sets owner +8, type +0xf, handler +4, position 
+JJ 0x06138f62 efx7b_Spawn_2 RENAME efx7b_SpawnChainNext renamed by role: allocates pool object, sets owner +8, type +0xf, handler +4, position 
+JJ 0x06139054 efx7b_Spawn_3 RENAME efx7b_SpawnChainWithYOffset renamed by role: allocates pool object, sets owner +8, type +0xf, handler +4, position 
+JJ 0x06139150 efx7b_Spawn_4 RENAME efx7b_SpawnChainStage renamed by role: allocates pool object, sets owner +8, type +0xf, handler +4, position 
+JJ 0x06139258 efx7c_Spawn RENAME efx7c_SpawnWithParam renamed by role: allocates pool object, sets owner +8, type +0xf, handler +4, position 
+JJ 0x06139590 efx7d_SpawnBurst RENAME efx7d_SpawnBurst12 renamed by role: allocates several pool objects in loop, sets owner +8, type, handler +
+JJ 0x06139780 efx7d_SpawnBurst_2 RENAME efx7d_SpawnBurst8Mirrored renamed by role: allocates several pool objects in loop, sets owner +8, type, handler +
+JJ 0x0613991c efx7d_SpawnBurst_3 RENAME efx7d_SpawnBurst8Facing renamed by role: allocates several pool objects in loop, sets owner +8, type, handler +
+JJ 0x06139b74 efx7e_Spawn RENAME efx7e_SpawnRandomDrift renamed by role: allocates pool object, sets owner +8, type +0xf, handler +4, position 
+JJ 0x06139da0 efx7f_Spawn RENAME efx7f_SpawnFloorAheadOfOwner renamed by role: allocates pool object, sets owner +8, type +0xf, handler +4, position 
+JJ 0x06139eb0 efx7f_Init RENAME efx7f_InitFromOwner renamed by role: initializes effect object: state +0xc=1, flags, palette +0x5a/5b, spee
+JJ 0x06139f2e efx7f_SpawnMisc RENAME efx7f_SpawnMiscWithParam renamed by role: allocates pool objects and sets fields, calls helpers, calls FUN_06139
+JJ 0x0613a124 efx7f_SpawnMisc_2 RENAME efx7f_SpawnMiscWithParamB renamed by role: allocates pool objects and sets fields, calls helpers, calls FUN_06139
+JJ 0x0613a8b4 efx7f_Init_2 RENAME efx7f_InitFromOwnerB renamed by role: initializes effect object: state +0xc=1, flags, palette +0x5a/5b, spee
+JJ 0x0613a932 efx7f_SpawnMisc_3 RENAME efx7f_SpawnMiscWithParamC renamed by role: allocates pool objects and sets fields, calls helpers, calls FUN_0613a
+JJ 0x0613ac44 efx7f_SpawnMisc_4 RENAME efx7f_SpawnMiscWithParamD renamed by role: allocates pool objects and sets fields, calls helpers, calls FUN_0613a
+JJ 0x0613b900 efx7f_SpawnMisc_5 RENAME efx7f_SpawnMiscForChrRunStateLogic2 renamed by role: allocates pool objects and sets fields, calls helpers
+JJ 0x0613ba78 efx7f_SpawnMisc_6 RENAME efx7f_SpawnMiscForChrRunStateLogic2B renamed by role: allocates pool objects and sets fields, calls helpers
+JJ 0x0613bb9c efx7f_Spawn_2 RENAME efx7f_SpawnTwoParams renamed by role: allocates pool object, sets owner +8, type +0xf, handler +4, position 
+JJ 0x0613c526 efx7f_Update CONFIRM efx7f_Update name fits body and callers
+JJ 0x0613c5c4 efx7f_Spawn_3 RENAME efx7f_SpawnForObjCheckInView renamed by role: allocates pool object, sets owner +8, type +0xf, handler +4, position 
+JJ 0x0613c674 efx7f_Spawn_4 RENAME efx7f_SpawnForObjApplyVelocityAndCall renamed by role: allocates pool object, sets owner +8, type +0xf, handler +4, position 
+JJ 0x0613c756 efx7f_Spawn_5 RENAME efx7f_SpawnForObjSetBoxFromTable renamed by role: allocates pool object, sets owner +8, type +0xf, handler +4, position 
+JJ 0x0613ca16 efx7f_SpawnMisc_7 RENAME efx7f_SpawnMiscLooped renamed by role: allocates pool objects and sets fields, calls helpers
+JJ 0x0613cc64 efx7f_SpawnMisc_8 RENAME efx7f_SpawnMiscWithParamE renamed by role: allocates pool objects and sets fields, calls helpers
+JJ 0x0613cdcc efx7f_Spawn_6 RENAME efx7f_SpawnPlain renamed by role: allocates pool object, sets owner +8, type +0xf, handler +4, position 
+JJ 0x0613d342 efx7f_SpawnBurst RENAME efx7f_SpawnBurstLoop renamed by role: allocates several pool objects in loop, sets owner +8, type, handler +
+JJ 0x0613d50c efx7f_Spawn_7 RENAME efx7f_SpawnWithParam renamed by role: allocates pool object, sets owner +8, type +0xf, handler +4, position 
+JJ 0x0613d5f6 efx7f_Spawn_8 RENAME efx7f_SpawnLooped renamed by role: allocates pool object, sets owner +8, type +0xf, handler +4, position 
+JJ 0x0613d7a8 efx7f_Spawn_9 RENAME efx7f_SpawnWithParamB renamed by role: allocates pool object, sets owner +8, type +0xf, handler +4, position 
+JJ 0x0613d8a0 efx7f_Spawn_10 RENAME efx7f_SpawnPlainB renamed by role: allocates pool object, sets owner +8, type +0xf, handler +4, position 
+JJ 0x0613d994 efx7f_Spawn_11 RENAME efx7f_SpawnWithParamC renamed by role: allocates pool object, sets owner +8, type +0xf, handler +4, position 
+JJ 0x0613da96 efx7f_SpawnMisc_9 RENAME efx7f_SpawnMiscLoopedB renamed by role: allocates pool objects and sets fields, calls helpers
+JJ 0x0613dc84 efx7f_SpawnBurst_2 RENAME efx7f_SpawnBurstLoopB renamed by role: allocates several pool objects in loop, sets owner +8, type, handler +
+JJ 0x0613de48 efx7f_Spawn_12 RENAME efx7f_SpawnWithParamD renamed by role: allocates pool object, sets owner +8, type +0xf, handler +4, position 
+JJ 0x0613df08 efx7f_Spawn_13 RENAME efx7f_SpawnLoopedB renamed by role: allocates pool object, sets owner +8, type +0xf, handler +4, position 
+JJ 0x0613e3a2 efx7f_Spawn_14 RENAME efx7f_SpawnPlainC renamed by role: allocates pool object, sets owner +8, type +0xf, handler +4, position 
+JJ 0x0613e502 efx7f_Spawn_15 RENAME efx7f_SpawnPlainD renamed by role: allocates pool object, sets owner +8, type +0xf, handler +4, position 
+JJ 0x0613e66e efx7f_Spawn_16 RENAME efx7f_SpawnPlainE renamed by role: allocates pool object, sets owner +8, type +0xf, handler +4, position 
+JJ 0x0613e80a efx7f_SpawnBurst_3 RENAME efx7f_SpawnBurstTable renamed by role: allocates several pool objects in loop, sets owner +8, type, handler +
+JJ 0x0613e9bc efx7f_SpawnBurst_4 RENAME efx7f_SpawnBurstTableB renamed by role: allocates several pool objects in loop, sets owner +8, type, handler +
+JJ 0x0613eb48 efx7f_Spawn_17 RENAME efx7f_SpawnWithParamE renamed by role: allocates pool object, sets owner +8, type +0xf, handler +4, position 
+JJ 0x0613ecae efx7f_Spawn_18 RENAME efx7f_SpawnWithParamF renamed by role: allocates pool object, sets owner +8, type +0xf, handler +4, position 
+JJ 0x0613edfe efx7f_Spawn_19 RENAME efx7f_SpawnPlainF renamed by role: allocates pool object, sets owner +8, type +0xf, handler +4, position 
+JJ 0x0613eeec efx7f_SpawnMisc_10 RENAME efx7f_SpawnMiscPlain renamed by role: allocates pool objects and sets fields, calls helpers
+JJ 0x0613f090 efx7f_Spawn_20 RENAME efx7f_SpawnForChrDispatchStateJump10 renamed by role: allocates pool object, sets owner +8, type +0xf, handler +4, position 
+JJ 0x0613f1fc efx7f_Spawn_21 RENAME efx7f_SpawnPlainG renamed by role: allocates pool object, sets owner +8, type +0xf, handler +4, position 
+JJ 0x0613f5b4 efx7f_Spawn_22 RENAME efx7f_SpawnForGfxClearLayers renamed by role: allocates pool object, sets owner +8, type +0xf, handler +4, position 
+JJ 0x0613f742 efx7f_SpawnMisc_11 RENAME efx7f_SpawnMiscWithParamF renamed by role: allocates pool objects and sets fields, calls helpers
+JJ 0x0613f854 efx7f_Spawn_23 RENAME efx7f_SpawnWithParamG renamed by role: allocates pool object, sets owner +8, type +0xf, handler +4, position 
+JJ 0x0613faf6 efx7f_SpawnBurst_5 RENAME efx7f_SpawnBurstLoopC renamed by role: allocates several pool objects in loop, sets owner +8, type, handler +
+JJ 0x0613fc4c efx7f_SpawnBurst_6 RENAME efx7f_SpawnBurstLoopD renamed by role: allocates several pool objects in loop, sets owner +8, type, handler +
+JJ 0x0613fe14 efx7f_Spawn_24 RENAME efx7f_SpawnPlainH renamed by role: allocates pool object, sets owner +8, type +0xf, handler +4, position 
+JJ 0x0613ffbc efx7f_Spawn_25 RENAME efx7f_SpawnTwoParamsB renamed by role: allocates pool object, sets owner +8, type +0xf, handler +4, position 
+JJ 0x06140728 efx7f_Spawn_26 RENAME efx7f_SpawnForPlyrRunMoveScript3 renamed by role: allocates pool object, sets owner +8, type +0xf, handler +4, position 
+JJ 0x061407d8 efx7f_Spawn_27 RENAME efx7f_SpawnPlainI renamed by role: allocates pool object, sets owner +8, type +0xf, handler +4, position 
+JJ 0x061408d8 efx7f_Spawn_28 RENAME efx7f_SpawnLoopedC renamed by role: allocates pool object, sets owner +8, type +0xf, handler +4, position 
+JJ 0x06140a18 efx7f_Spawn_29 RENAME efx7f_SpawnPlainJ renamed by role: allocates pool object, sets owner +8, type +0xf, handler +4, position 
+JJ 0x06140ac2 efx7f_Spawn_30 RENAME efx7f_SpawnWithParamH renamed by role: allocates pool object, sets owner +8, type +0xf, handler +4, position 
+JJ 0x06140be4 efx7f_Spawn_31 RENAME efx7f_SpawnPlainK renamed by role: allocates pool object, sets owner +8, type +0xf, handler +4, position 
+JJ 0x06140cec efx7f_Spawn_32 RENAME efx7f_SpawnWithParamI renamed by role: allocates pool object, sets owner +8, type +0xf, handler +4, position 
+JJ 0x06140df8 efx7f_Spawn_33 RENAME efx7f_SpawnPlainL renamed by role: allocates pool object, sets owner +8, type +0xf, handler +4, position 
+JJ 0x06140ed8 efx7f_SpawnMisc_12 RENAME efx7f_SpawnMiscPlainB renamed by role: allocates pool objects and sets fields, calls helpers
+JJ 0x06140f94 efx7f_Update_2 RENAME efx7f_UpdateStateMachine renamed by role: per-frame state machine on +0xd/+0x10: moves position +0x5c/+0x60, tim
+JJ 0x06141058 efx7f_Update_3 RENAME efx7f_UpdateStateMachineB renamed by role: per-frame state machine on +0xd/+0x10: moves position +0x5c/+0x60, tim
+JJ 0x0614139c efx7f_SpawnMisc_13 RENAME efx7f_SpawnMiscPlainC renamed by role: allocates pool objects and sets fields, calls helpers
+JJ 0x06141460 efx7f_SpawnMisc_14 RENAME efx7f_SpawnMiscPlainD renamed by role: allocates pool objects and sets fields, calls helpers
+JJ 0x06141538 efx7f_SpawnMisc_15 RENAME efx7f_SpawnMiscPlainE renamed by role: allocates pool objects and sets fields, calls helpers
+JJ 0x061419ec efx7f_SpawnMisc_16 RENAME efx7f_SpawnMiscPlainF renamed by role: allocates pool objects and sets fields, calls helpers
+JJ 0x06141aaa efx7f_SpawnMisc_17 RENAME efx7f_SpawnMiscPlainG renamed by role: allocates pool objects and sets fields, calls helpers
+JJ 0x06141b9e efx7f_SpawnMisc_18 RENAME efx7f_SpawnMiscShort renamed by role: allocates pool objects and sets fields, calls helpers
+JJ 0x06141c70 efx7f_SpawnMisc_19 RENAME efx7f_SpawnMiscShortB renamed by role: allocates pool objects and sets fields, calls helpers
+JJ 0x06141e68 efx7f_Spawn_34 RENAME efx7f_SpawnForMenuInitScreen renamed by role: allocates pool object, sets owner +8, type +0xf, handler +4, position 
+JJ 0x06143b30 efx7f_SpawnMisc_20 RENAME efx7f_SpawnLinkedRunner renamed by role: allocates pool objects and sets fields, calls helpers, calls FUN_06143
+JJ 0x06143c60 efx7f_SpawnMisc_21 RENAME efx7f_DismissHelper renamed by role: allocates pool objects and sets fields, calls helpers
+JJ 0x06143c86 efx7f_Update_4 RENAME efx7f_UpdateRunLinked renamed by role: per-frame state machine on +0xd/+0x10: moves position +0x5c/+0x60, tim
+JJ 0x06143dc8 efx7f_SpawnMisc_22 RENAME efx7f_SpawnMiscForRoundEndSeqSubC renamed by role: allocates pool objects and sets fields, calls helpers, calls FUN_06143
+JJ 0x06143e22 efx7f_Init_3 RENAME efx7f_InitForRoundEnd renamed by role: initializes effect object: state +0xc=1, flags, palette +0x5a/5b, spee
+JJ 0x06143ffc efx7f_SpawnMisc_23 RENAME efx7f_SpawnMiscPlainH renamed by role: allocates pool objects and sets fields, calls helpers
+JJ 0x06144358 efx7f_SpawnMisc_24 RENAME efx7f_SpawnMiscPlainI renamed by role: allocates pool objects and sets fields, calls helpers
+JJ 0x06144a4a efx7f_SpawnMisc_25 RENAME efx7f_SpawnMiscBranchy renamed by role: allocates pool objects and sets fields, calls helpers
+JJ 0x06145102 efx7f_Spawn_35 RENAME efx7f_SpawnPlainM renamed by role: allocates pool object, sets owner +8, type +0xf, handler +4, position 
+JJ 0x06145260 efx7f_Spawn_36 RENAME efx7f_SpawnPlainN renamed by role: allocates pool object, sets owner +8, type +0xf, handler +4, position 
+JJ 0x061453fc efx7f_SpawnMisc_26 RENAME efx7f_SpawnMiscPlainJ renamed by role: allocates pool objects and sets fields, calls helpers
+JJ 0x06145654 efx7f_SpawnMisc_27 RENAME efx7f_SpawnMiscPlainK renamed by role: allocates pool objects and sets fields, calls helpers
+JJ 0x06145778 efx7f_SpawnMisc_28 RENAME efx7f_SpawnMiscPlainL renamed by role: allocates pool objects and sets fields, calls helpers
+JJ 0x0614589c efx7f_Spawn_37 RENAME efx7f_SpawnPlainO renamed by role: allocates pool object, sets owner +8, type +0xf, handler +4, position 
+JJ 0x06145a90 efx7f_Spawn_38 RENAME efx7f_SpawnPlainP renamed by role: allocates pool object, sets owner +8, type +0xf, handler +4, position 
+JJ 0x06145c56 efx7f_Spawn_39 RENAME efx7f_SpawnWithParamJ renamed by role: allocates pool object, sets owner +8, type +0xf, handler +4, position 
+JJ 0x0614621e efx65_Init_7 RENAME efx65_InitPlain renamed by role: initializes effect object: state +0xc=1, flags, palette +0x5a/5b, spee
+JJ 0x0614627e efx65_Init_8 RENAME efx65_InitPalette renamed by role: initializes effect object: state +0xc=1, flags, palette +0x5a/5b, spee
+JJ 0x061462f2 efx65_Init_9 RENAME efx65_InitPlainB renamed by role: initializes effect object: state +0xc=1, flags, palette +0x5a/5b, spee
+JJ 0x06146b2a efx65_CallStateTable CONFIRM efx65_CallStateTable name fits body and callers
+JJ 0x06146b70 efx65_Spawn CONFIRM efx65_Spawn name fits body and callers
+JJ 0x061470fc efx65_Spawn_2 RENAME efx65_SpawnTwoParams renamed by role: allocates pool object, sets owner +8, type +0xf, handler +4, position 
+JJ 0x061471c0 efx65_Spawn_3 RENAME efx65_SpawnForPlyrUpdateMisc100 renamed by role: allocates pool object, sets owner +8, type +0xf, handler +4, position 
+JJ 0x061476e8 efx65_Spawn_4 RENAME efx65_SpawnForPlyrRunStateHandler6 renamed by role: allocates pool object, sets owner +8, type +0xf, handler +4, position 
+JJ 0x06148bbe efx65_Update CONFIRM efx65_Update name fits body and callers
+JJ 0x06148c62 efx65_Spawn_5 RENAME efx65_SpawnUpdateChildA renamed by role: allocates pool object, sets owner +8, type +0xf, handler +4, position 
+JJ 0x06148d40 efx65_Spawn_6 RENAME efx65_SpawnUpdateChildB renamed by role: allocates pool object, sets owner +8, type +0xf, handler +4, position 
+JJ 0x06148e1c efx65_Spawn_7 RENAME efx65_SpawnUpdateChildC renamed by role: allocates pool object, sets owner +8, type +0xf, handler +4, position 
+JJ 0x06148fac efx65_SpawnMisc RENAME efx65_SpawnMiscBranchy renamed by role: allocates pool objects and sets fields, calls helpers
+JJ 0x06149118 efx65_SpawnMisc_2 RENAME efx65_SpawnMiscBranchyB renamed by role: allocates pool objects and sets fields, calls helpers
+JJ 0x0614922a efx65_SpawnMisc_3 RENAME efx65_SpawnMiscBranchyC renamed by role: allocates pool objects and sets fields, calls helpers
+JJ 0x061492dc efx65_SpawnMisc_4 RENAME efx65_SpawnMiscBranchyD renamed by role: allocates pool objects and sets fields, calls helpers
+JJ 0x061493f6 efx65_Spawn_8 RENAME efx65_SpawnTwoParamsB renamed by role: allocates pool object, sets owner +8, type +0xf, handler +4, position 
+JJ 0x061494ec efx65_SpawnMisc_5 RENAME efx65_SpawnMiscPlain renamed by role: allocates pool objects and sets fields, calls helpers
+JJ 0x0614a95e efx65_Helper RENAME efx65_PlaceAtOwnerOffset renamed by role: small helper setting object position +0x5c/+0x60 from owner object off
+JJ 0x0614a97e efx65_Helper_2 RENAME efx65_PlaceAtOwnerOffsetB renamed by role: small helper setting object position +0x5c/+0x60 from owner object off
+JJ 0x0614a99e efx65_Helper_3 RENAME efx65_PlaceAtOwnerOffsetC renamed by role: small helper setting object position +0x5c/+0x60 from owner object off
+JJ 0x0614aa02 efx65_Spawn_9 RENAME efx65_SpawnWithParam renamed by role: allocates pool object, sets owner +8, type +0xf, handler +4, position 
+JJ 0x0614b8d6 efx65_Update_2 RENAME efx65_UpdateStateMachine renamed by role: per-frame state machine on +0xd/+0x10: moves position +0x5c/+0x60, tim
+JJ 0x0614bf66 efx65_SpawnMisc_6 RENAME efx65_SpawnMiscBranchyE renamed by role: allocates pool objects and sets fields, calls helpers
+JJ 0x0614c814 efx65_Helper_4 RENAME efx65_PlaceAtOwnerOffsetD renamed by role: small helper setting object position +0x5c/+0x60 from owner object off
+JJ 0x0614c84a efx65_SpawnMisc_7 RENAME efx65_SpawnMiscForPlyrUpdateLarge35 renamed by role: allocates pool objects and sets fields, calls helpers
+JJ 0x0614c91c efx65_Init_10 RENAME efx65_InitPlainC renamed by role: initializes effect object: state +0xc=1, flags, palette +0x5a/5b, spee
+JJ 0x0614cd0c efx65_CallStateTable_2 RENAME efx65_CallStateTableB renamed by role: jump-table dispatch on state index, calls handler via table
+JJ 0x0614cd3e efx65_Spawn_10 RENAME efx65_SpawnWithParamB renamed by role: allocates pool object, sets owner +8, type +0xf, handler +4, position 
+JJ 0x0614de54 efx65_CallStateTable_3 RENAME efx65_CallStateTableC renamed by role: jump-table dispatch on state index, calls handler via table
+JJ 0x0614e478 efx65_Init_11 RENAME efx65_InitPlainD renamed by role: initializes effect object: state +0xc=1, flags, palette +0x5a/5b, spee
+JJ 0x0614e8e6 efx65_Spawn_11 RENAME efx65_SpawnWithParamC renamed by role: allocates pool object, sets owner +8, type +0xf, handler +4, position 
+JJ 0x0614f41a efx32_Spawn CONFIRM efx32_Spawn name fits body and callers
+JJ 0x0614f9d0 efx32_Spawn_2 RENAME efx32_SpawnPlain renamed by role: allocates pool object, sets owner +8, type +0xf, handler +4, position 
+JJ 0x0614ff70 efx32_Spawn_3 RENAME efx32_SpawnTwoParams renamed by role: allocates pool object, sets owner +8, type +0xf, handler +4, position 
+JJ 0x06150184 efx32_SpawnMisc RENAME efx32_SpawnMiscBranchy renamed by role: allocates pool objects and sets fields, calls helpers
+JJ 0x061505d0 efx32_Spawn_4 RENAME efx32_SpawnTwoParamsB renamed by role: allocates pool object, sets owner +8, type +0xf, handler +4, position 
+JJ 0x0615091e efx32_Spawn_5 RENAME efx32_SpawnTwoParamsC renamed by role: allocates pool object, sets owner +8, type +0xf, handler +4, position 
+JJ 0x06150e34 efx32_Spawn_6 RENAME efx32_SpawnTwoParamsD renamed by role: allocates pool object, sets owner +8, type +0xf, handler +4, position 
+JJ 0x061511c4 efx32_Spawn_7 RENAME efx32_SpawnTwoParamsE renamed by role: allocates pool object, sets owner +8, type +0xf, handler +4, position 
+JJ 0x061513ce efx32_Spawn_8 RENAME efx32_SpawnBranchy renamed by role: allocates pool object, sets owner +8, type +0xf, handler +4, position 
+JJ 0x06151658 efx32_Spawn_9 RENAME efx32_SpawnWithChild renamed by role: allocates pool object, sets owner +8, type +0xf, handler +4, position 
+JJ 0x061517f0 efx32_Spawn_10 RENAME efx32_SpawnChildOfNine renamed by role: allocates pool object, sets owner +8, type +0xf, handler +4, position 
+JJ 0x06151c5e efx32_Spawn_11 RENAME efx32_SpawnBranchyB renamed by role: allocates pool object, sets owner +8, type +0xf, handler +4, position 
+JJ 0x06151ea2 efx32_Spawn_12 RENAME efx32_SpawnPlainB renamed by role: allocates pool object, sets owner +8, type +0xf, handler +4, position 
+JJ 0x06151fc6 efx33_Spawn CONFIRM efx33_Spawn name fits body and callers
+JJ 0x06152652 efx34_Spawn RENAME efx34_SpawnViaEfx33 renamed by role: allocates pool object, sets owner +8, type +0xf, handler +4, position 
+JJ 0x06153256 efx34_Helper RENAME efx34_PlaceAtOwnerOffset renamed by role: small helper setting object position +0x5c/+0x60 from owner object off
+JJ 0x0615394a efx34_Helper_2 RENAME efx34_PlaceAtOwnerOffsetB renamed by role: small helper setting object position +0x5c/+0x60 from owner object off
+JJ 0x0615448e efx34_Helper_3 RENAME efx34_PlaceAtOwnerOffsetC renamed by role: small helper setting object position +0x5c/+0x60 from owner object off
+JJ 0x06154b38 efx34_Helper_4 RENAME efx34_PlaceAtOwnerOffsetD renamed by role: small helper setting object position +0x5c/+0x60 from owner object off
+JJ 0x0615524c efx34_Helper_5 RENAME efx34_PlaceAtOwnerOffsetE renamed by role: small helper setting object position +0x5c/+0x60 from owner object off
+JJ 0x061553cc efx34_SpawnMisc RENAME efx34_SpawnMiscRecursive renamed by role: allocates pool objects and sets fields, calls helpers
+JJ 0x061555b4 ui_SpawnObjType01 CONFIRM ui_SpawnObjType01 name fits body and callers
+JJ 0x0615578c ui_SpawnObjType02 CONFIRM ui_SpawnObjType02 name fits body and callers
+JJ 0x061558f2 ui_SpawnObjType04 CONFIRM ui_SpawnObjType04 name fits body and callers
+JJ 0x06155a90 ui_SpawnObjType05 CONFIRM ui_SpawnObjType05 name fits body and callers
+JJ 0x06155c1a ui_SpawnObjType06 CONFIRM ui_SpawnObjType06 name fits body and callers
+JJ 0x06155f32 ui_SpawnObjType07 CONFIRM ui_SpawnObjType07 name fits body and callers
+JJ 0x0615605c ui_SpawnObjType08 CONFIRM ui_SpawnObjType08 name fits body and callers
+JJ 0x0615625c ui_SpawnObjType09 CONFIRM ui_SpawnObjType09 name fits body and callers
+JJ 0x0615648e ui_SpawnObjType0A CONFIRM ui_SpawnObjType0A name fits body and callers
+JJ 0x0615665a ui_SpawnObjType0B CONFIRM ui_SpawnObjType0B name fits body and callers
+JJ 0x0615679c ui_SpawnObjType0C CONFIRM ui_SpawnObjType0C name fits body and callers
+JJ 0x06156906 ui_SpawnObjType0D CONFIRM ui_SpawnObjType0D name fits body and callers
+JJ 0x06156cb4 ui_SpawnObjType0E CONFIRM ui_SpawnObjType0E name fits body and callers
+JJ 0x0615717a ui_SpawnObjType0F_Singleton CONFIRM ui_SpawnObjType0F_Singleton name fits body and callers
+JJ 0x0615762c ui_SpawnObjType20_Simple CONFIRM ui_SpawnObjType20_Simple name fits body and callers
+JJ 0x06157682 ui_SpawnObjType21 CONFIRM ui_SpawnObjType21 name fits body and callers
+JJ 0x06157a98 obj_SpawnChildOffsetByFacing CONFIRM obj_SpawnChildOffsetByFacing name fits body and callers
+JJ 0x06157ba0 obj_IsOutOfBounds CONFIRM obj_IsOutOfBounds name fits body and callers
+JJ 0x06157bda obj_IsOutOfBoundsEx CONFIRM obj_IsOutOfBoundsEx name fits body and callers
+JJ 0x06157cb6 obj_SpawnCloneOfParent CONFIRM obj_SpawnCloneOfParent name fits body and callers
+JJ 0x06157dcc obj_UpdateOwnerLinked CONFIRM obj_UpdateOwnerLinked name fits body and callers
+JJ 0x06158102 obj_SpawnChildType02 CONFIRM obj_SpawnChildType02 name fits body and callers
+JJ 0x06158454 obj_SpawnChildType03 CONFIRM obj_SpawnChildType03 name fits body and callers
+JJ 0x06158714 obj_SpawnChildType04 CONFIRM obj_SpawnChildType04 name fits body and callers
+JJ 0x06158922 obj_OffsetChildX_A RENAME obj_PlaceChildFromRowMode1 renamed by role: sets child x = parent x plus or minus table entry by facing
+JJ 0x061589fe obj_OffsetChildX_B RENAME obj_PlaceChildFromRowMode2 renamed by role: sets child x = parent x plus or minus table entry by facing
+JJ 0x06158ad8 obj_OffsetChildX_C RENAME obj_PlaceChildFromRowMode0 renamed by role: sets child x = parent x plus or minus table entry by facing and sets y
+JJ 0x06159080 obj_SpawnChildWithCall RENAME obj_SpawnType6ChildBehindParent renamed by role: calls two-arg helper then allocates child from parent by type
+JJ 0x061591c4 obj_SpawnChildOfOwner RENAME obj_SpawnType6ChildBehindOwner renamed by role: calls helper then allocates child from owner object with extra param
+JJ 0x06159cf8 obj_AimAtOwnerTarget CONFIRM obj_AimAtOwnerTarget name fits body and callers
